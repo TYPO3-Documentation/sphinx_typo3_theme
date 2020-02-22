@@ -11,7 +11,7 @@
     <meta name="docsearch:package_type" content="" />
 
     
-        <title>Welcome to Sphinx TYPO3 theme documentation! &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
+        <title>Development &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
     
     
 
@@ -21,7 +21,8 @@
             <link rel="index" title="Index" href="genindex.html" />
             <link rel="search" title="Search" href="search.html" />
         <link rel="top" title="Sphinx TYPO3 theme 99.88.77 documentation" href="#" />
-            <link rel="next" title="Overview" href="readme.html" />
+            <link rel="next" title="Workflows" href="workflows.html" />
+            <link rel="prev" title="Usage" href="usage.html" />
 
     <script src="_static/js/modernizr.min.js"></script>
 
@@ -49,7 +50,7 @@
                     <nav>
                         <input type="checkbox" id="toggleToc" class="toc-checkbox">
                         <div class="toc-header"><div class="toc-title">
-                                    <a class="toc-title-project" href="#">Sphinx TYPO3 theme</a></div><div class="toc-actions">
+                                    <a class="toc-title-project" href="index.html">Sphinx TYPO3 theme</a></div><div class="toc-actions">
                                 <label for="toggleToc" class="toc-toggle">
                                     Menu
                                 </label>
@@ -67,11 +68,11 @@
                                     
                                     
                                         <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">sphinx_typo3_theme</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sphinx_typo3_theme.html">sphinx_typo3_theme package</a><ul>
@@ -95,16 +96,18 @@
                     <div class="rst-content">
                         
     
+        <a class="no-focus" accesskey="p" href="usage.html" tabindex="-1"></a>
     
-        <a class="no-focus" accesskey="n" href="readme.html" tabindex="-1"></a>
+    
+        <a class="no-focus" accesskey="n" href="workflows.html" tabindex="-1"></a>
     
                         <div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Start</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Welcome to Sphinx TYPO3 theme documentation!</li>
+        <li class="breadcrumb-item"><a href="index.html">Start</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Development</li>
     </ol>
         <div class="breadcrumb-additions">
-                <a class="btn btn-sm btn-light" href="_sources/index.rst.txt" rel="nofollow">
+                <a class="btn btn-sm btn-light" href="_sources/development.rst.txt" rel="nofollow">
                     <span class="btn-icon"><span class="fas fa-code"></span></span>
                     <span class="btn-text">View source</span>
                 </a>
@@ -113,34 +116,66 @@
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
                                 
-    <div class="section" id="welcome-to-sphinx-typo3-theme-documentation">
-<h1>Welcome to Sphinx TYPO3 theme documentation!<a class="headerlink" href="#welcome-to-sphinx-typo3-theme-documentation" title="Permalink to this headline">¶</a></h1>
-<img alt="Sphinx TYPO3 theme screenshot" src="https://raw.githubusercontent.com/typo3-documentation/sphinx_typo3_theme/master/img/screenshot.png" />
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows.html">Workflows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">sphinx_typo3_theme</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sphinx_typo3_theme.html">sphinx_typo3_theme package</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-</ul>
+    <div class="section" id="development">
+<span id="index-0"></span><span id="id1"></span><h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h1>
+<p>For local development you need a system with Node v12.x, Yarn, Python3, Git and
+make. It is strongly recommended to use a Python virtual environment (<a class="reference external" href="https://docs.python.org/3/library/venv.html">venv</a>).
+The build process derives the version from repository data, so it’s necessary
+to clone the repository and not just download a single snapshot.</p>
+<p>Start with <cite>make</cite>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># show all available tasks</span>
+make
+</pre></div>
 </div>
+<p>Install requirements and fulfill Python and Node demands (repeatable):</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make setup
+</pre></div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
+<p>When doing frontend development compile your changes at any time:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make frontend
+</pre></div>
+</div>
+<p>Build and install the package:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make install
+</pre></div>
+</div>
+<p>Don’t forget to update the docs. Render the documentation and show in browser:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make docs
+</pre></div>
+</div>
+<p>Without opening the browser:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">non_interactive</span><span class="o">=</span><span class="m">1</span>  make docs
+</pre></div>
+</div>
+<p>Check the Python code. The CI workflow requires <cite>lint-minimal</cite> to succeed:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># for local use</span>
+make lint
+
+<span class="c1"># used in the workflow</span>
+make lint-minimal
+</pre></div>
+</div>
+<p>Run Python unit tests:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make <span class="nb">test</span>
+</pre></div>
+</div>
+<p>Rebuild and install from Python wheel package:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make install
+
+<span class="c1"># then verify the module can be imported and used</span>
+make test-import
+</pre></div>
+</div>
+<div class="section" id="theme-stress-test">
+<h2>Theme stress test<a class="headerlink" href="#theme-stress-test" title="Permalink to this headline">¶</a></h2>
+<p>There is a demo manual <a class="reference external" href="https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/">t3SphinxThemeRtdDemoDocs</a>
+under construction. It serves as a “stress test” for this <a class="reference external" href="https://github.com/typo3-documentation/sphinx_typo3_theme">sphinx_typo3_theme</a>
+and tries to use as many reStructuredText examples as possible and covered by
+the theme. <strong>Documentation writers</strong> may want to have a look at those pages to
+understand what reST markup can be used and what the visual effect will be.
+<strong>Theme contributors</strong> should use the demo manual for testing and <em>visually</em>
+check the rendering.</p>
+</div>
 </div>
 
 
@@ -150,9 +185,15 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             
+                <li class="page-item">
+                    <a class="page-link" href="usage.html" title="Accesskey Alt(+Shift)+p">
+                        Previous
+                    </a>
+                </li>
+            
             
                 <li class="page-item">
-                    <a class="page-link" href="readme.html" title="Accesskey Alt(+Shift)+n">
+                    <a class="page-link" href="workflows.html" title="Accesskey Alt(+Shift)+n">
                         Next
                     </a>
                 </li>

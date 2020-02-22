@@ -11,7 +11,7 @@
     <meta name="docsearch:package_type" content="" />
 
     
-        <title>Welcome to Sphinx TYPO3 theme documentation! &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
+        <title>Usage &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
     
     
 
@@ -21,7 +21,8 @@
             <link rel="index" title="Index" href="genindex.html" />
             <link rel="search" title="Search" href="search.html" />
         <link rel="top" title="Sphinx TYPO3 theme 99.88.77 documentation" href="#" />
-            <link rel="next" title="Overview" href="readme.html" />
+            <link rel="next" title="Development" href="development.html" />
+            <link rel="prev" title="Installation" href="installation.html" />
 
     <script src="_static/js/modernizr.min.js"></script>
 
@@ -49,7 +50,7 @@
                     <nav>
                         <input type="checkbox" id="toggleToc" class="toc-checkbox">
                         <div class="toc-header"><div class="toc-title">
-                                    <a class="toc-title-project" href="#">Sphinx TYPO3 theme</a></div><div class="toc-actions">
+                                    <a class="toc-title-project" href="index.html">Sphinx TYPO3 theme</a></div><div class="toc-actions">
                                 <label for="toggleToc" class="toc-toggle">
                                     Menu
                                 </label>
@@ -67,10 +68,10 @@
                                     
                                     
                                         <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">sphinx_typo3_theme</a><ul>
@@ -95,16 +96,18 @@
                     <div class="rst-content">
                         
     
+        <a class="no-focus" accesskey="p" href="installation.html" tabindex="-1"></a>
     
-        <a class="no-focus" accesskey="n" href="readme.html" tabindex="-1"></a>
+    
+        <a class="no-focus" accesskey="n" href="development.html" tabindex="-1"></a>
     
                         <div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Start</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Welcome to Sphinx TYPO3 theme documentation!</li>
+        <li class="breadcrumb-item"><a href="index.html">Start</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Usage</li>
     </ol>
         <div class="breadcrumb-additions">
-                <a class="btn btn-sm btn-light" href="_sources/index.rst.txt" rel="nofollow">
+                <a class="btn btn-sm btn-light" href="_sources/usage.rst.txt" rel="nofollow">
                     <span class="btn-icon"><span class="fas fa-code"></span></span>
                     <span class="btn-text">View source</span>
                 </a>
@@ -113,34 +116,18 @@
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
                                 
-    <div class="section" id="welcome-to-sphinx-typo3-theme-documentation">
-<h1>Welcome to Sphinx TYPO3 theme documentation!<a class="headerlink" href="#welcome-to-sphinx-typo3-theme-documentation" title="Permalink to this headline">¶</a></h1>
-<img alt="Sphinx TYPO3 theme screenshot" src="https://raw.githubusercontent.com/typo3-documentation/sphinx_typo3_theme/master/img/screenshot.png" />
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows.html">Workflows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">sphinx_typo3_theme</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sphinx_typo3_theme.html">sphinx_typo3_theme package</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
-</ul>
+    <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>Use the Sphinx TYPO3 theme in the conf.py file of a Sphinx project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sphinx_typo3_theme</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_typo3_theme&#39;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">html_theme_path</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">html_theme_path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sphinx_typo3_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">())</span>
+</pre></div>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
 </div>
 
 
@@ -150,9 +137,15 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             
+                <li class="page-item">
+                    <a class="page-link" href="installation.html" title="Accesskey Alt(+Shift)+p">
+                        Previous
+                    </a>
+                </li>
+            
             
                 <li class="page-item">
-                    <a class="page-link" href="readme.html" title="Accesskey Alt(+Shift)+n">
+                    <a class="page-link" href="development.html" title="Accesskey Alt(+Shift)+n">
                         Next
                     </a>
                 </li>
