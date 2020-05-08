@@ -2,43 +2,40 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="book-version" content="99.88.77" />
-    <meta name="book-release" content="99.88.77" />
     <meta name="docsearch:name" content="Sphinx TYPO3 theme" />
-    <meta name="docsearch:version" content="99.88.77" />
     <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="99.88.77" />
+    <meta name="docsearch:version" content="99.88.77" />
 
-    
-        <title>Development &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
-    
-    
+    <title>Development &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
 
     <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/fontawesome.css" />
-            <link rel="index" title="Index" href="genindex.html" />
-            <link rel="search" title="Search" href="search.html" />
-        <link rel="top" title="Sphinx TYPO3 theme 99.88.77 documentation" href="#" />
-            <link rel="next" title="Workflows" href="workflows.html" />
-            <link rel="prev" title="Usage" href="usage.html" />
-
+<!-- linktags -->
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Sphinx TYPO3 theme 99.88.77 documentation" href="#" />
+    <link rel="next" title="Workflows" href="workflows.html" />
+    <link rel="prev" title="Usage" href="usage.html" />
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
     <script src="_static/js/modernizr.min.js"></script>
-
-    
 
 </head>
 
 <body>
 
     <div class="page">
-        
+
         <div class="page-header">
             <div class="page-header-inner">
-                <a href="https://docs.typo3.org" title="TYPO3 Documentation" class="logo">
-                    <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
-                </a>
+<!-- pageheader -->
+<a href="https://docs.typo3.org/" title="TYPO3 Documentation" class="logo">
+    <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+</a>
+<!-- /pageheader -->
             </div>
         </div>
 
@@ -57,16 +54,17 @@
                             </div>
                         </div>
                         <div class="toc-collapse">
+<!-- searchbox.html -->
 <div id="searchbox" class="toc-search" role="search">
     <form id="search-form" action="search.html" autocomplete="off" method="get">
         <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
         <input type="hidden" name="check_keywords" value="yes" />
         <input type="hidden" name="area" value="default" />
     </form>
-</div><div class="toc" role="navigation" aria-label="main navigation">
-                                
-                                    
-                                    
+</div>
+<!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+<!-- menu -->
                                         <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">Overview</a></li>
@@ -86,36 +84,47 @@
 <li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
 </ul>
 
-                                    
-                                
+                                    <ul>
+<li><a class="reference internal" href="#">Development</a><ul>
+<li><a class="reference internal" href="#grunt">Grunt</a></li>
+<li><a class="reference internal" href="#theme-stress-test">Theme stress test</a></li>
+<li><a class="reference internal" href="#javascript-package-management">Javascript package management</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
                             </div>
                         </div>
                     </nav>
                 </div>
                 <div class="page-main-content">
                     <div class="rst-content">
-                        
-    
+<!-- pager-hidden.html -->
+
         <a class="no-focus" accesskey="p" href="usage.html" tabindex="-1"></a>
-    
-    
         <a class="no-focus" accesskey="n" href="workflows.html" tabindex="-1"></a>
-    
-                        <div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Start</a></li>
         <li class="breadcrumb-item active" aria-current="page">Development</li>
     </ol>
         <div class="breadcrumb-additions">
+                    <a class="btn btn-sm btn-primary" href="https://github.com/unused, deprecated/edit/unused, deprecated/Documentation/Localization.unused, deprecated/development.rst" target="_blank">
+                        <span class="btn-icon"><span class="fab fa-github"></span></span>
+                        <span class="btn-text">Edit on GitHub</span>
+                    </a>
                 <a class="btn btn-sm btn-light" href="_sources/development.rst.txt" rel="nofollow">
                     <span class="btn-icon"><span class="fas fa-code"></span></span>
                     <span class="btn-text">View source</span>
                 </a>
         </div>
 </div>
+<!-- /breadcrumbs.html -->
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
-                                
+<!-- body -->
     <div class="section" id="development">
 <span id="index-0"></span><span id="id1"></span><h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h1>
 <p>For local development you need a system with Node v12.x, Yarn, Python3, Git and
@@ -171,6 +180,14 @@ can be uploaded to PyPi run:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make build <span class="nb">test</span>
 </pre></div>
 </div>
+<div class="section" id="grunt">
+<h2>Grunt<a class="headerlink" href="#grunt" title="Permalink to this headline">¶</a></h2>
+<p>More commands are available by means of <cite>grunt</cite>. Run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>grunt --help
+</pre></div>
+</div>
+<p>and check the <cite>gruntfile.js</cite>.</p>
+</div>
 <div class="section" id="theme-stress-test">
 <h2>Theme stress test<a class="headerlink" href="#theme-stress-test" title="Permalink to this headline">¶</a></h2>
 <p>There is a demo manual <a class="reference external" href="https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/">t3SphinxThemeRtdDemoDocs</a>
@@ -181,30 +198,39 @@ understand what reST markup can be used and what the visual effect will be.
 <strong>Theme contributors</strong> should use the demo manual for testing and <em>visually</em>
 check the rendering.</p>
 </div>
+<div class="section" id="javascript-package-management">
+<h2>Javascript package management<a class="headerlink" href="#javascript-package-management" title="Permalink to this headline">¶</a></h2>
+<p>Use <cite>yarn</cite> for package management.</p>
+<p>To upgrade a Javascript package to a newer version use the following. This
+keeps <cite>package.json</cite> and <cite>yarn.lock</cite> in sync as BOTH will be modified:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># ATTENTION: Select only those with reasonable version numbers.</span>
+<span class="c1"># Be very careful if the MAJOR number would change</span>
+yarn upgrade-interactive --latest
+</pre></div>
+</div>
+</div>
 </div>
 
-
+<!-- /body -->
                             </div>
                         </div>
-                        
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-            
-                <li class="page-item">
-                    <a class="page-link" href="usage.html" title="Accesskey Alt(+Shift)+p">
-                        Previous
-                    </a>
-                </li>
-            
-            
-                <li class="page-item">
-                    <a class="page-link" href="workflows.html" title="Accesskey Alt(+Shift)+n">
-                        Next
-                    </a>
-                </li>
-            
-        </ul>
-    </nav>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="usage.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="workflows.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- /pager.html -->
                     </div>
                 </div>
             </div>
@@ -213,50 +239,55 @@ check the rendering.</p>
         
 
         <div class="page-footer">
-            <footer>
+<!-- footer.html -->
+<footer>
     <div class="frame frame-ruler-before frame-background-dark">
         <div class="frame-container">
-            <div class="frame-inner"><div class="footer-additional"><p class="text-center"><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow" target="_blank">TYPO3 Theme 99.88.77</a></p>
+            <div class="frame-inner">
+                <div class="footer-additional">
+                    <p class="text-center">
+                        <a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow" target="_blank">
+                            TYPO3 Theme 99.88.77
+                        </a>
+                    </p>
                 </div>
-
-                <div class="footer-meta"><div class="footer-meta-copyright">&copy; Copyright 2020, TYPO3 documentation team</div>
-                    
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright 2020, TYPO3 documentation team
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
 </footer>
+<!-- /footer.html -->
         </div>
-
     </div>
 
-    
-        <script type="text/javascript">
-            var DOCUMENTATION_OPTIONS = {
-                URL_ROOT: './',
-                VERSION: '99.88.77',
-                COLLAPSE_INDEX: false,
-                FILE_SUFFIX: '.html',
-                HAS_SOURCE: true
-            };
-        </script>
-        <script type="text/javascript" src="_static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="_static/js/underscore.min.js"></script>
-        <script type="text/javascript" src="_static/js/doctools.min.js"></script>
-        <script type="text/javascript" src="_static/js/popper.min.js"></script>
-        <script type="text/javascript" src="_static/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="_static/js/theme.min.js"></script><script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/js/searchtools.min.js"></script>
-        <script type="text/javascript" src="_static/js/autocomplete.min.js"></script>
-            
-            
-            
-            
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: './',
+            VERSION: '99.88.77',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="_static/js/autocomplete.min.js"></script>
     <script type="text/javascript">
         jQuery(function() { Search.loadIndex("searchindex.js"); });
     </script>
-    <script type="text/javascript" id="searchindexloader"></script>  
+    <script type="text/javascript" id="searchindexloader"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
 
-    </body>
+</body>
 </html>
