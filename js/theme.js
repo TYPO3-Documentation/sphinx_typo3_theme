@@ -90,6 +90,9 @@ if (!!autocomplete && !!Search) {
 
 jQuery(document).ready(function () { 'use strict';
 
+  // resolves #103
+  $('li.toctree-l1.current').filter(":contains('TYPO3 Exceptions')").removeClass('current');
+
   function setVersionContent(content) {
     const options = document.createElement('dl');
     options.innerHTML = content;
