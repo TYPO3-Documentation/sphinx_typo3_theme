@@ -123,4 +123,7 @@ jQuery(document).ready(function () { 'use strict';
     });
   }
 
+  jQuery('#btnEditOnGitHub').mouseenter(function () { jQuery('#btnHowToEdit').show();});
+  jQuery('#btnHowToEdit').parent().mouseleave(function () {jQuery('#btnHowToEdit').hide();});
+
 });
