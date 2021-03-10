@@ -8,10 +8,10 @@ if (typeof window.T3Docs === 'undefined') {
 // toggle expand-collapse state of menu item
 function toggleCurrent(event) { 'use strict';
   event.preventDefault();
-  const link = event.currentTarget.parentElement;
-  const element = link.parentElement;
-  const siblings = element.parentElement.parentElement.querySelectorAll('li.current');
-  for (let i = 0; i < siblings.length; i++) {
+  var link = event.currentTarget.parentElement;
+  var element = link.parentElement;
+  var siblings = element.parentElement.parentElement.querySelectorAll('li.current');
+  for (var i = 0; i < siblings.length; i++) {
     if (siblings[i] !== element) {
       siblings[i].classList.remove('current');
     }
@@ -21,12 +21,12 @@ function toggleCurrent(event) { 'use strict';
 
 // add toggle icon to a-tags of menu items in .toc navigations
 function makeMenuExpandable() { 'use strict';
-  const tocs = document.getElementsByClassName('toc');
-  for (let i = 0; i < tocs.length; i++) {
-    let links = tocs[i].getElementsByTagName('a');
-    for (let ii = 0; ii < links.length; ii++) {
+  var tocs = document.getElementsByClassName('toc');
+  for (var i = 0; i < tocs.length; i++) {
+    var links = tocs[i].getElementsByTagName('a');
+    for (var ii = 0; ii < links.length; ii++) {
       if (links[ii].nextSibling) {
-        let expand = document.createElement('span');
+        var expand = document.createElement('span');
         expand.classList.add('toctree-expand');
         expand.addEventListener('click', toggleCurrent, true);
         links[ii].prepend(expand);
@@ -39,9 +39,9 @@ makeMenuExpandable();
 
 // wrap tables to make them responsive
 function makeTablesResponsive() { 'use strict';
-  const tables = document.querySelectorAll('.rst-content table.docutils');
-  for (let i = 0; i < tables.length; i++) {
-    const wrapper = document.createElement('div');
+  var tables = document.querySelectorAll('.rst-content table.docutils');
+  for (var i = 0; i < tables.length; i++) {
+    var wrapper = document.createElement('div');
     wrapper.classList.add('table-responsive');
     tables[i].parentNode.insertBefore(wrapper, tables[i]);
     wrapper.appendChild(tables[i]);
@@ -54,8 +54,8 @@ makeTablesResponsive();
 if (!!autocomplete && !!Search) {
   // add autocompletion to search field
   document.addEventListener('DOMContentLoaded', function () { 'use strict';
-    const searchform = document.getElementById("search-form");
-    const searchinput = document.getElementById("searchinput");
+    var searchform = document.getElementById("search-form");
+    var searchinput = document.getElementById("searchinput");
     if (searchform && searchinput) {
       autocomplete({
         input: searchinput,
@@ -66,7 +66,7 @@ if (!!autocomplete && !!Search) {
               window.T3Docs.autocomplete[index] = { label: item };
             });
           }
-          let suggestions = window.T3Docs.autocomplete.filter(function (entry) {
+          var suggestions = window.T3Docs.autocomplete.filter(function (entry) {
             return entry.label.toLowerCase().startsWith(text.toLowerCase());
           });
           update(suggestions);
@@ -74,7 +74,7 @@ if (!!autocomplete && !!Search) {
         minLength: 4,
         emptyMsg: 'No elements found',
         render: function (item) {
-          const div = document.createElement("div");
+          var div = document.createElement("div");
           div.textContent = item.label;
           return div;
         },
@@ -94,31 +94,31 @@ jQuery(document).ready(function () { 'use strict';
   $('li.toctree-l1.current').filter(":contains('TYPO3 Exceptions')").removeClass('current');
 
   function setVersionContent(content) {
-    const options = document.createElement('dl');
+    var options = document.createElement('dl');
     options.innerHTML = content;
-    const versionOptions = document.getElementById("toc-version-options");
+    var versionOptions = document.getElementById("toc-version-options");
     versionOptions.innerHTML = '';
     versionOptions.appendChild(options);
   }
 
-  const versionNode = document.getElementById("toc-version");
+  var versionNode = document.getElementById("toc-version");
   if (versionNode) {
     versionNode.addEventListener('click', function () {
-      const versionWrapper = document.getElementById("toc-version-wrapper");
+      var versionWrapper = document.getElementById("toc-version-wrapper");
       versionWrapper.classList.toggle('toc-version-wrapper-active');
-      const versionOptions = document.getElementById("toc-version-options");
+      var versionOptions = document.getElementById("toc-version-options");
       if (!versionOptions.dataset.ready) {
-        const versionsUri = 'https://docs.typo3.org/services/ajaxversions.php?url=' + encodeURI(document.URL);
+        var versionsUri = 'https://docs.typo3.org/services/ajaxversions.php?url=' + encodeURI(document.URL);
         jQuery.ajax({
           url: versionsUri,
           success: function (result) {
             setVersionContent(result);
-            const versionOptions = document.getElementById("toc-version-options");
+            var versionOptions = document.getElementById("toc-version-options");
             versionOptions.dataset.ready = true;
           },
           error: function () {
             setVersionContent('<p>No data available.</p>');
-            const versionOptions = document.getElementById("toc-version-options");
+            var versionOptions = document.getElementById("toc-version-options");
             versionOptions.dataset.ready = true;
           }
         });
