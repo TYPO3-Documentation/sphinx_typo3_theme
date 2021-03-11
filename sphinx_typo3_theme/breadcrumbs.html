@@ -8,6 +8,12 @@
     </ol>
     {%- if pagename != "search" %}
         <div class="breadcrumb-additions">
+            <a class="btn btn-sm btn-primary" id="btnHowToEdit" style="display:none"
+               href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/GitHub/"
+               rel="nofollow noopener" target="_blank">
+                <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
+                <span class="btn-text">How to edit</span>
+            </a>
             {%- if theme_github_repository and theme_github_branch %}
                 {%- if theme_github_sphinx_locale %}
                     {%- set localizationprefix = "Localization." + theme_github_sphinx_locale + "/" %}
@@ -16,23 +22,23 @@
                 {%- endif %}
 
                 {%- if theme_path_to_documentation_dir %}
-                    <a class="btn btn-sm btn-primary" href="https://github.com/{{ theme_github_repository|e }}/edit/{{ theme_github_branch|e }}/{{ theme_path_to_documentation_dir|e }}/{{ localizationprefix|e }}{{ sourcename|replace('.txt', '.rst')|replace('.rst.rst', '.rst')|e }}" target="_blank">
+                    <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/{{ theme_github_repository|e }}/edit/{{ theme_github_branch|e }}/{{ theme_path_to_documentation_dir|e }}/{{ localizationprefix|e }}{{ sourcename|replace('.txt', '.rst')|replace('.rst.rst', '.rst')|e }}" target="_blank">
                         <span class="btn-icon"><span class="fab fa-github"></span></span>
                         <span class="btn-text">Edit on GitHub</span>
                     </a>
                 {%- else %}
-                    <a class="btn btn-sm btn-primary" href="https://github.com/{{ theme_github_repository|e }}/edit/{{ theme_github_branch|e }}/Documentation/{{ localizationprefix|e }}{{ sourcename|replace('.txt', '.rst')|replace('.rst.rst', '.rst')|e }}" target="_blank">
+                    <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/{{ theme_github_repository|e }}/edit/{{ theme_github_branch|e }}/Documentation/{{ localizationprefix|e }}{{ sourcename|replace('.txt', '.rst')|replace('.rst.rst', '.rst')|e }}" target="_blank">
                         <span class="btn-icon"><span class="fab fa-github"></span></span>
                         <span class="btn-text">Edit on GitHub</span>
                     </a>
                 {%- endif %}
             {%- elif display_github and builder == 'html' %}
-                <a class="btn btn-sm btn-light" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ source_suffix }}">
+                <a class="btn btn-sm btn-light" id="btnEditOnGitHub" href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ source_suffix }}">
                     <span class="btn-icon"><span class="fab fa-github"></span></span>
                     <span class="btn-text">Edit on GitHub</span>
                 </a>
             {%- elif display_bitbucket and builder == 'html' %}
-                <a class="btn btn-sm btn-light" href="https://bitbucket.org/{{ bitbucket_user }}/{{ bitbucket_repo }}/src/{{ bitbucket_version}}{{ conf_py_path }}{{ pagename }}{{ source_suffix }}">
+                <a class="btn btn-sm btn-light" id="btnEditOnGitHub" href="https://bitbucket.org/{{ bitbucket_user }}/{{ bitbucket_repo }}/src/{{ bitbucket_version}}{{ conf_py_path }}{{ pagename }}{{ source_suffix }}">
                     <span class="btn-icon"><span class="fab fa-bitbucket"></span></span>
                     <span class="btn-text">Edit on Bitbucket</span>
                 </a>
