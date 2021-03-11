@@ -51,47 +51,49 @@ makeTablesResponsive();
 
 
 /* global autocomplete:false, Search:false */
-if (!!autocomplete && !!Search) {
-  // add autocompletion to search field
-  document.addEventListener('DOMContentLoaded', function () { 'use strict';
-    var searchform = document.getElementById("search-form");
-    var searchinput = document.getElementById("searchinput");
-    if (searchform && searchinput) {
-      autocomplete({
-        input: searchinput,
-        fetch: function (text, update) {
-          if (typeof window.T3Docs.autocomplete === 'undefined') {
-            window.T3Docs.autocomplete = [];
-            Object.keys(Search._index.terms).forEach(function (item, index) {
-              window.T3Docs.autocomplete[index] = { label: item };
-            });
-          }
-          var suggestions = window.T3Docs.autocomplete.filter(function (entry) {
-            return entry.label.toLowerCase().startsWith(text.toLowerCase());
+// add autocompletion to search field
+document.addEventListener('DOMContentLoaded', function () { 'use strict';
+  var searchform = document.getElementById("search-form");
+  var searchinput = document.getElementById("searchinput");
+  if (searchform && searchinput) {
+    autocomplete({
+      input: searchinput,
+      fetch: function (text, update) {
+        if (typeof window.T3Docs.autocomplete === 'undefined') {
+          window.T3Docs.autocomplete = [];
+          Object.keys(Search._index.terms).forEach(function (item, index) {
+            window.T3Docs.autocomplete[index] = { label: item };
           });
-          update(suggestions);
-        },
-        minLength: 4,
-        emptyMsg: 'No elements found',
-        render: function (item) {
-          var div = document.createElement("div");
-          div.textContent = item.label;
-          return div;
-        },
-        onSelect: function (item) {
-          searchinput.value = item.label;
-          searchform.submit();
         }
-      });
-    }
-  });
+        var suggestions = window.T3Docs.autocomplete.filter(function (entry) {
+          return entry.label.toLowerCase().startsWith(text.toLowerCase());
+        });
+        update(suggestions);
+      },
+      minLength: 4,
+      emptyMsg: 'No elements found',
+      render: function (item) {
+        var div = document.createElement("div");
+        div.textContent = item.label;
+        return div;
+      },
+      onSelect: function (item) {
+        searchinput.value = item.label;
+        searchform.submit();
+      }
+    });
+  }
+});
+
+
+function headExtraCss4711() { 'use strict';
+  var style = document.createElement('style');
+  style.id = 'headExtraCss4711';
+  style.innerHTML = '@media (min-width: 1140px) { .page-main-inner { width: 99999px }}';
+  document.head.appendChild(style);
 }
 
-
 jQuery(document).ready(function () { 'use strict';
-
-  // resolves #103
-  $('li.toctree-l1.current').filter(":contains('TYPO3 Exceptions')").removeClass('current');
 
   function setVersionContent(content) {
     var options = document.createElement('dl');
@@ -128,5 +130,17 @@ jQuery(document).ready(function () { 'use strict';
 
   jQuery('#btnEditOnGitHub').mouseenter(function () { jQuery('#btnHowToEdit').show();});
   jQuery('#btnHowToEdit').parent().mouseleave(function () {jQuery('#btnHowToEdit').hide();});
+  jQuery('#switchpanel').hover(
+    function() {jQuery(this).addClass('expanded');},
+    function() {jQuery(this).removeClass('expanded');}
+  );
+  jQuery('#switchFullWidth').click(function (event) {
+    event.preventDefault();
+    headExtraCss4711();
+  });
+  jQuery('#switchNormalWidth').click(function (event) {
+    event.preventDefault();
+    document.getElementById('headExtraCss4711').remove();
+  });
 
 });
