@@ -70,10 +70,3 @@
     min-width: 0;
     flex-grow: 1;
 }
-
-// https://github.com/TYPO3-Documentation/sphinx_typo3_theme/issues/80
-@media (min-width: 2049px) {
-    .page-main-inner {
-        width: 99999px;
-    }
-}
