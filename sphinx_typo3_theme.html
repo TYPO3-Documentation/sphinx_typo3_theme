@@ -113,7 +113,15 @@
         <li class="breadcrumb-item active" aria-current="page">sphinx_typo3_theme package</li>
     </ol>
         <div class="breadcrumb-additions">
-                    <a class="btn btn-sm btn-primary" href="https://github.com/unused, deprecated/edit/unused, deprecated/Documentation/Localization.unused, deprecated/sphinx_typo3_theme.rst" target="_blank">
+            <a class="btn btn-sm btn-primary"
+                id="btnHowToEdit" style="display:none"
+                href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/GitHub/"
+                rel="nofollow noopener"
+                target="_blank">
+                    <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
+                    <span class="btn-text">How to edit</span>
+            </a>
+                    <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/unused, deprecated/edit/unused, deprecated/Documentation/Localization.unused, deprecated/sphinx_typo3_theme.rst" target="_blank">
                         <span class="btn-icon"><span class="fab fa-github"></span></span>
                         <span class="btn-text">Edit on GitHub</span>
                     </a>
@@ -145,31 +153,31 @@
 <p>Sphinx TYPO3 theme for docs.typo3.org.</p>
 <dl class="py function">
 <dt id="sphinx_typo3_theme.get_html_theme_path">
-<code class="sig-prename descclassname">sphinx_typo3_theme.</code><code class="sig-name descname">get_html_theme_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#get_html_theme_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx_typo3_theme.get_html_theme_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">sphinx_typo3_theme.</span></code><code class="sig-name descname"><span class="pre">get_html_theme_path</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#get_html_theme_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinx_typo3_theme.get_html_theme_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return absolute path to parent folder of installed theme.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="sphinx_typo3_theme.get_theme_mtime">
-<code class="sig-prename descclassname">sphinx_typo3_theme.</code><code class="sig-name descname">get_theme_mtime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#get_theme_mtime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx_typo3_theme.get_theme_mtime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">sphinx_typo3_theme.</span></code><code class="sig-name descname"><span class="pre">get_theme_mtime</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#get_theme_mtime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinx_typo3_theme.get_theme_mtime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the timestamp of the build as integer.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="sphinx_typo3_theme.get_theme_name">
-<code class="sig-prename descclassname">sphinx_typo3_theme.</code><code class="sig-name descname">get_theme_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#get_theme_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx_typo3_theme.get_theme_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">sphinx_typo3_theme.</span></code><code class="sig-name descname"><span class="pre">get_theme_name</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#get_theme_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinx_typo3_theme.get_theme_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the name of the theme.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="sphinx_typo3_theme.setup">
-<code class="sig-prename descclassname">sphinx_typo3_theme.</code><code class="sig-name descname">setup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx_typo3_theme.setup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">sphinx_typo3_theme.</span></code><code class="sig-name descname"><span class="pre">setup</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#setup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinx_typo3_theme.setup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setup functionality called by Sphinx</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="sphinx_typo3_theme.update_context">
-<code class="sig-prename descclassname">sphinx_typo3_theme.</code><code class="sig-name descname">update_context</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app</span></em>, <em class="sig-param"><span class="n">pagename</span></em>, <em class="sig-param"><span class="n">templatename</span></em>, <em class="sig-param"><span class="n">context</span></em>, <em class="sig-param"><span class="n">doctree</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#update_context"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sphinx_typo3_theme.update_context" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">sphinx_typo3_theme.</span></code><code class="sig-name descname"><span class="pre">update_context</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pagename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">templatename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doctree</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sphinx_typo3_theme.html#update_context"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinx_typo3_theme.update_context" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the rendering context for a page.</p>
 <p>This function makes the theme version available in the Jinja2 html
 templates as <cite>{{ theme_version }}</cite>.</p>
