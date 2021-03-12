@@ -84,7 +84,7 @@ setup(
     license='MIT license',
     author='Martin Bless',
     author_email='martin.bless@mbless.de',
-    description='Sphinx TYPO3 theme for docs.typo3.org, restarting 2020.',
+    description='Sphinx TYPO3 theme for https://docs.typo3.org/',
     long_description=readme + '\n\n' + history,
     long_description_content_type='text/x-rst',
     include_package_data=True,

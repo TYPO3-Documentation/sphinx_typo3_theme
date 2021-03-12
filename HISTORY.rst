@@ -2,6 +2,14 @@
 History
 =======
 
+4.5.0 (2021-13-12)
+==================
+
+*  Start with 'Switch panel'
+*  Add 'How to edit' button
+*  Start 'TYPO3 Exceptions' with collapsed menu
+
+
 4.4.3 (2021-01-20)
 ==================
 
