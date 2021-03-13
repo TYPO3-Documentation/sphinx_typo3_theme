@@ -2,7 +2,12 @@
 History
 =======
 
-4.5.0 (2021-13-12)
+4.5.1 (2021-03-13)
+==================
+
+*  Remove current 'Switch panel' solution (not production ready).
+
+4.5.0 (2021-03-12)
 ==================
 
 *  Start with 'Switch panel'

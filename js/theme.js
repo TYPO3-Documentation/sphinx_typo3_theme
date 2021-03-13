@@ -86,13 +86,6 @@ document.addEventListener('DOMContentLoaded', function () { 'use strict';
 });
 
 
-function headExtraCss4711() { 'use strict';
-  var style = document.createElement('style');
-  style.id = 'headExtraCss4711';
-  style.innerHTML = '@media (min-width: 1140px) { .page-main-inner { width: 99999px }}';
-  document.head.appendChild(style);
-}
-
 jQuery(document).ready(function () { 'use strict';
 
   function setVersionContent(content) {
@@ -132,17 +125,5 @@ jQuery(document).ready(function () { 'use strict';
   jQuery('li.toctree-l1.current').filter(":contains('TYPO3 Exceptions')").removeClass('current');
   jQuery('#btnEditOnGitHub').mouseenter(function () { jQuery('#btnHowToEdit').show();});
   jQuery('#btnHowToEdit').parent().mouseleave(function () {jQuery('#btnHowToEdit').hide();});
-  jQuery('#switchpanel').hover(
-    function() {jQuery(this).addClass('expanded');},
-    function() {jQuery(this).removeClass('expanded');}
-  );
-  jQuery('#switchFullWidth').click(function (event) {
-    event.preventDefault();
-    headExtraCss4711();
-  });
-  jQuery('#switchNormalWidth').click(function (event) {
-    event.preventDefault();
-    document.getElementById('headExtraCss4711').remove();
-  });
 
 });
