@@ -45,3 +45,11 @@ by `Martin Bless`_ as a derivative of the ReadTheDocs theme.
 Releasing
 ---------
 Make sure to specify all three numbers as in 'v99.88.77'.
+
+
+See also
+--------
+
+There also is a `demo manual <https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/>`__
+which serves as a "stress test" for the theme and shows what markup is possible and
+how it gets rendered.
