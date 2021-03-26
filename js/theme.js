@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () { 'use strict';
         update(suggestions);
       },
       minLength: 4,
-      emptyMsg: 'No elements found',
+      emptyMsg: 'Not found in word stems',
       render: function (item) {
         var div = document.createElement("div");
         div.textContent = item.label;
@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function () { 'use strict';
       onSelect: function (item) {
         searchinput.value = item.label;
         searchform.submit();
-      }
+      },
+      disableAutoSelect: true
     });
   }
 });
@@ -123,7 +124,5 @@ jQuery(document).ready(function () { 'use strict';
 
   // start with collapsed menu on a TYPO3 Exceptions page
   jQuery('li.toctree-l1.current').filter(":contains('TYPO3 Exceptions')").removeClass('current');
-  jQuery('#btnEditOnGitHub').mouseenter(function () { jQuery('#btnHowToEdit').show();});
-  jQuery('#btnHowToEdit').parent().mouseleave(function () {jQuery('#btnHowToEdit').hide();});
 
 });

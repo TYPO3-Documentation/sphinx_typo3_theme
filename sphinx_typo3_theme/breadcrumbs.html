@@ -8,12 +8,17 @@
     </ol>
     {%- if pagename != "search" %}
         <div class="breadcrumb-additions">
-            <a class="btn btn-sm btn-primary" id="btnHowToEdit" style="display:none"
-               href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/GitHub/"
+            {%- if theme_h2edit_url and
+                   ((theme_github_repository and theme_github_branch) or
+                    ((builder == 'html') and (display_github or
+                                              display_bitbucket))) %}
+            <a class="btn btn-sm btn-primary" id="btnHowToEdit"
+               href="{{ theme_h2edit_url }}"
                rel="nofollow noopener" target="_blank">
                 <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
                 <span class="btn-text">How to edit</span>
             </a>
+            {%- endif %}
             {%- if theme_github_repository and theme_github_branch %}
                 {%- if theme_github_sphinx_locale %}
                     {%- set localizationprefix = "Localization." + theme_github_sphinx_locale + "/" %}
