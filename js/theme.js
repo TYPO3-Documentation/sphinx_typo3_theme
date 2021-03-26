@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function () { 'use strict';
       onSelect: function (item) {
         searchinput.value = item.label;
         searchform.submit();
-      }
+      },
+      disableAutoSelect: true
     });
   }
 });
