@@ -2,6 +2,22 @@
 History
 =======
 
+
+4.5.2 (2021-03-26)
+==================
+
+*  Have 'How to edit' button point to `GithubMethod.html
+   <https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html>`__
+
+*  Always show the 'How to edit' button when the 'Edit on ...' button is shown
+
+*  Built in offline Sphinx search autocompletion: Turn autoSelect off, use text
+   'Not found in word stems'
+
+*  Remove flex property from logo link, so that it doesn't extend the clickable
+   area past the image
+
+
 4.5.1 (2021-03-13)
 ==================
 
