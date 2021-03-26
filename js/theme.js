@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () { 'use strict';
         update(suggestions);
       },
       minLength: 4,
-      emptyMsg: 'No elements found',
+      emptyMsg: 'Not found in word stems',
       render: function (item) {
         var div = document.createElement("div");
         div.textContent = item.label;
