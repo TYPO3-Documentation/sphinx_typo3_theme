@@ -124,7 +124,5 @@ jQuery(document).ready(function () { 'use strict';
 
   // start with collapsed menu on a TYPO3 Exceptions page
   jQuery('li.toctree-l1.current').filter(":contains('TYPO3 Exceptions')").removeClass('current');
-  jQuery('#btnEditOnGitHub').mouseenter(function () { jQuery('#btnHowToEdit').show();});
-  jQuery('#btnHowToEdit').parent().mouseleave(function () {jQuery('#btnHowToEdit').hide();});
 
 });
