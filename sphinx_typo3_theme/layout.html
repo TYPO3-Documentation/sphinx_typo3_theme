@@ -112,13 +112,15 @@
             <div class="page-header-inner">
 <!-- pageheader -->
 {%- block pageheader %}
+<div class="row">
+<div class="col-sm-6 col-lg-7">
 {%- if logo and logo != 'None' %}
 
 <div class="logo">
 {%- if logo_url %}
 <a href="{{ logo_url }}" {% if logo_title %}title="{{ logo_title|e }}" {% endif %}>
-
 {%- endif %}
+
     <img src="{{ pathto('_static/' + logo, 1) }}"
          {%- if logo_width %} width="{{ logo_width|e }}"{% endif %}
          {%- if logo_height %} height="{{ logo_height|e }}"{% endif %}
@@ -128,11 +130,23 @@
 
 {%- if logo_url %}
 </a>
-
 {%- endif %}
 </div>
 
 {%- endif %}
+</div>
+<div class="col-sm-6 col-lg-5">
+<div role="search">
+    <form id="rtd-search-form" class="wy-form" action="/search/search" method="get">
+        <div class="input-group mb-3 mt-sm-3">
+            <input type="text" class="form-control shadow-none" name="q" autocomplete="off" placeholder="Search in TYPO3 documentation" id="searchinput" value="">
+            <div class="input-group-append">
+                <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i>&nbsp;Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
 {%- endblock %}
 <!-- /pageheader -->
             </div>
