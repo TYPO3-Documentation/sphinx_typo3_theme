@@ -2,6 +2,8 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="docsearch:name" content="Sphinx TYPO3 theme" />
     <meta name="docsearch:package_type" content="" />
@@ -13,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -34,9 +38,7 @@
 <!-- pageheader -->
 
 <div class="logo">
-<a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
-    <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
-</a>
+    <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
 </div>
 <!-- /pageheader -->
             </div>
@@ -135,7 +137,7 @@
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
 <!-- body -->
-    <div class="section" id="development">
+    <section id="development">
 <span id="index-0"></span><span id="id1"></span><h1>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h1>
 <p>For local development you need a system with Node v12.x, Yarn, Python3, Git and
 make. It is strongly recommended to use a Python virtual environment (<a class="reference external" href="https://docs.python.org/3/library/venv.html">venv</a>).
@@ -190,15 +192,15 @@ can be uploaded to PyPi run:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make build <span class="nb">test</span>
 </pre></div>
 </div>
-<div class="section" id="grunt">
+<section id="grunt">
 <h2>Grunt<a class="headerlink" href="#grunt" title="Permalink to this headline">¶</a></h2>
 <p>More commands are available by means of <cite>grunt</cite>. Run:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>grunt --help
 </pre></div>
 </div>
 <p>and check the <cite>gruntfile.js</cite>.</p>
-</div>
-<div class="section" id="theme-stress-test">
+</section>
+<section id="theme-stress-test">
 <h2>Theme stress test<a class="headerlink" href="#theme-stress-test" title="Permalink to this headline">¶</a></h2>
 <p>There is a demo manual <a class="reference external" href="https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/">t3SphinxThemeRtdDemoDocs</a>
 under construction. It serves as a “stress test” for this <a class="reference external" href="https://github.com/typo3-documentation/sphinx_typo3_theme">sphinx_typo3_theme</a>
@@ -207,8 +209,8 @@ the theme. <strong>Documentation writers</strong> may want to have a look at tho
 understand what reST markup can be used and what the visual effect will be.
 <strong>Theme contributors</strong> should use the demo manual for testing and <em>visually</em>
 check the rendering.</p>
-</div>
-<div class="section" id="javascript-package-management">
+</section>
+<section id="javascript-package-management">
 <h2>Javascript package management<a class="headerlink" href="#javascript-package-management" title="Permalink to this headline">¶</a></h2>
 <p>Use <cite>yarn</cite> for package management.</p>
 <p>To upgrade a Javascript package to a newer version use the following. This
@@ -218,8 +220,8 @@ keeps <cite>package.json</cite> and <cite>yarn.lock</cite> in sync as BOTH will 
 yarn upgrade-interactive --latest
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 <!-- /body -->
                             </div>
@@ -292,6 +294,7 @@ yarn upgrade-interactive --latest
     <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/js/searchtools.min.js"></script>
     <script type="text/javascript" src="_static/js/autocomplete.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script type="text/javascript">
         jQuery(function() { Search.loadIndex("searchindex.js"); });
     </script>

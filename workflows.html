@@ -2,6 +2,8 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="docsearch:name" content="Sphinx TYPO3 theme" />
     <meta name="docsearch:package_type" content="" />
@@ -13,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -34,9 +38,7 @@
 <!-- pageheader -->
 
 <div class="logo">
-<a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
-    <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
-</a>
+    <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
 </div>
 <!-- /pageheader -->
             </div>
@@ -137,10 +139,10 @@
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
 <!-- body -->
-    <div class="section" id="workflows">
+    <section id="workflows">
 <h1>Workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h1>
 <p>About workflows (GitHub Actions).</p>
-<div class="section" id="continous-integration-ci-workflow">
+<section id="continous-integration-ci-workflow">
 <h2>Continous Integration (CI) workflow<a class="headerlink" href="#continous-integration-ci-workflow" title="Permalink to this headline">¶</a></h2>
 <p><cite>.github/workflows/CI.yml</cite></p>
 <p>The “Continous Integration” (CI) workflow does all the work. It is triggered by
@@ -167,7 +169,7 @@ access”.</p>
 <p>Make sure to only merge pull-requests when job <strong>passed-all-tests</strong>
 succeeds.</p>
 </div>
-<div class="section" id="jobs-in-the-workflow">
+<section id="jobs-in-the-workflow">
 <h3>Jobs in the workflow<a class="headerlink" href="#jobs-in-the-workflow" title="Permalink to this headline">¶</a></h3>
 <dl>
 <dt>some-context-vars</dt><dd><p>A quick display of some context variables.</p>
@@ -216,9 +218,9 @@ delivery network.</p>
 and provides the rendering of some TYPO3 manuals for download.</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="uploads-to-the-cdn">
+</section>
+</section>
+<section id="uploads-to-the-cdn">
 <h2>Uploads to the CDN<a class="headerlink" href="#uploads-to-the-cdn" title="Permalink to this headline">¶</a></h2>
 <p>The static theme data of each release on PyPi will automatically be uploaded to
 the TYPO3 content delivery network (CDN). The general url is:</p>
@@ -226,15 +228,15 @@ the TYPO3 content delivery network (CDN). The general url is:</p>
 </pre></div>
 </div>
 <p>For example, to access <cite>4.3.2</cite> data, write:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">typo3</span><span class="o">.</span><span class="n">azureedge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">typo3documentation</span><span class="o">/</span><span class="n">theme</span><span class="o">/</span><span class="n">sphinx_typo3_theme</span><span class="o">/</span><span class="mf">4.3</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="n">css</span><span class="o">/</span><span class="n">theme</span><span class="o">.</span><span class="n">css</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">typo3</span><span class="o">.</span><span class="n">azureedge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">typo3documentation</span><span class="o">/</span><span class="n">theme</span><span class="o">/</span><span class="n">sphinx_typo3_theme</span><span class="o">/</span><span class="mf">4.3.2</span><span class="o">/</span><span class="n">css</span><span class="o">/</span><span class="n">theme</span><span class="o">.</span><span class="n">css</span>
 </pre></div>
 </div>
 <p>To access the latest version insert ‘master’ for ‘branch’:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">typo3</span><span class="o">.</span><span class="n">azureedge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">typo3documentation</span><span class="o">/</span><span class="n">theme</span><span class="o">/</span><span class="n">sphinx_typo3_theme</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">css</span><span class="o">/</span><span class="n">theme</span><span class="o">.</span><span class="n">css</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 <!-- /body -->
                             </div>
@@ -307,6 +309,7 @@ the TYPO3 content delivery network (CDN). The general url is:</p>
     <script type="text/javascript" src="_static/language_data.js"></script>
     <script type="text/javascript" src="_static/js/searchtools.min.js"></script>
     <script type="text/javascript" src="_static/js/autocomplete.min.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script type="text/javascript">
         jQuery(function() { Search.loadIndex("searchindex.js"); });
     </script>
