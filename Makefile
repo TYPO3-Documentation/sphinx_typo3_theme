@@ -36,7 +36,8 @@ Compile frontend changes:
 Build, import from package, test, render the repo docs and open in browser:
    make install test-import docs
 
-See grunt help for more grunt commands:
+Currently we are using Grunt. We may switch to Gulp in future.
+See Grunt help for available grunt commands:
    grunt --help
 """)
 endef
