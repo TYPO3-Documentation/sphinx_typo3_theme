@@ -76,6 +76,22 @@ module.exports = function (grunt) {
             dest: 'sphinx_typo3_theme/static/js/bootstrap.min.js'
           }
         ]
+      },
+      clickdummy: {
+        files: [
+          {
+            expand: true,
+            cwd: 'clickdummy/webroot',
+            src: ['**/*'],
+            dest: 'GENERATED/'
+          },
+          {
+            expand: true,
+            cwd: 'sphinx_typo3_theme/static',
+            src: ['**/*'],
+            dest: 'GENERATED/static/'
+          },
+        ]
       }
     },
 
@@ -218,6 +234,7 @@ module.exports = function (grunt) {
       css: ['sphinx_typo3_theme/static/css'],
       fonts: ['sphinx_typo3_theme/static/fonts'],
       js: ['sphinx_typo3_theme/static/js'],
+      clickdummy: ['GENERATED/**/*'],
     },
 
     // watch
@@ -258,7 +275,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-sass');git
   grunt.loadNpmTasks('grunt-stylelint');
 
   /**
@@ -266,8 +283,9 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('update', ['copy', 'modernizr']);
   grunt.registerTask('js', ['uglify']);
-  grunt.registerTask('default', ['clean', 'update', 'stylelint', 'sass', 'js', 'removesourcemap']);
+  grunt.registerTask('default', ['clean', 'update', 'stylelint', 'sass', 'js', 'removesourcemap', 'copyclickdummy']);
   grunt.registerTask('frontend', ['default']);
   grunt.registerTask('build', ['default', 'exec']);
   grunt.registerTask('render', ['clean:build', 'exec']);
+  grunt.registerTask('copyclickdummy', ['copy:clickdummy']);
 };
