@@ -266,9 +266,9 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
 
-"TYPO3CMS-Guide-HowToDocument@github:TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument":
+"TYPO3CMS-Guide-HowToDocument@https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument/archive/refs/heads/master.tar.gz":
   version "0.0.0"
-  resolved "https://codeload.github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument/tar.gz/5880f5b16d83820b22114d5fb05ecd5ae07e6cc9"
+  resolved "https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument/archive/refs/heads/master.tar.gz#cdacce0dc11ef93a67c61b25fe287aefc9adbf08"
 
 abbrev@1:
   version "1.1.1"
@@ -3855,6 +3855,10 @@ svg-tags@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
+
+"t3SphinxThemeRtdDemoDocs@https://github.com/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/archive/refs/heads/master.tar.gz":
+  version "0.0.0"
+  resolved "https://github.com/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/archive/refs/heads/master.tar.gz#91fb490ea34113be8f054ec3143b18bd3e094752"
 
 table@^5.4.6:
   version "5.4.6"
