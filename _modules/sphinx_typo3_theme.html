@@ -33,9 +33,25 @@
         <div class="page-header">
             <div class="page-header-inner">
 <!-- pageheader -->
+<div class="row">
+<div class="col-sm-6 col-lg-7">
 
 <div class="logo">
     <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+</div>
+</div>
+<div class="col-sm-6 col-lg-5">
+<div role="search">
+    <form id="global-search-form" action="/search/search" method="get">
+        <div class="input-group mb-3 mt-sm-3">
+            <input id="globalsearchinput" type="text" class="form-control shadow-none" name="q"
+                   placeholder="Search in TYPO3 documentation" value="" autocomplete="off">
+            <div class="input-group-append">
+                <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i>&nbsp;Search</button>
+            </div>
+        </div>
+    </form>
+</div>
 </div>
 <!-- /pageheader -->
             </div>
@@ -67,7 +83,7 @@
 <!-- /searchbox.html -->
                             <div class="toc" role="navigation" aria-label="main navigation">
 <!-- menu -->
-                                        <p class="caption"><span class="caption-text">Contents:</span></p>
+                                        <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
@@ -127,7 +143,7 @@
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">.static._version_GENERATED</span> <span class="kn">import</span> <span class="n">version</span> <span class="k">as</span> <span class="n">__version__</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;99.88.77&#39;</span>
+    <span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;99.88.77&quot;</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">.static._version_info_GENERATED</span> <span class="kn">import</span> <span class="n">version_info</span>
@@ -144,13 +160,13 @@
 <div class="viewcode-block" id="get_theme_mtime"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.get_theme_mtime">[docs]</a><span class="k">def</span> <span class="nf">get_theme_mtime</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Return the timestamp of the build as integer.&quot;&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">version_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;build_mtime&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></div>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">version_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;build_mtime&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="get_theme_name"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.get_theme_name">[docs]</a><span class="k">def</span> <span class="nf">get_theme_name</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Return the name of the theme.&quot;&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="n">version_info</span><span class="p">[</span><span class="s1">&#39;module_name&#39;</span><span class="p">]</span></div>
+    <span class="k">return</span> <span class="n">version_info</span><span class="p">[</span><span class="s2">&quot;module_name&quot;</span><span class="p">]</span></div>
 
 
 <div class="viewcode-block" id="update_context"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.update_context">[docs]</a><span class="k">def</span> <span class="nf">update_context</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">pagename</span><span class="p">,</span> <span class="n">templatename</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">doctree</span><span class="p">):</span>
@@ -172,14 +188,14 @@
 <span class="sd">    `page.html`.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;theme_version&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">__version__</span>
-    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pagename</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;template&#39;</span><span class="p">)</span></div>
+    <span class="n">context</span><span class="p">[</span><span class="s2">&quot;theme_version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">__version__</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pagename</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="setup"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Setup functionality called by Sphinx&quot;&quot;&quot;</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;html-page-context&#39;</span><span class="p">,</span> <span class="n">update_context</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s1">&#39;add_html_theme&#39;</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;html-page-context&quot;</span><span class="p">,</span> <span class="n">update_context</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s2">&quot;add_html_theme&quot;</span><span class="p">):</span>
         <span class="n">theme_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
         <span class="n">app</span><span class="o">.</span><span class="n">add_html_theme</span><span class="p">(</span><span class="s2">&quot;sphinx_typo3_theme&quot;</span><span class="p">,</span> <span class="n">theme_path</span><span class="p">)</span>
     <span class="c1"># unconfirmed: just assuming that parallel_write_safe is ok</span>
