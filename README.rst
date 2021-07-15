@@ -14,6 +14,11 @@ Sphinx TYPO3 theme for docs.typo3.org
    :alt: CI
    :target: https://github.com/TYPO3-Documentation/sphinx_typo3_theme/actions?query=workflow%3ACI
 
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Badge: Using 'black' style for Python code
+
+
 .. BADGES_END
 
 Sphinx TYPO3 theme contains all files required to build a Sphinx extension that

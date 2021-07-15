@@ -1,0 +1,16 @@
+
+# With version >= Git 2.23
+# List the full 40 character hash for all commits that are to be ignored
+# when doing 'git blame'. We have marked them in the commit
+# message as: [git-blame-ignore] Message...
+
+# Example:
+#    git blame setup.py --ignore-revs-file .git-blame-ignore-revs
+#
+# Configure as default:
+#    git config blame.ignoreRevsFile .git-blame-ignore-revs
+#
+# See:
+#    https://black.readthedocs.io/en/stable/guides/introducing_black_to_your_project.html?highlight=blame#avoiding-ruining-git-blame
+
+d6430dd3e9a827fa8d8b2ffb72faf400ad8bb243

@@ -27,13 +27,17 @@ print("""
 Start with the installation of Python and Node modules:
    make setup
 
+Rebuild all (frontend and Sphinx extension):
+   make all
+
 Compile frontend changes:
-   make frontend
+   make clean-frontend frontend
 
 Build, import from package, test, render the repo docs and open in browser:
    make install test-import docs
 
-See grunt help for more grunt commands:
+Currently we are using Grunt. We may switch to Gulp in future.
+See Grunt help for available grunt commands:
    grunt --help
 """)
 endef
@@ -47,12 +51,16 @@ help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
 
+.PHONY: all
+all: clean-frontend clean frontend build-sphinx-extension ## Clean all, build all
+
+
 .PHONY: build
-build: clean build-project ## Build all, except frontend
+build: clean build-sphinx-extension ## Clean and build all, except frontend
 
 
-.PHONY: build-project
-build-project: clean-project ##- Build Sphinx extension
+.PHONY: build-sphinx-extension
+build-sphinx-extension: clean-project ## Build Sphinx extension
 	python setup.py sdist
 	python setup.py bdist_wheel
 	ls -l dist
@@ -166,7 +174,7 @@ servedocs: docs ##- Redo 'docs' and watch for changes (=make sd)
 
 
 .PHONY: setup
-setup: setup-python setup-frontend ## Setup all
+setup: setup-python setup-frontend ## Setup all (Python and Npm modules)
 
 
 .PHONY: setup-frontend
