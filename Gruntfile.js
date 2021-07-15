@@ -2,7 +2,7 @@ const path = require('path');
 const sass = require('node-sass');
 
 module.exports = function (grunt) {
-  "use strict";
+
   /**
    * Grunt task to remove source map comment
    */
@@ -18,9 +18,7 @@ module.exports = function (grunt) {
         grunt.file.write(file.dest, content);
         grunt.log.success('Source file "' + filepath + '" was processed.');
         counter++;
-        if (counter >= files.length) {
-          done(true);
-        }
+        if (counter >= files.length) done(true);
       });
     });
   });
@@ -77,22 +75,6 @@ module.exports = function (grunt) {
             src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
             dest: 'sphinx_typo3_theme/static/js/bootstrap.min.js'
           }
-        ]
-      },
-      clickdummy: {
-        files: [
-          {
-            expand: true,
-            cwd: 'clickdummy/webroot',
-            src: ['**/*'],
-            dest: 'GENERATED/'
-          },
-          {
-            expand: true,
-            cwd: 'sphinx_typo3_theme/static',
-            src: ['**/*'],
-            dest: 'GENERATED/static/'
-          },
         ]
       }
     },
@@ -206,92 +188,26 @@ module.exports = function (grunt) {
 
     // exec
     exec: {
-      build_sphinx_1_online: {
+      build_sphinx: {
         command: () => {
-          var systemSpecific = '';
+          systemSpecific = '';
           switch (process.platform) {
             case 'linux':
               systemSpecific = '--user=$(id -u):$(id -g) ';
               break;
           }
-          var cmdstr = 'docker run --rm '
+          command = 'docker run --rm '
             + systemSpecific
             + '--volume ' + path.resolve((grunt.option('source') ? grunt.option('source') : './node_modules/TYPO3CMS-Guide-HowToDocument')) + ':/PROJECT/:ro '
             + '--volume ' + path.resolve('./config') + ':/CONFIG/:ro '
             + '--volume ' + path.resolve('./build') + ':/RESULT/ '
-            + '--volume ' + path.resolve('./dist') + ':/WHEELS/ '
+            + '--volume ' + path.resolve('./sphinx_typo3_theme') + ':/ALL/userhome/.local/share/virtualenvs/venv-y0waPz_e/lib/python2.7/site-packages/sphinx_typo3_theme:ro '
             + 't3docs/render-documentation makehtml '
             + '-c make_latex 0 '
             + '-c make_singlehtml 0 '
             + '-c jobfile /CONFIG/jobfile-online.json '
-            + ';';
-          return cmdstr;
-        }
-      },
-      build_sphinx_1_offline: {
-        command: () => {
-          var systemSpecific = '';
-          switch (process.platform) {
-            case 'linux':
-              systemSpecific = '--user=$(id -u):$(id -g) ';
-              break;
-          }
-          var cmdstr = 'docker run --rm '
-            + systemSpecific
-            + '--volume ' + path.resolve((grunt.option('source') ? grunt.option('source') : './node_modules/TYPO3CMS-Guide-HowToDocument')) + ':/PROJECT/:ro '
-            + '--volume ' + path.resolve('./config') + ':/CONFIG/:ro '
-            + '--volume ' + path.resolve('./build') + ':/RESULT/ '
-            + '--volume ' + path.resolve('./dist') + ':/WHEELS/ '
-            + 't3docs/render-documentation makehtml '
-            + '-c make_latex 0 '
-            + '-c make_singlehtml 0 '
-            + '-c jobfile /CONFIG/jobfile-offline.json '
-            + ';';
-          return cmdstr;
-        }
-      },
-      build_sphinx_2_online: {
-        command: () => {
-          var systemSpecific = '';
-          switch (process.platform) {
-            case 'linux':
-              systemSpecific = '--user=$(id -u):$(id -g) ';
-              break;
-          }
-          var cmdstr = 'docker run --rm '
-            + systemSpecific
-            + '--volume ' + path.resolve((grunt.option('source') ? grunt.option('source') : './node_modules/t3SphinxThemeRtdDemoDocs')) + ':/PROJECT/:ro '
-            + '--volume ' + path.resolve('./config') + ':/CONFIG/:ro '
-            + '--volume ' + path.resolve('./build') + ':/RESULT/ '
-            + '--volume ' + path.resolve('./dist') + ':/WHEELS/ '
-            + 't3docs/render-documentation makehtml '
-            + '-c make_latex 0 '
-            + '-c make_singlehtml 0 '
-            + '-c jobfile /CONFIG/jobfile-online.json '
-            + ';';
-          return cmdstr;
-        }
-      },
-      build_sphinx_2_offline: {
-        command: () => {
-          var systemSpecific = '';
-          switch (process.platform) {
-            case 'linux':
-              systemSpecific = '--user=$(id -u):$(id -g) ';
-              break;
-          }
-          var cmdstr = 'docker run --rm '
-            + systemSpecific
-            + '--volume ' + path.resolve((grunt.option('source') ? grunt.option('source') : './node_modules/t3SphinxThemeRtdDemoDocs')) + ':/PROJECT/:ro '
-            + '--volume ' + path.resolve('./config') + ':/CONFIG/:ro '
-            + '--volume ' + path.resolve('./build') + ':/RESULT/ '
-            + '--volume ' + path.resolve('./dist') + ':/WHEELS/ '
-            + 't3docs/render-documentation makehtml '
-            + '-c make_latex 0 '
-            + '-c make_singlehtml 0 '
-            + '-c jobfile /CONFIG/jobfile-offline.json '
-            + ';';
-          return cmdstr;
+            + ';'
+          return command;
         }
       }
     },
@@ -302,7 +218,6 @@ module.exports = function (grunt) {
       css: ['sphinx_typo3_theme/static/css'],
       fonts: ['sphinx_typo3_theme/static/fonts'],
       js: ['sphinx_typo3_theme/static/js'],
-      clickdummy: ['GENERATED/**/*'],
     },
 
     // watch
@@ -351,12 +266,8 @@ module.exports = function (grunt) {
    */
   grunt.registerTask('update', ['copy', 'modernizr']);
   grunt.registerTask('js', ['uglify']);
-  grunt.registerTask('default', ['clean', 'update', 'stylelint', 'sass', 'js', 'removesourcemap', 'copyclickdummy']);
+  grunt.registerTask('default', ['clean', 'update', 'stylelint', 'sass', 'js', 'removesourcemap']);
   grunt.registerTask('frontend', ['default']);
   grunt.registerTask('build', ['default', 'exec']);
-  grunt.registerTask('render1online', ['clean:build', 'exec:build_sphinx_1_online']);
-  grunt.registerTask('render1offline', ['clean:build', 'exec:build_sphinx_1_offline']);
-  grunt.registerTask('render2online', ['clean:build', 'exec:build_sphinx_2_online']);
-  grunt.registerTask('render2offline', ['clean:build', 'exec:build_sphinx_2_offline']);
-  grunt.registerTask('copyclickdummy', ['copy:clickdummy']);
+  grunt.registerTask('render', ['clean:build', 'exec']);
 };

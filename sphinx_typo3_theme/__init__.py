@@ -5,7 +5,7 @@ import os
 try:
     from .static._version_GENERATED import version as __version__
 except ImportError:
-    __version__ = "99.88.77"
+    __version__ = '99.88.77'
 
 try:
     from .static._version_info_GENERATED import version_info
@@ -22,13 +22,13 @@ def get_html_theme_path():
 def get_theme_mtime():
     """Return the timestamp of the build as integer."""
 
-    return int(version_info.get("build_mtime", 0))
+    return int(version_info.get('build_mtime', 0))
 
 
 def get_theme_name():
     """Return the name of the theme."""
 
-    return version_info["module_name"]
+    return version_info['module_name']
 
 
 def update_context(app, pagename, templatename, context, doctree):
@@ -50,14 +50,14 @@ def update_context(app, pagename, templatename, context, doctree):
     `page.html`.
 
     """
-    context["theme_version"] = __version__
-    return app.builder.env.metadata.get(pagename, {}).get("template")
+    context['theme_version'] = __version__
+    return app.builder.env.metadata.get(pagename, {}).get('template')
 
 
 def setup(app):
     """Setup functionality called by Sphinx"""
-    app.connect("html-page-context", update_context)
-    if hasattr(app, "add_html_theme"):
+    app.connect('html-page-context', update_context)
+    if hasattr(app, 'add_html_theme'):
         theme_path = os.path.abspath(os.path.dirname(__file__))
         app.add_html_theme("sphinx_typo3_theme", theme_path)
     # unconfirmed: just assuming that parallel_write_safe is ok

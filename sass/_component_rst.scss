@@ -208,7 +208,8 @@
             background-color: theme-color('light');
             color: color-yiq(theme-color('light'));
         }
-        .descname {
+        tt,
+        code {
             background-color: transparent;
             border: none;
             padding: 0;
