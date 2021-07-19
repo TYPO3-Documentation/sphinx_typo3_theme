@@ -5,7 +5,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@fortawesome/fontawesome-free": "^5.13.0",
-		"TYPO3CMS-Guide-HowToDocument": "https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument/archive/refs/heads/master.tar.gz",
+		"TYPO3CMS-Guide-HowToDocument": "github:TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument",
 		"autocompleter": "^6.0.3",
 		"bootstrap": "^4.4.1",
 		"connect-livereload": "^0.6.1",
@@ -24,7 +24,6 @@
 		"node-sass": "^4.14.0",
 		"popper.js": "^1.16.1",
 		"stylelint": "^13.3.3",
-		"t3SphinxThemeRtdDemoDocs": "https://github.com/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/archive/refs/heads/master.tar.gz",
 		"underscore": "^1.12.1"
 	},
 	"scripts": {

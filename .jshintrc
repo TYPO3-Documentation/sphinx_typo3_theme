@@ -37,7 +37,6 @@
   "maxstatements" : false,    // {int} Max number statements per function
   "maxcomplexity" : false,    // {int} Max cyclomatic complexity per function
   "maxlen"        : false,    // {int} Max number of characters per line
-  "-W014"         : true,     // Bad line breaking before 'X'.
   "varstmt"       : false,    // true: Disallow any var statements. Only `let` and `const` are allowed.
 
   // Relaxing
