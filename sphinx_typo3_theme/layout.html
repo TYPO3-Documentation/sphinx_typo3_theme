@@ -135,15 +135,19 @@
 </div>
 <div class="col-sm-6 col-lg-5">
 <div role="search">
+    {%- if theme_docstypo3org %}
     <form id="global-search-form" action="/search/search" method="get">
         <div class="input-group mb-3 mt-sm-3">
             <input id="globalsearchinput" type="text" class="form-control shadow-none" name="q"
-                   placeholder="Search in TYPO3 documentation" value="" autocomplete="off">
+                   placeholder="Search all TYPO3 documentation" value="" autocomplete="off">
             <div class="input-group-append">
                 <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i>&nbsp;Search</button>
             </div>
         </div>
     </form>
+    {%- else %}
+    <!-- global-search-form -->
+    {%- endif %}
 </div>
 </div>
 {%- endblock %}
