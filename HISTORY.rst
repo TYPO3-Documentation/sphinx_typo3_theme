@@ -3,6 +3,18 @@ History
 =======
 
 
+4.6.0 (2021-07-19)
+==================
+
+*  Add global search to page template
+*  Rearrange ux buttons "Edit on GitHub" and so on
+*  Fix css in pr#133
+*  Improve Gruntfile.js, Makefile, .jshintrc
+*  Introduce .git-blame-ignore-revs
+*  Introduce 'black' code formatter
+*  Add 'black' badge to README.rst
+
+
 4.5.2 (2021-03-26)
 ==================
 
