@@ -2,6 +2,12 @@
 History
 =======
 
+4.6.1 (2021-07-21)
+==================
+
+*  [BUGFIX] Fix broken layout.html
+*  Add theme variable (theme_)global_search_action
+
 
 4.6.0 (2021-07-19)
 ==================
