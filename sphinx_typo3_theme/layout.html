@@ -110,47 +110,52 @@
 
         <div class="page-header">
             <div class="page-header-inner">
-<!-- pageheader -->
+<!--block pageheader-->
 {%- block pageheader %}
 <div class="row">
-<div class="col-sm-6 col-lg-7">
-{%- if logo and logo != 'None' %}
+    <div class="col-sm-6 col-lg-7">
+        {%- if logo and logo != 'None' %}
 
-<div class="logo">
-{%- if logo_url %}
-<a href="{{ logo_url }}" {% if logo_title %}title="{{ logo_title|e }}" {% endif %}>
-{%- endif %}
+        <div class="logo">
+        {%- if logo_url %}
+        <a href="{{ logo_url }}" {% if logo_title %}title="{{ logo_title|e }}" {% endif %}>
+        {%- endif %}
 
-    <img src="{{ pathto('_static/' + logo, 1) }}"
-         {%- if logo_width %} width="{{ logo_width|e }}"{% endif %}
-         {%- if logo_height %} height="{{ logo_height|e }}"{% endif %}
-         {%- if logo_alt %} alt="{{ logo_alt|e }}"{% endif %}
-         {%- if logo_title and not logo_url %} title="{{ logo_title|e }}"{% endif %}
-         {%- if 1 %} class="logo-image" />{% endif %}
+            <img src="{{ pathto('_static/' + logo, 1) }}"
+                 {%- if logo_width %} width="{{ logo_width|e }}"{% endif %}
+                 {%- if logo_height %} height="{{ logo_height|e }}"{% endif %}
+                 {%- if logo_alt %} alt="{{ logo_alt|e }}"{% endif %}
+                 {%- if logo_title and not logo_url %} title="{{ logo_title|e }}"{% endif %}
+                 {%- if 1 %} class="logo-image" />{% endif %}
 
-{%- if logo_url %}
-</a>
-{%- endif %}
-</div>
-
-{%- endif %}
-</div>
-<div class="col-sm-6 col-lg-5">
-<div role="search">
-    <form id="rtd-search-form" class="wy-form" action="/search/search" method="get">
-        <div class="input-group mb-3 mt-sm-3">
-            <input type="text" class="form-control shadow-none" name="q" autocomplete="off" placeholder="Search in TYPO3 documentation" id="searchinput" value="">
-            <div class="input-group-append">
-                <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i>&nbsp;Search</button>
-            </div>
+        {%- if logo_url %}
+        </a>
+        {%- endif %}
         </div>
-    </form>
-</div>
-</div>
+
+        {%- endif %}
+    </div><!--/.col-sm-6 .col-lg-7-->
+    <div class="col-sm-6 col-lg-5">
+        <div role="search">
+            {% if theme_docstypo3org -%}
+            <form id="rtd-search-form" class="wy-form" action="/search/search" method="get">
+                <div class="input-group mb-3 mt-sm-3">
+                    <input type="text" class="form-control shadow-none" name="q" autocomplete="off" placeholder="Search in TYPO3 documentation" id="searchinput" value="">
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i>&nbsp;Search</button>
+                    </div>
+                </div>
+            </form>
+            {%- else %}
+            <!--form global search-->
+            {%- endif %}
+        </div>
+    </div><!--/.col-sm-6 .col-lg-5-->
+</div><!--/.row-->
 {%- endblock %}
-<!-- /pageheader -->
-            </div>
-        </div>
+<!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-inner-->
 
         {% if theme_docstypo3org -%}
             <!--# include virtual="/includes/header.html" -->
