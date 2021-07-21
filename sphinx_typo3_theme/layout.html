@@ -134,13 +134,13 @@
         </div>
 
         {%- endif %}
-    </div><!--/.col-sm-6 .col-lg-7-->
+    </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
         <div role="search">
             {% if theme_docstypo3org -%}
-            <form id="rtd-search-form" class="wy-form" action="/search/search" method="get">
+            <form id="global-search-form" action="/search/search" method="get">
                 <div class="input-group mb-3 mt-sm-3">
-                    <input type="text" class="form-control shadow-none" name="q" autocomplete="off" placeholder="Search in TYPO3 documentation" id="searchinput" value="">
+                    <input type="text" class="form-control shadow-none" name="q" autocomplete="off" placeholder="Search all TYPO3 documentation" id="searchinput" value="">
                     <div class="input-group-append">
                         <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i>&nbsp;Search</button>
                     </div>
@@ -150,7 +150,7 @@
             <!--form global search-->
             {%- endif %}
         </div>
-    </div><!--/.col-sm-6 .col-lg-5-->
+    </div><!--/.col-x-->
 </div><!--/.row-->
 {%- endblock %}
 <!--/block pageheader-->
