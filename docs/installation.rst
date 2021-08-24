@@ -35,7 +35,7 @@ you through the process.
 
    .. code-block:: console
 
-       $ git clone git://github.com/typo3-documentation/sphinx_typo3_theme
+       $ git clone git@github.com:typo3-documentation/sphinx_typo3_theme
 
    Or download the `tarball`_:
 
