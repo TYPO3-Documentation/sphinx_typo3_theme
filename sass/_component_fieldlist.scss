@@ -16,19 +16,20 @@
 .rst-content dl.field-list {
     display: grid;
     grid-template-columns: fit-content(30%) auto;
-    & > dt {
+    dt {
         font-weight: bold;
         word-break: break-word;
         padding-left: 0;
         padding-right: .5em;
+        margin-bottom: $spacer * .5;
     }
     & > dt:after {
         content: ":";
     }
-    & > dd {
+    dd {
         padding-left: .5em;
         margin-top: 0;
         margin-left: 0;
-        margin-bottom: 0;
+        margin-bottom: $spacer * .5;
     }
 }
