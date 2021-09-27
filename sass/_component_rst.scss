@@ -81,6 +81,10 @@
             }
         }
     }
+    // https://github.com/TYPO3-Documentation/sphinx_typo3_theme/issues/144
+    li > p {
+        margin: 0;
+    }
 
     /**
      * Keyboard Shortcuts
