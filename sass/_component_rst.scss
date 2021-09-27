@@ -191,7 +191,7 @@
             margin: 0 0 $spacer ($spacer * 2);
         }
     }
-    dl:not(.docutils) {
+    dl:not(.docutils):not(.field-list) {
         margin-bottom: $spacer;
         dt {
             display: inline-block;
