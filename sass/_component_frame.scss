@@ -46,6 +46,8 @@ $frame-backgrounds: map-merge(
 .frame-container {
     position: relative;
     @include make-container();
+    // about the deprecation messag of next line, see
+    // https://blog.getbootstrap.com/2020/08/06/bootstrap-4-5-2/
     @include make-container-max-widths();
 }
 
