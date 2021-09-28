@@ -14,9 +14,12 @@ ul[class*="horizbuttons-"] {
         border-radius: $border-radius;
         display: inline;
         padding: ($spacer / 4) ($spacer / 2);
-        > a {
+        a {
             color: inherit;
             font-weight: bold;
+        }
+        p {
+            display: inline;
         }
     }
     &[class*="-xxxl"] {
