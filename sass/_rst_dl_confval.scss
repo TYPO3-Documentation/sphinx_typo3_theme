@@ -5,18 +5,15 @@
 $confval-bg: hsl(hue($warning), 50%, 92.9%);
 $confval-dt-bg: hsl(hue($warning), 50%, 85%);
 $confval-dt-border: hsl(hue($warning), 50%, 50%);
-
 .rst-content {
     dl.std.confval {
         background-color: $confval-bg;
         border-radius: $border-radius;
         margin-bottom: $spacer * 1.5;
         padding-bottom: $spacer * .3;
-
         .descname {
             color: $code-color;
         }
-
         & > dt {
             background-color: $confval-dt-bg;
             border-radius: $border-radius;
