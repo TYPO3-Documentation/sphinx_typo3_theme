@@ -1,0 +1,13 @@
+4.7.dev1
+
+Keep version number like above in files:
+
+*  First line in this file
+*  setup.py
+*  sphinx_typo3_theme/__init__.py
+
+See also:
+   `PEP 440 -- Version Identification and Dependency Specification
+    <https://www.python.org/dev/peps/pep-0440/>`__
+
+End of text.
