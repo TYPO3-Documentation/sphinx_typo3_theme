@@ -26,8 +26,10 @@
 @import "component_horizbuttons";
 @import "component_search";
 @import "component_panel";
-@import "component_fieldlist";
-@import "component_definitionlists";
+@import "rst_dl_fieldlist";
+@import "rst_dl_confval";
+@import "rst_dl_sphinxcontrib_phpdomain";
+@import "rst_sphinx_tabs";
 
 // misc
 @import "utilities";

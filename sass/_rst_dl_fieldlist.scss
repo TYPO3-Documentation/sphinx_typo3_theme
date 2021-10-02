@@ -1,21 +1,29 @@
+//
+// Field lists
+//
+
 .rst-content .field-list {
     p {
         margin: 0;
     }
+
     ul {
         margin: 0;
         padding-left: 1em;
     }
 }
+
 .rst-content .field-name {
     -moz-hyphens: manual;
     -ms-hyphens: manual;
     -webkit-hyphens: manual;
     hyphens: manual;
 }
+
 .rst-content dl.field-list {
     display: grid;
     grid-template-columns: fit-content(30%) auto;
+
     dt {
         font-weight: bold;
         word-break: break-word;
@@ -23,9 +31,11 @@
         padding-right: .5em;
         margin-bottom: $spacer * .5;
     }
+
     & > dt:after {
         content: ":";
     }
+
     dd {
         padding-left: .5em;
         margin-top: 0;
