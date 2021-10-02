@@ -43,16 +43,18 @@
 {%- if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
 {%- endif %}
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/' + style, 1) }}" />
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/webfonts.css', 1) }}" />
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/fontawesome.css', 1) }}" />
 {%- for css in css_files %}
-  {%- if css|attr("filename") %}
+  {%- if css|string not in ['_static/css/theme.css', '_static/css/fontawesome.css', '_static/css/webfonts.css'] %}
+    {%- if css|attr("filename") %}
     {{ css_tag(css) }}
-  {%- else %}
+    {%- else %}
     <link rel="stylesheet" type="text/css" href="{{ pathto(css, 1) }}" />
+    {%- endif %}
   {%- endif %}
 {%- endfor %}
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/fontawesome.css', 1) }}" />
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/webfonts.css', 1) }}" />
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/' + style, 1) }}" />
 <!-- linktags -->
 {%- block linktags %}
   {%- if hasdoc('about') %}
