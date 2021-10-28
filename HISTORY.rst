@@ -2,6 +2,13 @@
 History
 =======
 
+4.7.dev2 (2021-10-28)
+=====================
+
+*  [FEATURE] Add displaysettingsui panel
+*  Mention DRC with link in footer
+
+
 4.6.1 (2021-07-21)
 ==================
 
