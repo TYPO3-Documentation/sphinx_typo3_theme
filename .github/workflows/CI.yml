@@ -444,4 +444,3 @@ jobs:
         with:
           name: ${{ matrix.manual[0] }} (TYPO3 rendering example, mode ${{ matrix.mode }})
           path: ./Documentation-GENERATED-temp/Result/project/0.0.0
-
