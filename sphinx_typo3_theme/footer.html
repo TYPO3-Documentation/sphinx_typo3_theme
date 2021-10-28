@@ -46,11 +46,12 @@
                     {%- if theme_show_last_updated and last_updated %}
                     <p class="text-center">Last rendered: {{ last_updated|e }}</p>
                     {%- endif %}
-                    <p class="text-center">
-                        <a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow" target="_blank">
-                            TYPO3 Theme {{ theme_version|e }}
-                        </a>
-                    </p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme at GitHub" target="_blank">
+                        <span>TYPO3 Theme {{ theme_version|e }}</span></a></li>
+                        <li><a href="https://github.com/t3docs/docker-render-documentation" title="DRC - Docker Rendering Container at GitHub" target="_blank">
+                        <span>DRC</span></a></li>
+                    </ul>
                 </div>
                 <div class="footer-meta">
                     {%- if theme_show_copyright %}

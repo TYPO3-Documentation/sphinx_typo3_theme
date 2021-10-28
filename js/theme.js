@@ -97,6 +97,24 @@ jQuery(document).ready(function () { 'use strict';
     versionOptions.appendChild(options);
   }
 
+  // Display settings FullWidth: value, checkbox, element
+  jQuery("#dsCogwheel" ).click(function() {
+    jQuery("#dsPanel" ).slideToggle();
+  });
+  var vFullWidth = sessionStorage.getItem('displaySettingsFullWidth') === 'true';
+  var cbFullWidth = document.querySelector('#cbFullWidth');
+  var elFullWidth = document.getElementsByClassName('page-main-inner')[0];
+  function adjustFullWidth(el, v) {
+    if (el) { el.style.width = !!v ? '99999px' : ''; }
+  }
+  adjustFullWidth(elFullWidth, vFullWidth);
+  if (!!cbFullWidth) { cbFullWidth.checked = vFullWidth; }
+  jQuery(cbFullWidth).change(function() {
+    var v = !!(cbFullWidth.checked);
+    sessionStorage.setItem('displaySettingsFullWidth', v.toString());
+    adjustFullWidth(elFullWidth, v);
+  });
+
   var versionNode = document.getElementById("toc-version");
   if (versionNode) {
     versionNode.addEventListener('click', function () {
