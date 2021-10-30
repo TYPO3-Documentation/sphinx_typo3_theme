@@ -101,19 +101,41 @@ jQuery(document).ready(function () { 'use strict';
   jQuery("#dsCogwheel" ).click(function() {
     jQuery("#dsPanel" ).slideToggle();
   });
-  var vFullWidth = sessionStorage.getItem('displaySettingsFullWidth') === 'true';
-  var cbFullWidth = document.querySelector('#cbFullWidth');
-  var elFullWidth = document.getElementsByClassName('page-main-inner')[0];
-  function adjustFullWidth(el, v) {
-    if (el) { el.style.width = !!v ? '99999px' : ''; }
+  var
+    vPermanent,
+    vFullWidth,
+    selectedStorage,
+    cbPermanent = document.querySelector('#cbPermanent'),
+    cbFullWidth = document.querySelector('#cbFullWidth'),
+    elFullWidth = document.getElementsByClassName('page-main-inner')[0]
+    ;
+  function dsLoad() {
+    vPermanent = localStorage.getItem('displaySettingsPermanent') === 'true';
+    selectedStorage = vPermanent ? localStorage : sessionStorage;
+    vFullWidth = selectedStorage.getItem('displaySettingsFullWidth') === 'true';
   }
-  adjustFullWidth(elFullWidth, vFullWidth);
-  if (!!cbFullWidth) { cbFullWidth.checked = vFullWidth; }
-  jQuery(cbFullWidth).change(function() {
-    var v = !!(cbFullWidth.checked);
-    sessionStorage.setItem('displaySettingsFullWidth', v.toString());
-    adjustFullWidth(elFullWidth, v);
+  function dsSet() {
+    if (elFullWidth) { elFullWidth.style.width = vFullWidth ? '99999px' : ''; }
+    if (cbPermanent) { cbPermanent.checked = vPermanent; }
+    if (cbFullWidth) { cbFullWidth.checked = vFullWidth; }
+  }
+  function dsSave() {
+    vPermanent = !! cbPermanent.checked;
+    vFullWidth = !! cbFullWidth.checked;
+    selectedStorage = vPermanent ? localStorage : sessionStorage;
+    selectedStorage.setItem('displaySettingsFullWidth', vFullWidth ? 'true' : 'false');
+    localStorage.setItem('displaySettingsPermanent', vPermanent ? 'true' : 'false');
+  }
+  jQuery(cbPermanent).change(function() {
+    dsSave();
+    dsSet();
   });
+  jQuery(cbFullWidth).change(function() {
+    dsSave();
+    dsSet();
+  });
+  dsLoad();
+  dsSet();
 
   var versionNode = document.getElementById("toc-version");
   if (versionNode) {
