@@ -3,84 +3,26 @@ History
 =======
 
 
-4.7.dev2 (2021-10-28)
+4.7.dev3 (2021-11-02)
 =====================
 
-*  [FEATURE] Add displaysettingsui panel
-*  Mention DRC with link in footer
-
-* 188eef9 2021-10-28 (HEAD -> develop) Say: Use full width martin.bless@mbless.de vor 79 Minuten
-* 7c3ae90 2021-10-28 Show OUR_IMAGE_VERSION as html_drc_version in footer martin.bless@mbless.de vor 83 Minuten
-* a52614e 2021-10-28 (origin/develop) Trigger rendering martin.bless@mbless.de vor 5 Stunden
-* 7f15fa3 2021-10-28 Update CI.yml martin.bless@mbless.de vor 5 Stunden
-* 988da0f 2021-10-28 v4.7.dev2 Update HISTORY.rst martin.bless@mbless.de vor 6 Stunden
-* b72be5d 2021-10-28 Add displaysettingsui, add DRC to footer martin.bless@mbless.de vor 6 Stunden
-* 0b73577 2021-10-28 Update CI.yml for 99.88.dev0 martin.bless@mbless.de vor 6 Stunden
-* d126ef0 2021-10-02 v4.7.dev1 Set version, buildall martin.bless@mbless.de vor 4 Wochen
-* 2790e34 2021-10-02 buildall martin.bless@mbless.de vor 4 Wochen
-* 76f29ee 2021-10-02 Style sphinx-tabs, phpdomain, confval, field-list martin.bless@mbless.de vor 4 Wochen
-* b10dd73 2021-10-02 Fix load order of css files martin.bless@mbless.de vor 4 Wochen
-* 0df5dbc 2021-10-02 Update pygments.scss martin.bless@mbless.de vor 4 Wochen
-* 72de007 2021-09-28 Buildall martin.bless@mbless.de vor 4 Wochen
-* 4352c25 2021-09-28 Add _component_definitionlists.scss martin.bless@mbless.de vor 4 Wochen
-* 8a43d4f 2021-09-28 Account for new <li><p> nesting in horizbuttons martin.bless@mbless.de vor 4 Wochen
-* 2a04603 2021-09-28 Disable overpowering style for <dl> martin.bless@mbless.de vor 4 Wochen
-* d051152 2021-09-27 Remove margins from <p> within <li> martin.bless@mbless.de vor 4 Wochen
-* 9df86b8 2021-09-27 Add comment about deprecation in scss martin.bless@mbless.de vor 4 Wochen
-* ee87eab 2021-09-27 Update _component_fieldlist.scss martin.bless@mbless.de vor 4 Wochen
-* 02bc80d 2021-09-27 Add Sass _component_fieldlist.scss martin.bless@mbless.de vor 4 Wochen
-* ed6b34d 2021-09-27 Improve Makefile martin.bless@mbless.de vor 4 Wochen
-* 4c4a641 2021-09-27 Add black to requirements_dev.txt martin.bless@mbless.de vor 4 Wochen
-* 53e4176 2021-09-27 Update classifiers in setup.py martin.bless@mbless.de vor 4 Wochen
-* 0afd35b 2021-09-16 Add comment line in template versionhints.html martin.bless@mbless.de vor 6 Wochen
-* b951678 2021-09-16 Use searchtools.js from Sphinx 4.2.0 martin.bless@mbless.de vor 6 Wochen
-* c7cde82 2021-09-16 Update theme.js, load versionhints.html if applicable martin.bless@mbless.de vor 6 Wochen
-* b20318b 2021-09-16 Include versionhints.html in layout.html martin.bless@mbless.de vor 6 Wochen
-* 848de4f 2021-09-16 Add jinja2 template file versionhints.html martin.bless@mbless.de vor 6 Wochen
-* ccf620f 2021-09-16 Add (empty) _static/ajax-version-hints.html martin.bless@mbless.de vor 6 Wochen
-* 9ff062b 2021-09-16 Upgrade all packages to current in yarn.lock martin.bless@mbless.de vor 6 Wochen
-* 169e488 2021-09-16 Use searchtools.js from Sphinx-4.1.2 martin.bless@mbless.de vor 6 Wochen
-:...skipping...
-* 188eef9 2021-10-28 (HEAD -> develop) Say: Use full width martin.bless@mbless.de vor 79 Minuten
-* 7c3ae90 2021-10-28 Show OUR_IMAGE_VERSION as html_drc_version in footer martin.bless@mbless.de vor 83 Minuten
-* a52614e 2021-10-28 (origin/develop) Trigger rendering martin.bless@mbless.de vor 5 Stunden
-* 7f15fa3 2021-10-28 Update CI.yml martin.bless@mbless.de vor 5 Stunden
-* 988da0f 2021-10-28 v4.7.dev2 Update HISTORY.rst martin.bless@mbless.de vor 6 Stunden
-* b72be5d 2021-10-28 Add displaysettingsui, add DRC to footer martin.bless@mbless.de vor 6 Stunden
-* 0b73577 2021-10-28 Update CI.yml for 99.88.dev0 martin.bless@mbless.de vor 6 Stunden
-* d126ef0 2021-10-02 v4.7.dev1 Set version, buildall martin.bless@mbless.de vor 4 Wochen
-* 2790e34 2021-10-02 buildall martin.bless@mbless.de vor 4 Wochen
-* 76f29ee 2021-10-02 Style sphinx-tabs, phpdomain, confval, field-list martin.bless@mbless.de vor 4 Wochen
-* b10dd73 2021-10-02 Fix load order of css files martin.bless@mbless.de vor 4 Wochen
-* 0df5dbc 2021-10-02 Update pygments.scss martin.bless@mbless.de vor 4 Wochen
-* 72de007 2021-09-28 Buildall martin.bless@mbless.de vor 4 Wochen
-* 4352c25 2021-09-28 Add _component_definitionlists.scss martin.bless@mbless.de vor 4 Wochen
-* 4352c25 2021-09-28 Add _component_definitionlists.scss martin.bless@mbless.de vor 4 Wochen
-* 8a43d4f 2021-09-28 Account for new <li><p> nesting in horizbuttons martin.bless@mbless.de vor 4 Wochen
-* 2a04603 2021-09-28 Disable overpowering style for <dl> martin.bless@mbless.de vor 4 Wochen
-* d051152 2021-09-27 Remove margins from <p> within <li> martin.bless@mbless.de vor 4 Wochen
-* 9df86b8 2021-09-27 Add comment about deprecation in scss martin.bless@mbless.de vor 4 Wochen
-* ee87eab 2021-09-27 Update _component_fieldlist.scss martin.bless@mbless.de vor 4 Wochen
-* 02bc80d 2021-09-27 Add Sass _component_fieldlist.scss martin.bless@mbless.de vor 4 Wochen
-* ed6b34d 2021-09-27 Improve Makefile martin.bless@mbless.de vor 4 Wochen
-* 4c4a641 2021-09-27 Add black to requirements_dev.txt martin.bless@mbless.de vor 4 Wochen
-* 53e4176 2021-09-27 Update classifiers in setup.py martin.bless@mbless.de vor 4 Wochen
-* 0afd35b 2021-09-16 Add comment line in template versionhints.html martin.bless@mbless.de vor 6 Wochen
-* b951678 2021-09-16 Use searchtools.js from Sphinx 4.2.0 martin.bless@mbless.de vor 6 Wochen
-* c7cde82 2021-09-16 Update theme.js, load versionhints.html if applicable martin.bless@mbless.de vor 6 Wochen
-* b20318b 2021-09-16 Include versionhints.html in layout.html martin.bless@mbless.de vor 6 Wochen
-* 848de4f 2021-09-16 Add jinja2 template file versionhints.html martin.bless@mbless.de vor 6 Wochen
-* ccf620f 2021-09-16 Add (empty) _static/ajax-version-hints.html martin.bless@mbless.de vor 6 Wochen
-* 9ff062b 2021-09-16 Upgrade all packages to current in yarn.lock martin.bless@mbless.de vor 6 Wochen
-* 169e488 2021-09-16 Use searchtools.js from Sphinx-4.1.2 martin.bless@mbless.de vor 6 Wochen
-* a253470 2021-09-16 Use language_data.js_t from Sphinx-4.1.2 martin.bless@mbless.de vor 6 Wochen
-* f38665c 2021-09-16 Use js/doctools.js from Sphinx-4.1.2 martin.bless@mbless.de vor 6 Wochen
-* 058508b 2021-09-16 Add _static/documentation_options.js_t from Sphinx-4.1.2 martin.bless@mbless.de vor 6 Wochen
-* 268f699 2021-09-14 Fix comment in HTML martin.bless@mbless.de vor 6 Wochen
-
-
-
-
+*  [FEATURE] Add displaysettingsui panel: Use full width, Make settings
+   permanent
+*  Mention DRC with link in footer, with DRC version
+*  Improve Makefile, add 'buildall' target in Makefile
+*  Style sphinx-tabs, phpdomain, confval, field-list
+*  [FIX] Fix load order of css files to have our theme.css at the end
+*  Update pygments.scss
+*  [EVOLVE] Account for new <li><p> nesting of latest Sphinx
+*  [EVOLVE] Disable overpowering style for <dl>
+*  [EVOLVE] Remove margins from <p> within <li>, produced by latest Sphinx
+*  Add 'black' to requirements_dev.txt
+*  Update classifiers in setup.py
+*  Add Javascript and html for 'versionhints'
+*  Use searchtools.js from Sphinx 4.2.0
+*  Update theme.js, load versionhints.html if applicable
+*  9ff062b 2021-09-16 Upgrade all packages to current in yarn.lock
+*  Use searchtools.js from Sphinx-4.1.2
 
 
 4.6.1 (2021-07-21)

@@ -5,7 +5,7 @@ import os
 try:
     from .static._version_GENERATED import version as __version__
 except ImportError:
-    __version__ = "4.7.dev2"
+    __version__ = "4.7.dev3"
 
 try:
     from .static._version_info_GENERATED import version_info
