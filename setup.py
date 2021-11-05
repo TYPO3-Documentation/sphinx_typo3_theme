@@ -16,7 +16,7 @@ from setuptools import setup
 PY3 = sys.version_info[0] >= 3
 setup_requirements = ["setuptools_scm"]
 test_requirements = []
-FALLBACK_VERSION = "4.7.dev3"
+FALLBACK_VERSION = "4.7.dev4"
 
 our_version_info_target_dir = "sphinx_typo3_theme/static"
 our_version_info_file_name = "_version_info_GENERATED"
