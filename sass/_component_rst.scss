@@ -48,6 +48,16 @@
         }
     }
 
+
+    /**
+     * Code block with caption
+     */
+    .literal-block-wrapper {
+        .code-block-caption {
+            font-size: $font-size-sm;
+        }
+    }
+
     /**
      * Literals
      */
