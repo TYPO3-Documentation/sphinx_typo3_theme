@@ -13,8 +13,19 @@
 <script type="text/javascript" src="extensions-search.js"></script>
 {% endblock -%}
 {% block body %}
-<div class="section">
-    <h2>Extension Manual Search</h2>
+
+<!-- extensions.html -->
+<p class="h1">Search</p>
+<div class="sphinx-bs container docutils">
+    <div class="row docutils">
+        <div class="d-flex col-12 padding-0-important docutils">
+            <div class="card w-100 docutils">
+                <div class="card-header bold-important docutils">
+                    <p class="card-text">Extension manual search</p>
+                </div>
+                <div class="card-body docutils">
+
+
     <form action="extensions.html" name="filter" id="extension_filter_form">
         <div class="b-form-row">
             <label style="">Search for extensions by key:</label>
@@ -25,6 +36,14 @@
     </form>
     <p id="search_results">Type at least three characters in the search field.</p>
     <div id="extension_list"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- /extensions.html -->
+
 {{ body }}
 {% endblock %}
