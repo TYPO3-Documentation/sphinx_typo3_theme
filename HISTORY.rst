@@ -3,6 +3,15 @@ History
 =======
 
 
+
+4.7.dev5 (2021-11-06)
+=====================
+
+*  Style caption of code-blocks
+*  Update template extensions.html
+*  Add generic classes bold-important, padding-0-important
+
+
 4.7.dev3 (2021-11-02)
 =====================
 
