@@ -41,8 +41,8 @@
 * Tables
 */
 table.docutils {
-    th p:last-child,
-    td p:last-child {
+    th :last-child,
+    td :last-child {
         margin-bottom: 0;
     }
     &:not(.field-list) {
