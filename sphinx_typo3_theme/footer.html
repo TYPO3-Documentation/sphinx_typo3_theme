@@ -4,7 +4,6 @@
         <div class="frame-container">
             <div class="frame-inner">
 
-                {%- if theme_docstypo3org %}
                 {%-
                     if theme_project_home
                     or theme_project_contact
@@ -30,7 +29,6 @@
                     {%- endif %}
                 </ul>
                 {%- endif %}
-                {%- endif %}
                 <div class="footer-additional">
                     {%- if theme_show_last_modified and t3ctx.last_modified %}
                     {%- if t3ctx.commit_url %}
@@ -47,10 +45,12 @@
                     <p class="text-center">Last rendered: {{ last_updated|e }}</p>
                     {%- endif %}
                     <ul class="footer-simplemenu">
-                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme at GitHub" target="_blank">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
                         <span>TYPO3 Theme {{ theme_version|e }}</span></a></li>
-                        <li><a href="https://github.com/t3docs/docker-render-documentation" title="DRC - Docker Rendering Container at GitHub" target="_blank">
+                        {%- if theme_docstypo3org %}
+                        <li><a href="https://github.com/t3docs/docker-render-documentation" title="Docker Rendering Container" target="_blank">
                         <span>DRC {{ theme_drc_version|e }}</span></a></li>
+                        {%- endif %}
                     </ul>
                 </div>
                 <div class="footer-meta">
