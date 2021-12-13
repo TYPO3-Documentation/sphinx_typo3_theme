@@ -2,6 +2,16 @@
 History
 =======
 
+4.7.dev6 (2021-12-13)
+=====================
+
+*  Activate project links in the footer for all renderings, not just those for
+   docs.typo3.org
+*  Supplement and reorder variables in `theme.conf`
+*  Add Python 3.10 as valid version in setup.py
+*  Fix margin of nested .toctree lists
+*  Remove margin of last <p> in table cells
+*  Exclude line numbers from selects in code blocks
 
 
 4.7.dev5 (2021-11-06)
