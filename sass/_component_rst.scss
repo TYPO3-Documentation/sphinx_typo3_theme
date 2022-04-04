@@ -21,6 +21,9 @@
         border: 1px solid theme-color-level('light', 1);
     }
     code {
+        &.css {
+            color: hsl(325, 80%, 40%);
+        }
         &.file {
             color: $code-color-file;
         }
