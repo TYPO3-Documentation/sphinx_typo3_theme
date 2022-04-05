@@ -22,7 +22,10 @@
     }
     code {
         &.css {
-            color: hsl(325, 80%, 40%);
+            color: $code-color-css;
+        }
+        &.bash {
+            color: $code-color-bash;
         }
         &.file {
             color: $code-color-file;
@@ -39,12 +42,23 @@
         &.php {
             color: $code-color-php;
         }
+        &.rst {
+            color: $code-color-rst;
+        }
         &.py {
             color: $code-color-py;
         }
-        &.ts,
+        &.shell {
+            color: $code-color-shell;
+        }
+        &.sql {
+            color: $code-color-sql;
+        }
         &.typoscript {
-            color: $code-color-ts;
+            color: $code-color-typoscript;
+        }
+        &.xml {
+            color: $code-color-xml;
         }
         &.yaml {
             color: $code-color-yaml;
@@ -116,7 +130,7 @@
         background-color: hsl(26.5, 84.3%, 95%);
         border-radius: 3px;
         border: 1px solid hsl(26.5, 84.3%, 85%);
-        color: $code-color-ts;
+        color: $code-color-typoscript;
         font-style: italic;
         margin: 0 3px 0 0;
         padding: 0 2px;

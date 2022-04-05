@@ -29,15 +29,22 @@ $yiq-contrasted-threshold: 160;
 //
 // Code Colors
 // --------------------------------------------------
-$code-color:        #ff5370;
+$code-color:        hsl(350, 100%, 40%);
+//
+$code-color-bash:   hsl(0, 100%, 0%);
+$code-color-css:    hsl(275, 100%, 40%);
 $code-color-file:   hsl(328, 100%, 50%);
 $code-color-html:   hsl(275, 100%, 40%);
 $code-color-js:     hsl(128, 100%, 20%);
 $code-color-method: hsl(210, 100%, 35%);
-$code-color-php:    hsl(210, 100%, 35%);
+$code-color-php:    hsl(210, 100%, 30%);
 $code-color-py:     hsl(210, 100%, 50%);
-$code-color-ts:     hsl(12, 100%, 20%);
-$code-color-yaml:   hsl(170, 80%, 30%);
+$code-color-rst:    hsl(175, 100%, 15%);
+$code-color-shell:  hsl(0, 100%, 0%);
+$code-color-sql:    hsl(175, 100%, 15%);
+$code-color-typoscript: hsl(12, 100%, 20%);
+$code-color-xml:    hsl(275, 100%, 40%);
+$code-color-yaml:   hsl(170, 80%, 25%);
 
 //
 // Fonts
