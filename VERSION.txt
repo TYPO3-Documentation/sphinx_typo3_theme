@@ -1,4 +1,4 @@
-4.7.dev6
+4.7.dev
 
 Keep version number like above in files:
 
