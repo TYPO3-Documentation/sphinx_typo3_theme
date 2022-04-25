@@ -23,5 +23,8 @@ $confval-dt-border: hsl(hue($warning), 50%, 50%);
             padding: .25em .5em;
             margin-bottom: .75em;
         }
+        & > dd {
+            margin-right: 1rem;
+        }
     }
 }
