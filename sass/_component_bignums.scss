@@ -25,7 +25,8 @@ $bignum-xxl:    1.5rem !default;
         background-color: theme-color-level('dark', -11);
         min-height: (($bignum-normal * 2) + $spacer * 2);
         border-radius: $border-radius;
-        > .first {
+        > .first,
+        p:first-child {
             font-weight: $font-weight-bold;
             font-size: $bignum-normal;
         }
@@ -112,7 +113,8 @@ $bignum-xxl:    1.5rem !default;
         padding-top: ($bignum-xxl * .25);
         background-color: transparent;
         min-height: ($bignum-xxl * 2);
-        > .first {
+        > .first,
+        p:first-child {
             font-size: $bignum-xxl;
         }
         &:before {
