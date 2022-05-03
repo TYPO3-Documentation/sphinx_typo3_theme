@@ -24,7 +24,7 @@
         word-break: break-word;
         padding-left: 0;
         padding-right: .5em;
-        margin-bottom: $spacer * .5;
+        margin-bottom: $spacer * .25;
     }
     & > dt:after {
         content: ":";
@@ -33,6 +33,6 @@
         padding-left: .5em;
         margin-top: 0;
         margin-left: 0;
-        margin-bottom: $spacer * .5;
+        margin-bottom: $spacer * .25;
     }
 }
