@@ -6,6 +6,9 @@
 @import "../node_modules/@fortawesome/fontawesome-free/scss/variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// tweak bootstrap components
+@import "card";
+
 // components
 @import "component_page";
 @import "component_footer";
