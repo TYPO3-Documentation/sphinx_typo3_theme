@@ -24,12 +24,9 @@
         </a>
     {%- endif %}
 
-
-    {%- if theme_h2edit_url and
-           ((theme_github_repository and theme_github_branch) or
-            ((builder == 'html') and (theme_edit_github or
-                                      theme_edit_bitbucket or
-                                      theme_edit_gitlab))) %}
+    {%- if theme_h2edit_url
+           and builder == 'html'
+           and theme_repo_file_edit_url %}
         <a class="btn btn-sm btn-light" id="btnHowToEdit"
            href="{{ theme_h2edit_url }}"
            rel="nofollow noopener" target="_blank">
@@ -38,30 +35,24 @@
         </a>
     {%- endif %}
 
-
-    {%- if theme_edit_github and builder == 'html' %}
+    {%- if builder == 'html'
+           and theme_repo_file_edit_url
+           and theme_edit_button_type == 'github' %}
         <a class="btn btn-sm btn-primary" id="btnEditOnGitHub"{#
-           #} href="{{ theme_github_protocol|default("https://")|e }}{#
-                  #}{{ theme_github_host|default("github.com")|e }}/{#
-                  #}{{ theme_github_user|e }}/{#
-                  #}{{ theme_github_repo|e }}/{#
-                  #}edit/{#
-                  #}{{ theme_github_version|e }}/{#
-                  #}{{ theme_path_to_documentation_dir|default("Documentation/") }}{#
+           #} href="{{ theme_repo_file_edit_url|e }}/{#
+                  #}{{ theme_path_to_documentation_dir|default("Documentation/")|e }}{#
                   #}{{ localizationprefix|e }}{#
                   #}{{ pagename|e }}{{ page_source_suffix|e }}">
             <span class="btn-icon"><span class="fab fa-github"></span></span>
             <span class="btn-text">Edit on GitHub</span>
         </a>
 
-    {%- elif theme_edit_bitbucket and builder == 'html' %}
+
+    {%- elif builder == 'html'
+           and theme_repo_file_edit_url
+           and theme_edit_button_type == 'bitbucket' %}
         <a class="btn btn-sm btn-primary" id="btnEditOnGitHub"{#
-           #} href="{{ theme_bitbucket_protocol|default("https://")|e }}{#
-                  #}{{ theme_bitbucket_host|default("bitbucket.com")|e }}/{#
-                  #}{{ theme_bitbucket_user|e }}/{#
-                  #}{{ theme_bitbucket_repo|e }}/{#
-                  #}src/{#
-                  #}{{ theme_bitbucket_version|e }}/{#
+           #} href="{{ theme_repo_file_edit_url|e }}/{#
                   #}{{ theme_path_to_documentation_dir|default("Documentation/")|e }}{#
                   #}{{ localizationprefix|e }}{#
                   #}{{ pagename|e }}{{ page_source_suffix|e }}">
@@ -69,34 +60,16 @@
             <span class="btn-text">Edit on Bitbucket</span>
         </a>
 
-    {%- elif theme_edit_gitlab and builder == 'html' %}
+    {%- elif builder == 'html'
+           and theme_repo_file_edit_url
+           and theme_edit_button_type == 'gitlab' %}
         <a class="btn btn-sm btn-primary" id="btnEditOnGitHub"{#
-           #} href="{{ theme_gitlab_protocol|default("https://")|e }}{#
-                  #}{{ theme_gitlab_host|default("gitlab.com")|e }}/{#
-                  #}{{ theme_gitlab_user|e }}/{#
-                  #}{{ theme_gitlab_repo|e }}/{#
-                  #}-/edit/{#
-                  #}{{ theme_gitlab_version|e }}/{#
+           #} href="{{ theme_repo_file_edit_url|e }}/{#
                   #}{{ theme_path_to_documentation_dir|default("Documentation/")|e }}{#
                   #}{{ localizationprefix|e }}{#
                   #}{{ pagename|e }}{{ page_source_suffix|e }}">
             <span class="btn-icon"><span class="fab fa-gitlab"></span></span>
             <span class="btn-text">Edit on gitlab</span>
-        </a>
-
-    {%- elif theme_github_repository and theme_github_branch %}
-        {#-
-            The code in this elif works but is deprecated.
-        #}
-        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/{{ theme_github_repository|e }}/edit/{{ theme_github_branch|e }}/{{ theme_path_to_documentation_dir|default("Documentation/")|e }}/{{ localizationprefix|e }}{{ sourcename|replace('.txt', '.rst')|replace('.rst.rst', '.rst')|e }}" target="_blank">
-            <span class="btn-icon"><span class="fab fa-github"></span></span>
-            <span class="btn-text">Edit on GitHub</span>
-        </a>
-
-    {%- elif 0 and show_source and source_url_prefix %}
-        <a class="btn btn-sm btn-light" href="{{ source_url_prefix }}{{ pagename }}{{ source_suffix }}">
-            <span class="btn-icon"><span class="fas fa-code"></span></span>
-            <span class="btn-text">View source</span>
         </a>
 
     {%- endif %}
