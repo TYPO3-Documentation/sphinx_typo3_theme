@@ -2,6 +2,14 @@
 History
 =======
 
+4.7.2 (2022-05-04)
+==================
+
+*  Simplify Edit button definition, drop the bitbucket_*, github_*,
+   gitlab_* variables, use edit_button_type, repository_url, repository_branch.
+   See theme.conf, breadcrumbs.html
+
+
 4.7.1 (2022-05-03)
 ==================
 
