@@ -2,6 +2,12 @@
 History
 =======
 
+4.7.3 (2022-05-05)
+==================
+
+*  Fix html template error in breadcrumbs.html
+
+
 4.7.2 (2022-05-04)
 ==================
 

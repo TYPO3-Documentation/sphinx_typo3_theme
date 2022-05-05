@@ -11,9 +11,9 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ pathto(master_doc) }}">Start</a></li>
         {%- for doc in parents %}
-            <li class="breadcrumb-item"><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ doc.link|e }}">{{ doc.title|e }}</a></li>
         {%- endfor %}
-        <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ title|e }}</li>
     </ol>
     {%- if pagename != "search" %}
     <div class="breadcrumb-additions">
@@ -28,7 +28,7 @@
            and builder == 'html'
            and theme_repo_file_edit_url %}
         <a class="btn btn-sm btn-light" id="btnHowToEdit"
-           href="{{ theme_h2edit_url }}"
+           href="{{ theme_h2edit_url|e }}"
            rel="nofollow noopener" target="_blank">
             <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
             <span class="btn-text">How to edit</span>
@@ -40,7 +40,7 @@
            and theme_edit_button_type == 'github' %}
         <a class="btn btn-sm btn-primary" id="btnEditOnGitHub"{#
            #} href="{{ theme_repo_file_edit_url|e }}/{#
-                  #}{{ theme_path_to_documentation_dir|default("Documentation/")|e }}{#
+                  #}{{ (theme_path_to_documentation_dir|default("Documentation/"))|e }}{#
                   #}{{ localizationprefix|e }}{#
                   #}{{ pagename|e }}{{ page_source_suffix|e }}">
             <span class="btn-icon"><span class="fab fa-github"></span></span>
@@ -53,7 +53,7 @@
            and theme_edit_button_type == 'bitbucket' %}
         <a class="btn btn-sm btn-primary" id="btnEditOnGitHub"{#
            #} href="{{ theme_repo_file_edit_url|e }}/{#
-                  #}{{ theme_path_to_documentation_dir|default("Documentation/")|e }}{#
+                  #}{{ (theme_path_to_documentation_dir|default("Documentation/"))|e }}{#
                   #}{{ localizationprefix|e }}{#
                   #}{{ pagename|e }}{{ page_source_suffix|e }}">
             <span class="btn-icon"><span class="fab fa-bitbucket"></span></span>
@@ -65,7 +65,7 @@
            and theme_edit_button_type == 'gitlab' %}
         <a class="btn btn-sm btn-primary" id="btnEditOnGitHub"{#
            #} href="{{ theme_repo_file_edit_url|e }}/{#
-                  #}{{ theme_path_to_documentation_dir|default("Documentation/")|e }}{#
+                  #}{{ (theme_path_to_documentation_dir|default("Documentation/"))|e }}{#
                   #}{{ localizationprefix|e }}{#
                   #}{{ pagename|e }}{{ page_source_suffix|e }}">
             <span class="btn-icon"><span class="fab fa-gitlab"></span></span>
