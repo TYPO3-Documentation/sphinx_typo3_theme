@@ -1,10 +1,10 @@
-4.7.3
+4.7.4
 
 Keep version number like above in files:
 
 *  First line in this file
-*  setup.py
-*  sphinx_typo3_theme/__init__.py
+*  ((setup.py))
+*  ((sphinx_typo3_theme/__init__.py))
 *  HISTORY.rst
 
 See also:
