@@ -17,7 +17,7 @@
     </ol>
     {%- if pagename != "search" %}
     <div class="breadcrumb-additions">
-    {%- if show_source and has_source and sourcename %}
+    {%- if theme_show_sourcelink and show_source and has_source and sourcename %}
         <a class="btn btn-sm btn-light" href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">
             <span class="btn-icon"><span class="fas fa-code"></span></span>
             <span class="btn-text">View source</span>
@@ -69,7 +69,7 @@
                   #}{{ localizationprefix|e }}{#
                   #}{{ pagename|e }}{{ page_source_suffix|e }}">
             <span class="btn-icon"><span class="fab fa-gitlab"></span></span>
-            <span class="btn-text">Edit on gitlab</span>
+            <span class="btn-text">Edit on GitLab</span>
         </a>
 
     {%- endif %}
