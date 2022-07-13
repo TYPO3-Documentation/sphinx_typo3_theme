@@ -125,7 +125,7 @@ jobs:
       - name: Maybe set tag 99.88.77
         run: |
           scm_version=$(python -c "import setuptools_scm as st;print('.'.join(st.get_version().split('.')[:3]))")
-          validstr=$(echo "$scm_version" | sed -e 's/[1-9][0-9]*\.\(0\|[1-9][0-9]*\)\.\(0\|[1-9][0-9]*\)/valid/')
+          validstr=$(echo "$scm_version" | sed -e 's/\(0\|\([1-9][0-9]*\)\)\.\(0\|\([1-9][0-9]*\)\)\.\(0\|\([1-9][0-9]*\)\)/valid/')
           echo Found scm_version:${scm_version}: && echo validates to validstr:${validstr}:
           if [ ! "$validstr" = "valid" ]; then
              newtag=v99.88.77
