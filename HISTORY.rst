@@ -2,6 +2,14 @@
 History
 =======
 
+4.7.6 (2022-07-25)
+==================
+
+*  Make logo link to docs home work again
+*  Remove one-to-much htmlescape of 'title' in breadcrumbs
+*  Change confval styling as described in issue #170
+
+
 4.7.5 (2022-07-13)
 ==================
 
