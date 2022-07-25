@@ -11,9 +11,9 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ pathto(master_doc) }}">Start</a></li>
         {%- for doc in parents %}
-            <li class="breadcrumb-item"><a href="{{ doc.link|e }}">{{ doc.title|e }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
         {%- endfor %}
-        <li class="breadcrumb-item active" aria-current="page">{{ title|e }}</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
     </ol>
     {%- if pagename != "search" %}
     <div class="breadcrumb-additions">
