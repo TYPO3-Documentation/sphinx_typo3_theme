@@ -1,0 +1,286 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "variables";
+div[class^='highlight-'] {
+    overflow-x: auto;
+    margin-bottom: $spacer;
+    pre {
+        margin: 0;
+        display: block;
+        overflow: auto;
+    }
+}
+.linenodiv,
+.highlight {
+    pre {
+        background-color: var(--base16-baseBG);
+        border-radius: $border-radius;
+        border: 1px solid var(--base16-baseBO);
+        color: var(--base16-baseFG);
+        line-height: 1.5;
+        padding: $spacer;
+    }
+}
+.linenodiv {
+    pre {
+        // maybe this is unused?
+        background-color: var(--base16-baseBG);
+        border-right: 1px solid red;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        line-height: 1.5;
+    }
+}
+.highlighttable {
+    width: 100%;
+    td {
+        padding: 0;
+        &.code {
+            width: 100%;
+        }
+    }
+    .highlight pre {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        line-height: 1.5;
+    }
+}
+
+/*
+// base16 styling guides
+// https://github.com/chriskempson/base16/blob/main/styling.md
+//
+// base00 - Default Background
+// base01 - Lighter Background (Used for status bars, line number and folding marks)
+// base02 - Selection Background
+// base03 - Comments, Invisibles, Line Highlighting
+// base04 - Dark Foreground (Used for status bars)
+// base05 - Default Foreground, Caret, Delimiters, Operators
+// base06 - Light Foreground (Not often used)
+// base07 - Light Background (Not often used)
+// base08 - Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+// base09 - Integers, Boolean, Constants, XML Attributes, Markup Link Url
+// base0A - Classes, Markup Bold, Search Text Background
+// base0B - Strings, Inherited Class, Markup Code, Diff Inserted
+// base0C - Support, Regular Expressions, Escape Characters, Markup Quotes
+// base0D - Functions, Methods, Attribute IDs, Headings
+// base0E - Keywords, Storage, Selector, Markup Italic, Diff Changed
+// base0F - Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+
+//  Pygments styles, see https://github.com/mohd-akram/base16-pygments
+//
+//  styles = {
+//      Text: base05,
+//      Error: base08,                   # .err
+//
+//      Comment: base03,                 # .c
+//      Comment.Preproc: base0f,         # .cp
+//      Comment.PreprocFile: base0b,     # .cpf
+//
+//      Keyword: base0e,                 # .k
+//      Keyword.Type: base08,            # .kt
+//
+//      Name.Attribute: base0d,          # .na
+//      Name.Builtin: base0d,            # .nb
+//      Name.Builtin.Pseudo: base08,     # .bp
+//      Name.Class: base0d,              # .nc
+//      Name.Constant: base09,           # .no
+//      Name.Decorator: base09,          # .nd
+//      Name.Function: base0d,           # .nf
+//      Name.Namespace: base0d,          # .nn
+//      Name.Tag: base0e,                # .nt
+//      Name.Variable: base0d,           # .nv
+//      Name.Variable.Instance: base08,  # .vi
+//
+//      Number: base09,                  # .m
+//
+//      Operator: base0c,                # .o
+//      Operator.Word: base0e,           # .ow
+//
+//      Literal: base0b,                 # .l
+//
+//      String: base0b,                  # .s
+//      String.Interpol: base0f,         # .si
+//      String.Regex: base0c,            # .sr
+//      String.Symbol: base09,           # .ss
+//  }
+//
+// What is used?
+//    00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+// fg          *     *        *  *     *  *  *  *  *
+// bg *  *  *
+*/
+
+:root {
+    --pygm-pre-hll: #{$base16-baseBG};
+    --pygm-pre-c: #{$base16-base03};
+    --pygm-pre-c1: #{$base16-base03};
+    --pygm-pre-cm: #{$base16-base03};
+    --pygm-pre-cp: #{$base16-base0F};
+    --pygm-pre-cpf: #{$base16-base0B};
+    --pygm-pre-cs: #{$base16-base03};
+    --pygm-pre-err: #{$base16-base08};
+    --pygm-pre-k: #{$base16-base0E};
+    --pygm-pre-kc: #{$base16-base0E};
+    --pygm-pre-kd: #{$base16-base0E};
+    --pygm-pre-kn: #{$base16-base0E};
+    --pygm-pre-kp: #{$base16-base0E};
+    --pygm-pre-kr: #{$base16-base0E};
+    --pygm-pre-kt: #{$base16-base08};
+    --pygm-pre-l: #{$base16-base0B};
+    --pygm-pre-il: #{$base16-base09};
+    --pygm-pre-ld: #{$base16-base09};
+    --pygm-pre-m: #{$base16-base09};
+    --pygm-pre-mf: #{$base16-base09};
+    --pygm-pre-mh: #{$base16-base09};
+    --pygm-pre-mi: #{$base16-base09};
+    --pygm-pre-mo: #{$base16-base09};
+    --pygm-pre-s: #{$base16-base0B};
+    --pygm-pre-s1: #{$base16-base09};
+    --pygm-pre-s2: #{$base16-base09};
+    --pygm-pre-sb: #{$base16-base09};
+    --pygm-pre-sc: #{$base16-base09};
+    --pygm-pre-sd: #{$base16-base09};
+    --pygm-pre-se: #{$base16-base09};
+    --pygm-pre-sh: #{$base16-base09};
+    --pygm-pre-si: #{$base16-base0F};
+    --pygm-pre-sr: #{$base16-base0C};
+    --pygm-pre-ss: #{$base16-base09};
+    --pygm-pre-sx: #{$base16-base09};
+    --pygm-pre-n: #{$base16-base0D};
+    --pygm-pre-na: #{$base16-base0D};
+    --pygm-pre-nb: #{$base16-base0D};
+    --pygm-pre-nc: #{$base16-base0D};
+    --pygm-pre-nd: #{$base16-base09};
+    --pygm-pre-ne: #{$base16-base0D};
+    --pygm-pre-nf: #{$base16-base0D};
+    --pygm-pre-ni: #{$base16-base0D};
+    --pygm-pre-nl: #{$base16-base0D};
+    --pygm-pre-nn: #{$base16-base0D};
+    --pygm-pre-no: #{$base16-base09};
+    --pygm-pre-nt: #{$base16-base0E};
+    --pygm-pre-nv: #{$base16-base0D};
+    --pygm-pre-nx: #{$base16-base0D};
+    --pygm-pre-py: #{$base16-base0D};
+    --pygm-pre-bp: #{$base16-base08};
+    --pygm-pre-vc: #{$base16-base0D};
+    --pygm-pre-vg: #{$base16-base0D};
+    --pygm-pre-vi: #{$base16-base08};
+    --pygm-pre-o: #{$base16-base0C};
+    --pygm-pre-p: #{$base16-base0B};
+    --pygm-pre-gd: #{$base16-base0B};
+    --pygm-pre-gh: #{$base16-base0B};
+    --pygm-pre-gi: #{$base16-base0B};
+    --pygm-pre-gp: #{$base16-base0B};
+    --pygm-pre-gu: #{$base16-base0B};
+    --pygm-pre-ow: #{$base16-base0E};
+    --pygm-pre-w: #{$base16-base0B};
+    --pygm-pre-x: #{$base16-base0B};
+}
+
+pre .hll { background-color: var(--pygm-pre-hll) } /* background */
+pre .c { color: var(--pygm-pre-c) } /* Comment */
+// pre .c1 { color: var(--pygm-pre-c1) } /** Comment.Single */
+// pre .cm { color: var(--pygm-pre-cm) } /** Comment.Multiline */
+pre .cp { color: var(--pygm-pre-cp) } /* Comment.Preproc */
+pre .cpf { color: var(--pygm-pre-cpf) } /* Comment.Preproc */
+// pre .cs { color: var(--pygm-pre-cs) } /** Comment.Special */
+pre .err { color: var(--pygm-pre-err) } /* Error */
+pre .k { color: var(--pygm-pre-k) } /* Keyword */
+// pre .kc { color: var(--pygm-pre-kc) } /** Keyword.Constant */
+// pre .kd { color: var(--pygm-pre-kd) } /** Keyword.Declaration */
+// pre .kn { color: var(--pygm-pre-kn) } /** Keyword.Namespace */
+// pre .kp { color: var(--pygm-pre-kp) } /** Keyword.Pseudo */
+// pre .kr { color: var(--pygm-pre-kr) } /** Keyword.Reserved */
+pre .kt { color: var(--pygm-pre-kt) } /* Keyword.Type */
+pre .l { color: var(--pygm-pre-l) } /* Literal */
+// pre .il { color: var(--pygm-pre-il) } /** Literal.Number.Integer.Long */
+// pre .ld { color: var(--pygm-pre-ld) } /** Literal.Date */
+pre .m { color: var(--pygm-pre-m) } /* Literal.Number */
+// pre .mf { color: var(--pygm-pre-mf) } /** Literal.Number.Float */
+// pre .mh { color: var(--pygm-pre-mh) } /** Literal.Number.Hex */
+// pre .mi { color: var(--pygm-pre-mi) } /** Literal.Number.Integer */
+// pre .mo { color: var(--pygm-pre-mo) } /** Literal.Number.Oct */
+pre .s { color: var(--pygm-pre-s) } /* Literal.String */
+// pre .s1 { color: var(--pygm-pre-s1) } /** Literal.String.Single */
+// pre .s2 { color: var(--pygm-pre-s2) } /** Literal.String.Double */
+// pre .sb { color: var(--pygm-pre-sb) } /** Literal.String.Backtick */
+// pre .sc { color: var(--pygm-pre-sc) } /** Literal.String.Char */
+// pre .sd { color: var(--pygm-pre-sd) } /** Literal.String.Doc */
+// pre .se { color: var(--pygm-pre-se) } /** Literal.String.Escape */
+// pre .sh { color: var(--pygm-pre-sh) } /** Literal.String.Heredoc */
+pre .si { color: var(--pygm-pre-si) } /* Literal.String.Interpol */
+pre .sr { color: var(--pygm-pre-sr) } /* Literal.String.Regex */
+pre .ss { color: var(--pygm-pre-ss) } /* Literal.String.Symbol */
+pre .sx { color: var(--pygm-pre-sx) } /** Literal.String.Other */
+// pre .n  { color: var(--pygm-pre-n) } /** Name */
+// pre .na { color: var(--pygm-pre-na) } /** Name.Attribute */
+// pre .nb { color: var(--pygm-pre-nb) } /** Name.Builtin */
+// pre .nc { color: var(--pygm-pre-nc) } /** Name.Class */
+// pre .nd { color: var(--pygm-pre-nd) } /** Name.Decorator */
+// pre .ne { color: var(--pygm-pre-ne) } /** Name.Exception */
+pre .nf { color: var(--pygm-pre-nf) } /* Name.Function */
+// pre .ni { color: var(--pygm-pre-ni) } /** Name.Entity */
+// pre .nl { color: var(--pygm-pre-nl) } /** Name.Label */
+pre .nn { color: var(--pygm-pre-nn) } /* Name.Namespace */
+pre .no { color: var(--pygm-pre-no) } /* Name.Constant */
+pre .nt { color: var(--pygm-pre-nt) } /* Name.Tag */
+pre .nv { color: var(--pygm-pre-nv) } /* Name.Variable */
+// pre .nx { color: var(--pygm-pre-nx) } /** Name.Other */
+// pre .py { color: var(--pygm-pre-py) } /** Name.Property */
+pre .bp { color: var(--pygm-pre-bp) } /* Name.Builtin.Pseudo */
+// pre .vc { color: var(--pygm-pre-vc) } /** Name.Variable.Class */
+// pre .vg { color: var(--pygm-pre-vg) } /** Name.Variable.Global */
+pre .vi { color: var(--pygm-pre-vi) } /* Name.Variable.Instance */
+pre .o { color:  var(--pygm-pre-o) } /* Operator */
+// pre .p { color:  var(--pygm-pre-p ) } /** Punctuation */
+// pre .gd { color: var(--pygm-pre-gd) } /** Generic.Deleted */
+// pre .gh { color: var(--pygm-pre-gh) } /** Generic.Heading */
+// pre .gi { color: var(--pygm-pre-gi) } /** Generic.Inserted */
+// pre .gp { color: var(--pygm-pre-gp) } /** Generic.Prompt */
+// pre .gu { color: var(--pygm-pre-gu) } /** Generic.Subheading */
+pre .ow { color: var(--pygm-pre-ow) } /* Operator.Word */
+// pre .w { color:  var(--pygm-pre-w ) } /** Text.Whitespace */
+// pre .x { color:  var(--pygm-pre-x ) } /** ? */
+pre .ge { font-style: italic } /* Generic.Emph */
+pre .gh { font-weight: $font-weight-bold } /* Generic.Heading */
+pre .gp { font-weight: $font-weight-bold } /* Generic.Prompt */
+pre .gs { font-weight: $font-weight-bold } /* Generic.Strong */
+pre .gu { font-weight: $font-weight-bold } /* Generic.Subheading */
+pre {
+    line-height: 125%;
+}
+//
+// check the following rules again in real life
+td.linenos .normal {
+    color: var(--base16-baseFG);
+    background-color: var(--base16-base01);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+span.linenos {
+    color: var(--base16-baseFG);
+    background-color: var(--base16-base01);
+    padding-left: 5px;
+    padding-right: 5px;
+    user-select: none;
+    pointer-events: none;
+}
+td.linenos .special {
+    color: #000000;
+    background-color: #ffffc0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+span.linenos.special {
+    color: #000000;
+    background-color: #ffffc0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.highlight .hll {
+    background-color: var(--base16-base02);
+}
+.highlight {
+    background: #ffffff;
+}

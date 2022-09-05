@@ -17,7 +17,6 @@
 @import "component_breadcrumb";
 @import "component_button";
 @import "component_toc";
-@import "component_pygments";
 @import "component_docutils";
 @import "component_admotion";
 @import "component_bignums";
@@ -37,3 +36,6 @@
 
 // misc
 @import "utilities";
+
+// loaded as extra css file:
+// codeblocks.css
