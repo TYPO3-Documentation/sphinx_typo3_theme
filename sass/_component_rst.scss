@@ -72,7 +72,13 @@
     .literal-block-wrapper {
         .code-block-caption {
             font-size: $font-size-sm;
+            background-color: hsla(0, 0%, 100%, .05);
         }
+    }
+    // the html postprocessing should turn the following class 'container'
+    // into 'du-container' to make the following rule superfluous
+    .literal-block-wrapper.docutils.container {
+        padding: 0;
     }
 
     /**
@@ -109,9 +115,10 @@
         }
     }
     // https://github.com/TYPO3-Documentation/sphinx_typo3_theme/issues/144
-    li > p {
-        margin: 0;
-    }
+    // https://github.com/TYPO3-Documentation/sphinx_typo3_theme/issues/172
+    //li > p {
+    //    margin: 0;
+    //}
 
     /**
      * Keyboard Shortcuts
