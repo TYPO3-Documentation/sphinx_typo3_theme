@@ -1,12 +1,12 @@
 //
-// directive .. confval::
+// directive .. confval::, generalised for dl.std
 //
 
-$confval-bg: hsl(0, 0%, 96%);
-$confval-dt-bg: hsl(0, 0%, 90%);
-$confval-dt-border: #666666;
+// $confval-bg: hsl(0, 0%, 96%);
+// $confval-dt-bg: hsl(0, 0%, 90%);
+// $confval-dt-border: #666666;
 .rst-content {
-    dl.std.confval {
+    dl.std:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) {
         background-color: $confval-bg;
         border-radius: $border-radius;
         margin-bottom: $spacer * 1.5;
@@ -17,12 +17,16 @@ $confval-dt-border: #666666;
             border-top: solid 3px $confval-dt-border;
             display: inline-block;
             font-size: $h4-font-size;
-            font-family: $font-family-monospace;
             padding: .25em .5em;
             margin-bottom: .75em;
         }
         & > dd {
             margin-right: 1rem;
+        }
+    }
+    dl.std.confval {
+        & > dt {
+            font-family: $font-family-monospace;
         }
     }
 }
