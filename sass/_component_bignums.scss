@@ -30,9 +30,10 @@ $bignum-xxl:    1.5rem !default;
             font-weight: $font-weight-bold;
             font-size: $bignum-normal;
         }
-        *:last-child {
-            margin-bottom: 0;
-        }
+        // https://github.com/TYPO3-Documentation/sphinx_typo3_theme/issues/172
+        //*:last-child {
+        //    margin-bottom: 0;
+        //}
         &:before {
             font-size: $bignum-normal;
             display: block;
