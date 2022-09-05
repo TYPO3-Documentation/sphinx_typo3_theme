@@ -2,6 +2,15 @@
 History
 =======
 
+4.7.7 (2022-09-05)
+==================
+
+*  Rework syntax highlighting. Use css variables. Add codeblock.css as
+   extra file.
+* Fix dl p issues
+* Update styling of dl lists
+
+
 4.7.6 (2022-07-25)
 ==================
 
