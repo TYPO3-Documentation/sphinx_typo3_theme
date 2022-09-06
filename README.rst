@@ -47,9 +47,9 @@ Releasing
 Make sure to specify all three numbers as in 'v99.88.77'.
 
 
-See also
---------
+Feature demonstration
+---------------------
 
-There also is a `demo manual <https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/>`__
+There also is a `demo manual <https://typo3-documentation.github.io/sphinx_typo3_theme_rendering_test/>`__
 which serves as a "stress test" for the theme and shows what markup is possible and
 how it gets rendered.
