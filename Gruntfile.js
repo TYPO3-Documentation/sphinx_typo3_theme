@@ -45,6 +45,16 @@ module.exports = function (grunt) {
 
     // copy
     copy: {
+      css: {
+        files: [
+          {
+            expand: true,
+            cwd: 'css',
+            src: ['**/*'],
+            dest: 'sphinx_typo3_theme/static/css/'
+          }
+        ]
+      },
       fonts: {
         files: [
           {
