@@ -150,7 +150,8 @@ pre .nf {
 }
 pre      { background-color: var(--pygm-pre-bg); border:1px solid var(--pygm-pre-bg-border)}
 pre      { color: var(--pygm-pre-fg); }
-pre .hll { background-color: var(--pygm-pre-hll); }
+pre .hll,
+.highlight pre .hll { background-color: var(--pygm-pre-hll); }
 pre .w   { color: var(--pygm-pre-Whitespace-w); }
 pre .err { color: var(--pygm-pre-Error-err); }
 pre .x   { color: var(--pygm-pre-Other-x); }
