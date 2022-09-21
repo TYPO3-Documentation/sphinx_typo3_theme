@@ -49,11 +49,11 @@ endef
 export PRINT_HELP_PYSCRIPT
 
 
-BROWSER := python -c "$$BROWSER_PYSCRIPT"
+BROWSER := python3 -c "$$BROWSER_PYSCRIPT"
 
 .PHONY: help
 help:
-	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+	@python3 -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
 
 .PHONY: builddall
@@ -66,8 +66,8 @@ build: clean build-project ## Build all, except frontend
 
 .PHONY: build-project
 build-project: clean-project ##- Build Sphinx extension
-	python setup.py sdist
-	python setup.py bdist_wheel
+	python3 setup.py sdist
+	python3 setup.py bdist_wheel
 	ls -l dist
 
 
