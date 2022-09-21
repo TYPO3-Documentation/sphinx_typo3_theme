@@ -26,6 +26,7 @@
 @import "component_math";
 @import "component_tablerow";
 @import "component_horizbuttons";
+@import "component_highlightblock";
 @import "component_search";
 @import "component_panel";
 @import "component_displaysettings";
@@ -37,5 +38,5 @@
 // misc
 @import "utilities";
 
-// loaded as extra css file:
-// codeblocks.css
+// loaded as extra and ready made css file:
+//    codeblocks.css

@@ -1,0 +1,9 @@
+div[class^='highlight-'] {
+    overflow-x: auto;
+    margin-bottom: $spacer;
+    pre {
+        margin: 0;
+        display: block;
+        overflow: auto;
+    }
+}
