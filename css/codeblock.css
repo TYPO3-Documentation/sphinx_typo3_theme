@@ -1,48 +1,50 @@
-/*  codeblock.css
+/* codeblock.css
  *  This file defines syntax highlighting in code blocks.
  *  It has no dependencies and works standalone.
  *  Fits pygments v2.13.0
  */
 
 /* inspired by stackoverflow dark */
+
 :root {
-    --sod-fg-stark:  #ffffff;
-    --sod-fg:        #eeeeee;
-    --sod-fg-dim:    #999999;
-    --sod-bg:        #1c1b1b;
-    --sod-bg-border: #1c1b1b;
-    --sod-bg-hll:    hsl(228,25%,35%);
-    --sod-lightgray: #cccccc;
-    --sod-gray:      #999999;
-    --sod-blue:      hsl(207,80%,70%); /* #88aece */
-    --sod-lilac:     #c59bc1;
-    --sod-orange:    #f08d49;
-    --sod-green:     #b5bd68;
-    --sod-red:       #de7176;
-    --sod-cyan:      #76c490;
-    --sod-inherit:   inherit;
-    --sod-whatisit:  #ff00C8;
+    --cbs-fg-stark:  #ffffff;
+    --cbs-fg:        #eeeeee;
+    --cbs-fg-dim:    #999999;
+    --cbs-bg:        #1c1b1b;
+    --cbs-bg-border: #1c1b1b;
+    --cbs-bg-hll:    hsl(228,25%,35%);
+    --cbs-lightgray: #cccccc;
+    --cbs-gray:      #999999;
+    --cbs-blue:      hsl(207,80%,70%); /* #88aece */
+    --cbs-lilac:     #c59bc1;
+    --cbs-orange:    #f08d49;
+    --cbs-green:     #b5bd68;
+    --cbs-red:       #de7176;
+    --cbs-cyan:      #76c490;
+    --cbs-inherit:   inherit;
+    --cbs-whatisit:  #ff00C8;
 }
 
 /* inspired by stackoverflow light */
-:root {
-    --sol-fg-stark:  #000000;
-    --sol-fg:        #2f3337;
-    --sol-fg-dim:    #656e77;
-    --sol-bg:        #f6f6f6;
-    --sol-bg-border: #e6e6e6;
-    --sol-bg-hll:    #ffffcc;
-    --sol-lightgray: #535a60;
-    --sol-gray:      #656e77;
-    --sol-blue:      #015692;
-    --sol-lilac:     #803378;
-    --sol-orange:    #b75501;
-    --sol-green:     #54790d;
-    --sol-red:       #c02d2e;
-    --sol-cyan:      #2f6f44;
-    --sol-inherit:   inherit;
-    --sol-whatisit:  #ff00C8;
+[data-cbs-theme="light"] {
+    --cbs-fg-stark: #000000;
+    --cbs-fg: #2f3337;
+    --cbs-fg-dim: #656e77;
+    --cbs-bg: #f7f7f7;
+    --cbs-bg-border: #e6e6e6;
+    --cbs-bg-hll: #ffffcc;
+    --cbs-lightgray: #535a60;
+    --cbs-gray: #656e77;
+    --cbs-blue: #015692;
+    --cbs-lilac: #803378;
+    --cbs-orange: #b75501;
+    --cbs-green: #54790d;
+    --cbs-red: #c02d2e;
+    --cbs-cyan: #2f6f44;
+    --cbs-inherit: inherit;
+    --cbs-whatisit: #ff00C8;
 }
+
 /* italic candidates: c, cm, c1, cs, ge, sd */
 pre .c,
 pre .cm,
@@ -63,91 +65,177 @@ pre .nf {
 }
 
 :root {
-  /* in this root block: use --sol for light theme, use --sod for dark theme */
-  --pygm-pre-bg:                        var(--sod-bg);
-  --pygm-pre-bg-border:                 var(--sod-bg-border);
-  --pygm-pre-hll:                       var(--sod-bg-hll);
-  --pygm-pre-fg:                        var(--sod-fg);
-  --pygm-pre-fg-dim:                    var(--sod-fg-dim);
-  --pygm-pre-fg-stark:                  var(--sod-fg-stark);
-  --pygm-pre-Text:                      var(--sod-fg);
-  --pygm-pre-Whitespace-w:              var(--sod-fg);
-  --pygm-pre-Error-err:                 var(--sod-red);
-  --pygm-pre-Other-x:                   var(--sod-whatisit);
-  --pygm-pre-Comment-c:                 var(--sod-gray);
-  --pygm-pre-Comment-Hashbang-ch:       var(--sod-gray);
-  --pygm-pre-Comment-Multiline-cm:      var(--sod-gray);
-  --pygm-pre-Comment-Preproc-cp:        var(--sod-fg);
-  --pygm-pre-Comment-PreprocFile-cpf:   var(--sod-fg-stark);
-  --pygm-pre-Comment-Single-c1:         var(--sod-gray);
-  --pygm-pre-Comment-Special-cs:        var(--sod-gray);
-  --pygm-pre-Generic-g:                 var(--sod-inherit);
-  --pygm-pre-Generic-Deleted-gd:        var(--sod-red);
-  --pygm-pre-Generic-Emph-ge:           var(--sod-inherit);
-  --pygm-pre-Generic-Error-gr:          var(--sod-inherit);
-  --pygm-pre-Generic-Heading-gh:        var(--sod-inherit);
-  --pygm-pre-Generic-Inserted-gi:       var(--sod-cyan);
-  --pygm-pre-Generic-Output-go:         var(--sod-inherit);
-  --pygm-pre-Generic-Prompt-gp:         var(--sod-inherit);
-  --pygm-pre-Generic-Strong-gs:         var(--sod-inherit);
-  --pygm-pre-Generic-Subheading-gu:     var(--sod-inherit);
-  --pygm-pre-Generic-Traceback-gt:      var(--sod-inherit);
-  --pygm-pre-Keyword-k:                 var(--sod-blue);
-  --pygm-pre-Keyword-Constant-kc:       var(--sod-inherit);
-  --pygm-pre-Keyword-Declaration-kd:    var(--sod-inherit);
-  --pygm-pre-Keyword-Namespace-kn:      var(--sod-inherit);
-  --pygm-pre-Keyword-Pseudo-kp:         var(--sod-inherit);
-  --pygm-pre-Keyword-Reserved-kr:       var(--sod-inherit);
-  --pygm-pre-Keyword-Type-kt:           var(--sod-inherit);
-  --pygm-pre-Literal-l:                 var(--sod-inherit);
-  --pygm-pre-Literal-Date-ld:           var(--sod-inherit);
-  --pygm-pre-Name-n:                    var(--sod-inherit);
-  --pygm-pre-Name-Attribute-na:         var(--sod-lilac);
-  --pygm-pre-Name-Builtin-nb:           var(--sod-blue);
-  --pygm-pre-Name-Builtin-Pseudo-bp:    var(--sod-inherit);
-  --pygm-pre-Name-Class-nc:             var(--sod-orange);
-  --pygm-pre-Name-Constant-no:          var(--sod-orange);
-  --pygm-pre-Name-Decorator-nd:         var(--sod-inherit);
-  --pygm-pre-Name-Entity-ni:            var(--sod-inherit);
-  --pygm-pre-Name-Exception-ne:         var(--sod-inherit);
-  --pygm-pre-Name-Function-nf:          var(--sod-blue);
-  --pygm-pre-Name-Function-Magic-fm:    var(--sod-inherit);
-  --pygm-pre-Name-Property-py:          var(--sod-inherit);
-  --pygm-pre-Name-Label-nl:             var(--sod-inherit);
-  --pygm-pre-Name-Namespace-nn:         var(--sod-inherit);
-  --pygm-pre-Name-Other-nx:             var(--sod-orange);
-  --pygm-pre-Name-Tag-nt:               var(--sod-blue);
-  --pygm-pre-Name-Variable-nv:          var(--sod-lilac);
-  --pygm-pre-Name-Variable-Class-vc:    var(--sod-inherit);
-  --pygm-pre-Name-Variable-Global-vg:   var(--sod-inherit);
-  --pygm-pre-Name-Variable-Instance-vi: var(--sod-inherit);
-  --pygm-pre-Name-Variable-Magic-vm:    var(--sod-inherit);
-  --pygm-pre-Number-m:                  var(--sod-orange);
-  --pygm-pre-Number-Bin-mb:             var(--sod-orange);
-  --pygm-pre-Number-Float-mf:           var(--sod-orange);
-  --pygm-pre-Number-Hex-mh:             var(--sod-orange);
-  --pygm-pre-Number-Integer-mi:         var(--sod-orange);
-  --pygm-pre-Number-Integer-Long-il:    var(--sod-orange);
-  --pygm-pre-Number-Oct-mo:             var(--sod-inherit);
-  --pygm-pre-Operator-o:                var(--sod-inherit);
-  --pygm-pre-Operator-Word-ow:          var(--sod-fg-stark);
-  --pygm-pre-Punctuation-p:             var(--sod-inherit);
-  --pygm-pre-Punctuation-Marker-pm:     var(--sod-inherit);
-  --pygm-pre-String-s:                  var(--sod-green);
-  --pygm-pre-String-Affix-sa:           var(--sod-inherit);
-  --pygm-pre-String-Backtick-sb:        var(--sod-inherit);
-  --pygm-pre-String-Char-sc:            var(--sod-inherit);
-  --pygm-pre-String-Delimiter-dl:       var(--sod-inherit);
-  --pygm-pre-String-Doc-sd:             var(--sod-fg-dim);
-  --pygm-pre-String-Double-s2:          var(--sod-green);
-  --pygm-pre-String-Escape-se:          var(--sod-inherit);
-  --pygm-pre-String-Heredoc-sh:         var(--sod-inherit);
-  --pygm-pre-String-Interpol-si:        var(--sod-inherit);
-  --pygm-pre-String-Other-sx:           var(--sod-inherit);
-  --pygm-pre-String-Regex-sr:           var(--sod-inherit);
-  --pygm-pre-String-Single-s1:          var(--sod-green);
-  --pygm-pre-String-Symbol-ss:          var(--sod-inherit);
+  --pygm-pre-bg:                        var(--cbs-bg);
+  --pygm-pre-bg-border:                 var(--cbs-bg-border);
+  --pygm-pre-hll:                       var(--cbs-bg-hll);
+  --pygm-pre-fg:                        var(--cbs-fg);
+  --pygm-pre-fg-dim:                    var(--cbs-fg-dim);
+  --pygm-pre-fg-stark:                  var(--cbs-fg-stark);
+  --pygm-pre-Text:                      var(--cbs-fg);
+  --pygm-pre-Whitespace-w:              var(--cbs-fg);
+  --pygm-pre-Error-err:                 var(--cbs-red);
+  --pygm-pre-Other-x:                   var(--cbs-whatisit);
+  --pygm-pre-Comment-c:                 var(--cbs-gray);
+  --pygm-pre-Comment-Hashbang-ch:       var(--cbs-gray);
+  --pygm-pre-Comment-Multiline-cm:      var(--cbs-gray);
+  --pygm-pre-Comment-Preproc-cp:        var(--cbs-fg);
+  --pygm-pre-Comment-PreprocFile-cpf:   var(--cbs-fg-stark);
+  --pygm-pre-Comment-Single-c1:         var(--cbs-gray);
+  --pygm-pre-Comment-Special-cs:        var(--cbs-gray);
+  --pygm-pre-Generic-g:                 var(--cbs-inherit);
+  --pygm-pre-Generic-Deleted-gd:        var(--cbs-red);
+  --pygm-pre-Generic-Emph-ge:           var(--cbs-inherit);
+  --pygm-pre-Generic-Error-gr:          var(--cbs-inherit);
+  --pygm-pre-Generic-Heading-gh:        var(--cbs-inherit);
+  --pygm-pre-Generic-Inserted-gi:       var(--cbs-cyan);
+  --pygm-pre-Generic-Output-go:         var(--cbs-inherit);
+  --pygm-pre-Generic-Prompt-gp:         var(--cbs-inherit);
+  --pygm-pre-Generic-Strong-gs:         var(--cbs-inherit);
+  --pygm-pre-Generic-Subheading-gu:     var(--cbs-inherit);
+  --pygm-pre-Generic-Traceback-gt:      var(--cbs-inherit);
+  --pygm-pre-Keyword-k:                 var(--cbs-blue);
+  --pygm-pre-Keyword-Constant-kc:       var(--cbs-inherit);
+  --pygm-pre-Keyword-Declaration-kd:    var(--cbs-inherit);
+  --pygm-pre-Keyword-Namespace-kn:      var(--cbs-inherit);
+  --pygm-pre-Keyword-Pseudo-kp:         var(--cbs-inherit);
+  --pygm-pre-Keyword-Reserved-kr:       var(--cbs-inherit);
+  --pygm-pre-Keyword-Type-kt:           var(--cbs-inherit);
+  --pygm-pre-Literal-l:                 var(--cbs-inherit);
+  --pygm-pre-Literal-Date-ld:           var(--cbs-inherit);
+  --pygm-pre-Name-n:                    var(--cbs-inherit);
+  --pygm-pre-Name-Attribute-na:         var(--cbs-lilac);
+  --pygm-pre-Name-Builtin-nb:           var(--cbs-blue);
+  --pygm-pre-Name-Builtin-Pseudo-bp:    var(--cbs-inherit);
+  --pygm-pre-Name-Class-nc:             var(--cbs-orange);
+  --pygm-pre-Name-Constant-no:          var(--cbs-orange);
+  --pygm-pre-Name-Decorator-nd:         var(--cbs-inherit);
+  --pygm-pre-Name-Entity-ni:            var(--cbs-inherit);
+  --pygm-pre-Name-Exception-ne:         var(--cbs-inherit);
+  --pygm-pre-Name-Function-nf:          var(--cbs-blue);
+  --pygm-pre-Name-Function-Magic-fm:    var(--cbs-inherit);
+  --pygm-pre-Name-Property-py:          var(--cbs-inherit);
+  --pygm-pre-Name-Label-nl:             var(--cbs-inherit);
+  --pygm-pre-Name-Namespace-nn:         var(--cbs-inherit);
+  --pygm-pre-Name-Other-nx:             var(--cbs-orange);
+  --pygm-pre-Name-Tag-nt:               var(--cbs-blue);
+  --pygm-pre-Name-Variable-nv:          var(--cbs-lilac);
+  --pygm-pre-Name-Variable-Class-vc:    var(--cbs-inherit);
+  --pygm-pre-Name-Variable-Global-vg:   var(--cbs-inherit);
+  --pygm-pre-Name-Variable-Instance-vi: var(--cbs-inherit);
+  --pygm-pre-Name-Variable-Magic-vm:    var(--cbs-inherit);
+  --pygm-pre-Number-m:                  var(--cbs-orange);
+  --pygm-pre-Number-Bin-mb:             var(--cbs-orange);
+  --pygm-pre-Number-Float-mf:           var(--cbs-orange);
+  --pygm-pre-Number-Hex-mh:             var(--cbs-orange);
+  --pygm-pre-Number-Integer-mi:         var(--cbs-orange);
+  --pygm-pre-Number-Integer-Long-il:    var(--cbs-orange);
+  --pygm-pre-Number-Oct-mo:             var(--cbs-inherit);
+  --pygm-pre-Operator-o:                var(--cbs-inherit);
+  --pygm-pre-Operator-Word-ow:          var(--cbs-fg-stark);
+  --pygm-pre-Punctuation-p:             var(--cbs-inherit);
+  --pygm-pre-Punctuation-Marker-pm:     var(--cbs-inherit);
+  --pygm-pre-String-s:                  var(--cbs-green);
+  --pygm-pre-String-Affix-sa:           var(--cbs-inherit);
+  --pygm-pre-String-Backtick-sb:        var(--cbs-inherit);
+  --pygm-pre-String-Char-sc:            var(--cbs-inherit);
+  --pygm-pre-String-Delimiter-dl:       var(--cbs-inherit);
+  --pygm-pre-String-Doc-sd:             var(--cbs-fg-dim);
+  --pygm-pre-String-Double-s2:          var(--cbs-green);
+  --pygm-pre-String-Escape-se:          var(--cbs-inherit);
+  --pygm-pre-String-Heredoc-sh:         var(--cbs-inherit);
+  --pygm-pre-String-Interpol-si:        var(--cbs-inherit);
+  --pygm-pre-String-Other-sx:           var(--cbs-inherit);
+  --pygm-pre-String-Regex-sr:           var(--cbs-inherit);
+  --pygm-pre-String-Single-s1:          var(--cbs-green);
+  --pygm-pre-String-Symbol-ss:          var(--cbs-inherit);
 }
+
+[data-cbs-theme="light"] {
+  --pygm-pre-bg:                        var(--cbs-bg);
+  --pygm-pre-bg-border:                 var(--cbs-bg-border);
+  --pygm-pre-hll:                       var(--cbs-bg-hll);
+  --pygm-pre-fg:                        var(--cbs-fg);
+  --pygm-pre-fg-dim:                    var(--cbs-fg-dim);
+  --pygm-pre-fg-stark:                  var(--cbs-fg-stark);
+  --pygm-pre-Text:                      var(--cbs-fg);
+  --pygm-pre-Whitespace-w:              var(--cbs-fg);
+  --pygm-pre-Error-err:                 var(--cbs-red);
+  --pygm-pre-Other-x:                   var(--cbs-whatisit);
+  --pygm-pre-Comment-c:                 var(--cbs-gray);
+  --pygm-pre-Comment-Hashbang-ch:       var(--cbs-gray);
+  --pygm-pre-Comment-Multiline-cm:      var(--cbs-gray);
+  --pygm-pre-Comment-Preproc-cp:        var(--cbs-fg);
+  --pygm-pre-Comment-PreprocFile-cpf:   var(--cbs-fg-stark);
+  --pygm-pre-Comment-Single-c1:         var(--cbs-gray);
+  --pygm-pre-Comment-Special-cs:        var(--cbs-gray);
+  --pygm-pre-Generic-g:                 var(--cbs-inherit);
+  --pygm-pre-Generic-Deleted-gd:        var(--cbs-red);
+  --pygm-pre-Generic-Emph-ge:           var(--cbs-inherit);
+  --pygm-pre-Generic-Error-gr:          var(--cbs-inherit);
+  --pygm-pre-Generic-Heading-gh:        var(--cbs-inherit);
+  --pygm-pre-Generic-Inserted-gi:       var(--cbs-cyan);
+  --pygm-pre-Generic-Output-go:         var(--cbs-inherit);
+  --pygm-pre-Generic-Prompt-gp:         var(--cbs-inherit);
+  --pygm-pre-Generic-Strong-gs:         var(--cbs-inherit);
+  --pygm-pre-Generic-Subheading-gu:     var(--cbs-inherit);
+  --pygm-pre-Generic-Traceback-gt:      var(--cbs-inherit);
+  --pygm-pre-Keyword-k:                 var(--cbs-blue);
+  --pygm-pre-Keyword-Constant-kc:       var(--cbs-inherit);
+  --pygm-pre-Keyword-Declaration-kd:    var(--cbs-inherit);
+  --pygm-pre-Keyword-Namespace-kn:      var(--cbs-inherit);
+  --pygm-pre-Keyword-Pseudo-kp:         var(--cbs-inherit);
+  --pygm-pre-Keyword-Reserved-kr:       var(--cbs-inherit);
+  --pygm-pre-Keyword-Type-kt:           var(--cbs-inherit);
+  --pygm-pre-Literal-l:                 var(--cbs-inherit);
+  --pygm-pre-Literal-Date-ld:           var(--cbs-inherit);
+  --pygm-pre-Name-n:                    var(--cbs-inherit);
+  --pygm-pre-Name-Attribute-na:         var(--cbs-lilac);
+  --pygm-pre-Name-Builtin-nb:           var(--cbs-blue);
+  --pygm-pre-Name-Builtin-Pseudo-bp:    var(--cbs-inherit);
+  --pygm-pre-Name-Class-nc:             var(--cbs-orange);
+  --pygm-pre-Name-Constant-no:          var(--cbs-orange);
+  --pygm-pre-Name-Decorator-nd:         var(--cbs-inherit);
+  --pygm-pre-Name-Entity-ni:            var(--cbs-inherit);
+  --pygm-pre-Name-Exception-ne:         var(--cbs-inherit);
+  --pygm-pre-Name-Function-nf:          var(--cbs-blue);
+  --pygm-pre-Name-Function-Magic-fm:    var(--cbs-inherit);
+  --pygm-pre-Name-Property-py:          var(--cbs-inherit);
+  --pygm-pre-Name-Label-nl:             var(--cbs-inherit);
+  --pygm-pre-Name-Namespace-nn:         var(--cbs-inherit);
+  --pygm-pre-Name-Other-nx:             var(--cbs-orange);
+  --pygm-pre-Name-Tag-nt:               var(--cbs-blue);
+  --pygm-pre-Name-Variable-nv:          var(--cbs-lilac);
+  --pygm-pre-Name-Variable-Class-vc:    var(--cbs-inherit);
+  --pygm-pre-Name-Variable-Global-vg:   var(--cbs-inherit);
+  --pygm-pre-Name-Variable-Instance-vi: var(--cbs-inherit);
+  --pygm-pre-Name-Variable-Magic-vm:    var(--cbs-inherit);
+  --pygm-pre-Number-m:                  var(--cbs-orange);
+  --pygm-pre-Number-Bin-mb:             var(--cbs-orange);
+  --pygm-pre-Number-Float-mf:           var(--cbs-orange);
+  --pygm-pre-Number-Hex-mh:             var(--cbs-orange);
+  --pygm-pre-Number-Integer-mi:         var(--cbs-orange);
+  --pygm-pre-Number-Integer-Long-il:    var(--cbs-orange);
+  --pygm-pre-Number-Oct-mo:             var(--cbs-inherit);
+  --pygm-pre-Operator-o:                var(--cbs-inherit);
+  --pygm-pre-Operator-Word-ow:          var(--cbs-fg-stark);
+  --pygm-pre-Punctuation-p:             var(--cbs-inherit);
+  --pygm-pre-Punctuation-Marker-pm:     var(--cbs-inherit);
+  --pygm-pre-String-s:                  var(--cbs-green);
+  --pygm-pre-String-Affix-sa:           var(--cbs-inherit);
+  --pygm-pre-String-Backtick-sb:        var(--cbs-inherit);
+  --pygm-pre-String-Char-sc:            var(--cbs-inherit);
+  --pygm-pre-String-Delimiter-dl:       var(--cbs-inherit);
+  --pygm-pre-String-Doc-sd:             var(--cbs-fg-dim);
+  --pygm-pre-String-Double-s2:          var(--cbs-green);
+  --pygm-pre-String-Escape-se:          var(--cbs-inherit);
+  --pygm-pre-String-Heredoc-sh:         var(--cbs-inherit);
+  --pygm-pre-String-Interpol-si:        var(--cbs-inherit);
+  --pygm-pre-String-Other-sx:           var(--cbs-inherit);
+  --pygm-pre-String-Regex-sr:           var(--cbs-inherit);
+  --pygm-pre-String-Single-s1:          var(--cbs-green);
+  --pygm-pre-String-Symbol-ss:          var(--cbs-inherit);
+}
+
 pre      { background-color: var(--pygm-pre-bg); border:1px solid var(--pygm-pre-bg-border)}
 pre      { color: var(--pygm-pre-fg); }
 pre .hll,
@@ -239,3 +327,4 @@ td.linenos .normal   { color: var(--pygm-pre-fg-dim)  ; background-color: transp
 span.linenos         { color: var(--pygm-pre-fg-dim)  ; background-color: transparent       ; padding-left: 5px; padding-right: 5px; }
 td.linenos .special  { color: var(--pygm-pre-fg-stark); background-color: var(--pygm-pre-bg); padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: var(--pygm-pre-fg-stark); background-color: var(--pygm-pre-bg); padding-left: 5px; padding-right: 5px; }
+
