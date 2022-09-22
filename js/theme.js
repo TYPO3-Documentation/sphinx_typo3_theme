@@ -102,33 +102,58 @@ jQuery(document).ready(function () { 'use strict';
     jQuery("#dsPanel" ).slideToggle();
   });
   var
+    body = document.getElementsByTagName('body')[0],
     vPermanent,
     vFullWidth,
+    vCbsTheme,
     selectedStorage,
     cbPermanent = document.querySelector('#cbPermanent'),
     cbFullWidth = document.querySelector('#cbFullWidth'),
+    rbCbsThemeDark = document.querySelector('#rbCbsThemeDark'),
+    rbCbsThemeLight = document.querySelector('#rbCbsThemeLight'),
     elFullWidth = document.getElementsByClassName('page-main-inner')[0]
     ;
+
   function dsLoad() {
     vPermanent = localStorage.getItem('displaySettingsPermanent') === 'true';
     selectedStorage = vPermanent ? localStorage : sessionStorage;
     vFullWidth = selectedStorage.getItem('displaySettingsFullWidth') === 'true';
+    vCbsTheme = selectedStorage.getItem('displaySettingsCbsTheme') || 'dark';
   }
   function dsSet() {
     if (elFullWidth) { elFullWidth.style.width = vFullWidth ? '99999px' : ''; }
     if (cbPermanent) { cbPermanent.checked = vPermanent; }
     if (cbFullWidth) { cbFullWidth.checked = vFullWidth; }
+    if (body && vCbsTheme) { body.dataset.cbsTheme = vCbsTheme; }
+    if (rbCbsThemeDark && vCbsTheme) { rbCbsThemeDark.checked = (vCbsTheme=='dark')};
+    if (rbCbsThemeLight && vCbsTheme) { rbCbsThemeLight.checked = (vCbsTheme=='light')};
   }
   function dsSave() {
     vPermanent = !! cbPermanent.checked;
     vFullWidth = !! cbFullWidth.checked;
+    vCbsTheme = (!!body.dataset.cbsTheme && body.dataset.cbsTheme) || 'dark';
     selectedStorage = vPermanent ? localStorage : sessionStorage;
     selectedStorage.setItem('displaySettingsFullWidth', vFullWidth ? 'true' : 'false');
+    selectedStorage.setItem('displaySettingsCbsTheme', vCbsTheme);
     localStorage.setItem('displaySettingsPermanent', vPermanent ? 'true' : 'false');
   }
   jQuery(cbPermanent).change(function() {
     dsSave();
     dsSet();
+  });
+  jQuery(rbCbsThemeDark).change(function() {
+    if (rbCbsThemeDark.checked) {
+      body.dataset.cbsTheme = rbCbsThemeDark.value;
+      dsSave();
+      dsSet();
+    }
+  });
+  jQuery(rbCbsThemeLight).change(function() {
+    if (rbCbsThemeLight.checked) {
+      body.dataset.cbsTheme = rbCbsThemeLight.value;
+      dsSave();
+      dsSet();
+    }
   });
   jQuery(cbFullWidth).change(function() {
     dsSave();
