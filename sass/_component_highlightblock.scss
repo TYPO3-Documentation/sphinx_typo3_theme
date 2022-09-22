@@ -5,5 +5,8 @@ div[class^='highlight-'] {
         margin: 0;
         display: block;
         overflow: auto;
+        border-radius: .2rem;
+        padding: .75rem;
+        font-size: 92%;
     }
 }
