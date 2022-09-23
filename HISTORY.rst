@@ -2,13 +2,20 @@
 History
 =======
 
-4.7.8 (2022-09-05)
+4.7.9 (2022-09-23)
+==================
+
+*  Fix bug in html template
+
+
+4.7.8 (2022-09-23)
 ==================
 
 *  Provide ready made codeblocks.css for syntax highlighting in code blocks.
    It doesn't have dependencies and uses css variables
 *  Add style switcher dark/light for code blocks
 *  Update styling of .bignums
+
 
 4.7.7 (2022-09-05)
 ==================
