@@ -2,13 +2,21 @@
 History
 =======
 
+4.7.8 (2022-09-05)
+==================
+
+*  Provide ready made codeblocks.css for syntax highlighting in code blocks.
+   It doesn't have dependencies and uses css variables
+*  Add style switcher dark/light for code blocks
+*  Update styling of .bignums
+
 4.7.7 (2022-09-05)
 ==================
 
 *  Rework syntax highlighting. Use css variables. Add codeblock.css as
    extra file.
-* Fix dl p issues
-* Update styling of dl lists
+*  Fix dl p issues
+*  Update styling of dl lists
 
 
 4.7.6 (2022-07-25)
