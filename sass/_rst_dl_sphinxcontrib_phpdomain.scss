@@ -1,0 +1,49 @@
+//
+// Sphinx extension: sphinxcontrib-phpdomain
+//
+.rst-content {
+    dl.php {
+        border-radius: $border-radius;
+        margin-bottom: $spacer;
+        padding-bottom: $spacer * .3;
+        .descname {
+            background-color: transparent;
+            border: none;
+            color: $code-color;
+            font-size: 100%;
+            padding: 0;
+        }
+        .optional {
+            padding: 0 .25em;
+        }
+        code {
+            padding: 0 .25em;
+        }
+        .pre {
+            font-family: $font-family-monospace;
+        }
+        .headerlink,
+        .optional {
+            color: $body-color;
+        }
+        .viewcode-link {
+            padding-left: 1em;
+        }
+        & > dt {
+            background-color: theme-color-level('info', -11);
+            border-radius: $border-radius;
+            border-top: solid 3px theme-color('info');
+            color: theme-color-level('info', 3);
+            display: inline-block;
+            font-size: $font-size-base;
+            margin-bottom: ($spacer / 2);
+            padding: .25em .5em;
+            position: relative;
+        }
+        dl.php > dt {
+            background-color: theme-color-level('light', -1);
+            border-top: 2px solid theme-color-level('light', 3);
+            color: color-yiq(theme-color-level('light', -1));
+        }
+    }
+}

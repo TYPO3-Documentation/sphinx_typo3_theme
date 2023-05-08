@@ -24,14 +24,23 @@ if 1: hits.sort()
 for target, help in hits:
 	print("%-20s %s" % (target, help))
 print("""
-Start with the installation of Python and Node modules:
-   make setup
+Do everything (setup, build frontend, build extension):
+   make  setup  buildall
 
-Compile frontend changes:
-   make frontend
+Start with the installation of Python and Node modules:
+   make  setup
+
+Rebuild all (frontend and extension):
+   make  buildall
+
+Only frontend:
+   make  clean-frontend  frontend
+
+Only Sphinx extension:
+   make  build
 
 Build, import from package, test, render the repo docs and open in browser:
-   make install test-import docs
+   make  install test-import docs
 
 See grunt help for more grunt commands:
    grunt --help
@@ -40,11 +49,15 @@ endef
 export PRINT_HELP_PYSCRIPT
 
 
-BROWSER := python -c "$$BROWSER_PYSCRIPT"
+BROWSER := python3 -c "$$BROWSER_PYSCRIPT"
 
 .PHONY: help
 help:
-	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+	@python3 -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+
+
+.PHONY: builddall
+buildall: clean-frontend frontend clean-project build-project ## Build all, frontend and extension
 
 
 .PHONY: build
@@ -53,8 +66,8 @@ build: clean build-project ## Build all, except frontend
 
 .PHONY: build-project
 build-project: clean-project ##- Build Sphinx extension
-	python setup.py sdist
-	python setup.py bdist_wheel
+	python3 setup.py sdist
+	python3 setup.py bdist_wheel
 	ls -l dist
 
 
@@ -77,15 +90,16 @@ clean-frontend: ## Clean frontend files
 	grunt clean
 
 
+.PHONY: clean-project
+clean-project: clean-build clean-pyc clean-test ##- Remove all build, test, coverage and Python artifacts
+
+
+.PHONY: clean-py
 clean-pyc: ##- Remove Python file artifacts
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -rf {} +
-
-
-.PHONY: clean-project
-clean-project: clean-build clean-pyc clean-test ##- Remove all build, test, coverage and Python artifacts
 
 
 .PHONY: clean-test
@@ -155,7 +169,7 @@ lint-minimal: ## Check Python style for minimal standards (alias lm)
 
 
 .PHONY: release
-release: dist ##- Clean, build and upload a release
+release: ##- Clean, build and upload a release
 	echo TO BE DONE: twine upload dist/*
 
 

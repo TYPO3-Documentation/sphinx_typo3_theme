@@ -83,6 +83,9 @@
     text-align: center;
     list-style: none;
     padding-left: 0;
+    > li {
+        margin-bottom: 1rem;
+    }
     @include media-breakpoint-up('sm') {
         margin-left: -.5em;
         margin-right: -.5em;
@@ -90,6 +93,7 @@
             display: inline-block;
             padding-left: .5em;
             padding-right: .5em;
+            margin-bottom: 0;
         }
     }
     .active a {

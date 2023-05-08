@@ -12,7 +12,7 @@
 {%- set blacklist_script_files = blacklist_script_files + ['_static/doctools.js'] -%}
 {%- set blacklist_script_files = blacklist_script_files + ['_static/language_data.js'] -%}
 {%- if not logo -%} {%- set logo = theme_logo -%} {%- endif -%}
-{%- if logo_url is not defined -%} {%- set logo_url = theme_logo_url -%} {%- endif -%}
+{%- if theme_logo_url -%} {%- set logo_url = theme_logo_url -%} {%- endif -%}
 {%- if logo_alt is not defined -%} {%- set logo_alt = theme_logo_alt -%} {%- endif -%}
 {%- if logo_title is not defined -%} {%- set logo_title = theme_logo_title -%} {%- endif -%}
 {%- if logo_width is not defined -%} {%- set logo_width = theme_logo_width -%} {%- endif -%}
@@ -43,16 +43,19 @@
 {%- if favicon %}
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
 {%- endif %}
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/' + style, 1) }}" />
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/webfonts.css', 1) }}" />
-    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/fontawesome.css', 1) }}" />
 {%- for css in css_files %}
-  {%- if css|attr("filename") %}
+  {%- if css|string not in ['_static/css/theme.css', '_static/css/fontawesome.css', '_static/css/webfonts.css'] %}
+    {%- if css|attr("filename") %}
     {{ css_tag(css) }}
-  {%- else %}
+    {%- else %}
     <link rel="stylesheet" type="text/css" href="{{ pathto(css, 1) }}" />
+    {%- endif %}
   {%- endif %}
 {%- endfor %}
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/fontawesome.css', 1) }}" />
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/webfonts.css', 1) }}" />
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/' + style, 1) }}" />
+    <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/codeblock.css', 1) }}" />
 <!-- linktags -->
 {%- block linktags %}
   {%- if hasdoc('about') %}
@@ -155,7 +158,7 @@
 {%- endblock %}
 <!--/block pageheader-->
             </div><!--/.page-header-inner-->
-        </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
 
         {% if theme_docstypo3org -%}
             <!--# include virtual="/includes/header.html" -->
@@ -232,6 +235,12 @@
 <!-- breadcrumbs.html -->
 {% include "breadcrumbs.html" %}
 <!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+{% include "displaysettingsui.html" %}
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+{% include "versionhints.html" %}
+<!-- /versionhints.html -->
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
 <!-- body -->

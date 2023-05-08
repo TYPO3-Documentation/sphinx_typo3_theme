@@ -45,6 +45,16 @@ module.exports = function (grunt) {
 
     // copy
     copy: {
+      css: {
+        files: [
+          {
+            expand: true,
+            cwd: 'css',
+            src: ['**/*'],
+            dest: 'sphinx_typo3_theme/static/css/'
+          }
+        ]
+      },
       fonts: {
         files: [
           {
@@ -97,9 +107,10 @@ module.exports = function (grunt) {
       },
       build: {
         files: {
+          'sphinx_typo3_theme/static/css/codeblock.css': 'sass/codeblock.scss',
+          'sphinx_typo3_theme/static/css/fontawesome.css': 'sass/fontawesome.scss',
           'sphinx_typo3_theme/static/css/theme.css': 'sass/theme.scss',
           'sphinx_typo3_theme/static/css/webfonts.css': 'sass/webfonts.scss',
-          'sphinx_typo3_theme/static/css/fontawesome.css': 'sass/fontawesome.scss',
         }
       }
     },

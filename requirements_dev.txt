@@ -1,8 +1,8 @@
+sphinx >= 4.5, < 5.0
+black
 flake8
-pip
 pytest
 setuptools
 setuptools_scm
-sphinx
 twine
 wheel

@@ -21,6 +21,12 @@
         border: 1px solid theme-color-level('light', 1);
     }
     code {
+        &.css {
+            color: $code-color-css;
+        }
+        &.bash {
+            color: $code-color-bash;
+        }
         &.file {
             color: $code-color-file;
         }
@@ -36,16 +42,43 @@
         &.php {
             color: $code-color-php;
         }
+        &.rst {
+            color: $code-color-rst;
+        }
         &.py {
             color: $code-color-py;
         }
-        &.ts,
+        &.shell {
+            color: $code-color-shell;
+        }
+        &.sql {
+            color: $code-color-sql;
+        }
         &.typoscript {
-            color: $code-color-ts;
+            color: $code-color-typoscript;
+        }
+        &.xml {
+            color: $code-color-xml;
         }
         &.yaml {
             color: $code-color-yaml;
         }
+    }
+
+
+    /**
+     * Code block with caption
+     */
+    .literal-block-wrapper {
+        .code-block-caption {
+            font-size: $font-size-sm;
+            background-color: hsla(0, 0%, 100%, .05);
+        }
+    }
+    // the html postprocessing should turn the following class 'container'
+    // into 'du-container' to make the following rule superfluous
+    .literal-block-wrapper.docutils.container {
+        padding: 0;
     }
 
     /**
@@ -64,7 +97,7 @@
     .toctree-wrapper ol,
     ul.simple,
     ol.simple {
-        li + li {
+        li {
             margin-top: ($spacer * .5);
         }
     }
@@ -76,11 +109,16 @@
         .toctree-wrapper.compact-list ol,
         ul.simple.compact-list,
         ol.simple.compact-list {
-            li + li {
+            li {
                 margin-top: 0;
             }
         }
     }
+    // https://github.com/TYPO3-Documentation/sphinx_typo3_theme/issues/144
+    // https://github.com/TYPO3-Documentation/sphinx_typo3_theme/issues/172
+    //li > p {
+    //    margin: 0;
+    //}
 
     /**
      * Keyboard Shortcuts
@@ -99,7 +137,7 @@
         background-color: hsl(26.5, 84.3%, 95%);
         border-radius: 3px;
         border: 1px solid hsl(26.5, 84.3%, 85%);
-        color: $code-color-ts;
+        color: $code-color-typoscript;
         font-style: italic;
         margin: 0 3px 0 0;
         padding: 0 2px;
@@ -191,7 +229,7 @@
             margin: 0 0 $spacer ($spacer * 2);
         }
     }
-    dl:not(.docutils) {
+    .DEPRECATED dl:not(.docutils):not(.field-list) {
         margin-bottom: $spacer;
         dt {
             display: inline-block;
@@ -225,7 +263,7 @@
             padding-left: 1em;
         }
     }
-    dl.dl-parameters {
+    .DEPRECATED dl.dl-parameters {
         dt {
             border-top: 2px solid theme-color-level('light', 3);
             background-color: theme-color-level('light', 1);
@@ -301,4 +339,14 @@
             background-color: transparent;
         }
     }
+}
+
+/**
+ * Generic classes
+ */
+.bold-important {
+    font-weight: bold !important;
+}
+.padding-0-important {
+    padding: 0 !important;
 }

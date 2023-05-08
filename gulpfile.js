@@ -1,3 +1,6 @@
+// Currently unused. However, I would prefer to use Gulp
+// in future instead of Grunt (marble)
+
 const autoprefix = require('autoprefixer');
 const browserSync = require('browser-sync');
 const del = require('del');

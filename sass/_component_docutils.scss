@@ -41,6 +41,10 @@
 * Tables
 */
 table.docutils {
+    th :last-child,
+    td :last-child {
+        margin-bottom: 0;
+    }
     &:not(.field-list) {
         border: 0;
         @extend .table;
