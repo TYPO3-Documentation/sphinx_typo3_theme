@@ -6,6 +6,9 @@
 @import "../node_modules/@fortawesome/fontawesome-free/scss/variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// tweak bootstrap components
+@import "card";
+
 // components
 @import "component_page";
 @import "component_footer";
@@ -14,7 +17,6 @@
 @import "component_breadcrumb";
 @import "component_button";
 @import "component_toc";
-@import "component_pygments";
 @import "component_docutils";
 @import "component_admotion";
 @import "component_bignums";
@@ -24,8 +26,17 @@
 @import "component_math";
 @import "component_tablerow";
 @import "component_horizbuttons";
+@import "component_highlightblock";
 @import "component_search";
 @import "component_panel";
+@import "component_displaysettings";
+@import "rst_dl_fieldlist";
+@import "rst_dl_confval";
+@import "rst_dl_sphinxcontrib_phpdomain";
+@import "rst_sphinx_tabs";
 
 // misc
 @import "utilities";
+
+// loaded as extra and ready made css file:
+//    codeblocks.css

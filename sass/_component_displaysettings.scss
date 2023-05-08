@@ -1,0 +1,29 @@
+.displaysettingsui {
+    display: none;
+    @media (min-width: 1200px) {
+        & {
+            display: block;
+        }
+    }
+    .dsDivCogwheel {
+        text-align: right;
+        float: right;
+        i {
+            cursor: pointer;
+            color: hsl(32, 100%, 50%);
+        }
+    }
+    .dsPanel {
+        border-radius: .2em;
+        display: none;
+        background-color: hsl(0, 0%, 95%);
+        border: 1px solid hsl(0, 0%, 85%);
+        padding: 1em;
+        input {
+            margin-right: .5em;
+        }
+        label {
+            margin-right: 1em;
+        }
+    }
+}

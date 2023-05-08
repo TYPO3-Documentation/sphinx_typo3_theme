@@ -97,6 +97,71 @@ jQuery(document).ready(function () { 'use strict';
     versionOptions.appendChild(options);
   }
 
+  // Display settings FullWidth: value, checkbox, element
+  jQuery("#dsCogwheel" ).click(function() {
+    jQuery("#dsPanel" ).slideToggle();
+  });
+  var
+    body = document.getElementsByTagName('body')[0],
+    vPermanent,
+    vFullWidth,
+    vCbsTheme,
+    selectedStorage,
+    cbPermanent = document.querySelector('#cbPermanent'),
+    cbFullWidth = document.querySelector('#cbFullWidth'),
+    rbCbsThemeDark = document.querySelector('#rbCbsThemeDark'),
+    rbCbsThemeLight = document.querySelector('#rbCbsThemeLight'),
+    elFullWidth = document.getElementsByClassName('page-main-inner')[0]
+    ;
+
+  function dsLoad() {
+    vPermanent = localStorage.getItem('displaySettingsPermanent') === 'true';
+    selectedStorage = vPermanent ? localStorage : sessionStorage;
+    vFullWidth = selectedStorage.getItem('displaySettingsFullWidth') === 'true';
+    vCbsTheme = selectedStorage.getItem('displaySettingsCbsTheme') || 'dark';
+  }
+  function dsSet() {
+    if (elFullWidth) { elFullWidth.style.width = vFullWidth ? '99999px' : ''; }
+    if (cbPermanent) { cbPermanent.checked = vPermanent; }
+    if (cbFullWidth) { cbFullWidth.checked = vFullWidth; }
+    if (body && vCbsTheme) { body.dataset.cbsTheme = vCbsTheme; }
+    if (rbCbsThemeDark && vCbsTheme) { rbCbsThemeDark.checked = (vCbsTheme=='dark')};
+    if (rbCbsThemeLight && vCbsTheme) { rbCbsThemeLight.checked = (vCbsTheme=='light')};
+  }
+  function dsSave() {
+    vPermanent = !! cbPermanent.checked;
+    vFullWidth = !! cbFullWidth.checked;
+    vCbsTheme = (!!body.dataset.cbsTheme && body.dataset.cbsTheme) || 'dark';
+    selectedStorage = vPermanent ? localStorage : sessionStorage;
+    selectedStorage.setItem('displaySettingsFullWidth', vFullWidth ? 'true' : 'false');
+    selectedStorage.setItem('displaySettingsCbsTheme', vCbsTheme);
+    localStorage.setItem('displaySettingsPermanent', vPermanent ? 'true' : 'false');
+  }
+  jQuery(cbPermanent).change(function() {
+    dsSave();
+    dsSet();
+  });
+  jQuery(rbCbsThemeDark).change(function() {
+    if (rbCbsThemeDark.checked) {
+      body.dataset.cbsTheme = rbCbsThemeDark.value;
+      dsSave();
+      dsSet();
+    }
+  });
+  jQuery(rbCbsThemeLight).change(function() {
+    if (rbCbsThemeLight.checked) {
+      body.dataset.cbsTheme = rbCbsThemeLight.value;
+      dsSave();
+      dsSet();
+    }
+  });
+  jQuery(cbFullWidth).change(function() {
+    dsSave();
+    dsSet();
+  });
+  dsLoad();
+  dsSet();
+
   var versionNode = document.getElementById("toc-version");
   if (versionNode) {
     versionNode.addEventListener('click', function () {
@@ -124,5 +189,18 @@ jQuery(document).ready(function () { 'use strict';
 
   // start with collapsed menu on a TYPO3 Exceptions page
   jQuery('li.toctree-l1.current').filter(":contains('TYPO3 Exceptions')").removeClass('current');
+
+  // fill in version hints
+  if (!!DOCUMENTATION_OPTIONS && !!DOCUMENTATION_OPTIONS.URL_ROOT) {
+    var coll = document.getElementsByClassName('version-hints-inner');
+    if (!!coll && coll.length==1 && coll[0].dataset && coll[0].dataset.runAjax==='yes') {
+      jQuery.ajax({
+        url: DOCUMENTATION_OPTIONS.URL_ROOT+"_static/ajax-version-hints.html",
+        success: function (texthtml) {
+          jQuery(".version-hints-inner").html(texthtml);
+        }
+      });
+    }
+  }
 
 });

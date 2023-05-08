@@ -21,7 +21,7 @@
 		"http-server": "^0.12.3",
 		"jquery": "^3.5.0",
 		"modernizr": "^3.11.0",
-		"node-sass": "^7.0.0",
+		"node-sass": "^4.14.0",
 		"popper.js": "^1.16.1",
 		"stylelint": "^13.3.3",
 		"underscore": "^1.12.1"
