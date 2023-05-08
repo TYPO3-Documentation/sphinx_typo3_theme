@@ -164,7 +164,7 @@ jobs:
           python-version: 3.x
       - run: python --version
       - run: pip install --upgrade pip
-      - run: pip install --upgrade sphinx
+      - run: pip install --upgrade sphinx==4.5.0
       - name: Install from wheel
         run: pip install $(find packages -name "*.whl")
       - name: Assert importable, show version
@@ -203,7 +203,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python --version
       - run: pip install --upgrade pip
-      - run: pip install --upgrade sphinx
+      - run: pip install --upgrade sphinx==4.5.0
       - name: Install from wheel
         run: pip install $(find packages -name "*.whl")
       - name: Assert importable, show version
