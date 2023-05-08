@@ -190,7 +190,7 @@ jobs:
         mode: [
           ['online', '-A docstypo3org=yes -A version=faked/online '],
           ['offline', '-A version=faked/offline']]
-        python-version: [2.7, 3.x]
+        python-version: [3.x]
     steps:
       - name: Download wheel
         uses: actions/download-artifact@v1
@@ -236,7 +236,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [2.7, 3.x]
+        python-version: [3.x]
     steps:
       - uses: actions/checkout@v2
       - name: Download wheel
@@ -401,23 +401,23 @@ jobs:
   use-docker-container:
     needs: [passed-all-tests]
     runs-on: ubuntu-latest
-    if: 0
+    if: 1
     strategy:
       matrix:
         # online, offline
         mode: ['online']
         manual: [
-          ['Writing Documentation', 'TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument'],
-          ['Stress Test Demo', 'typo3-documentation/t3SphinxThemeRtdDemoDocs']]
+          # ['Writing Documentation', 'TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument'],
+          ['Stress Test Demo', 'typo3-documentation/sphinx_typo3_theme_rendering_test']]
     steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: ${{ matrix.manual[1] }}
       - name: Download wheel
         uses: actions/download-artifact@v1
         with:
           name: bdist-wheel-package
           path: WHEELS
-      - uses: actions/checkout@v2
-        with:
-          repository: ${{ matrix.manual[1] }}
       - run: |
           mkdir -p Documentation-GENERATED-temp
           if [[ "${{ matrix.mode }}" = "offline" ]]; then
@@ -426,13 +426,19 @@ jobs:
           if [[ "${{ matrix.mode }}" = "online" ]]; then
               echo '{"Overrides_cfg":{"html_theme_options":{"docstypo3org":"nonempty"}}}' > Documentation-GENERATED-temp/jobfile.json
           fi
+      - name: list WHEELS
+        run: |
+          echo github.workspace is ${{ github.workspace }}
+          echo GITHUB_WORKSPACE in env is ${GITHUB_WORKSPACE}
+          echo files in ${{ github.workspace }}/WHEELS
+          ls -la ${{ github.workspace }}/WHEELS
       - name: docker run
         run: |
           docker run --rm --user=$(id -u):$(id -g) \
             -v $(pwd):/PROJECT:ro \
             -v $(pwd)/Documentation-GENERATED-temp:/RESULT \
-            -v $(pwd)/WHEELS:/WHEELS \
-            t3docs/render-documentation makehtml \
+            -v ${{ github.workspace }}/WHEELS:/WHEELS \
+            ghcr.io/t3docs/render-documentation:develop makehtml \
               -c make_singlehtml 1 \
               -c jobfile /RESULT/jobfile.json
 
