@@ -2,6 +2,14 @@
 History
 =======
 
+4.7.10 (2023-05-08)
+===================
+
+*  1da63a0 2023-05-08 Update codeblock.css to not select linenos                                                                                                                             ─╯
+*  b7b4603 2023-05-08 Fix and update workflow CI.yml
+*  fbb1fee 2023-05-08 Update README.rst: add development how-to
+
+
 4.7.9 (2022-09-23)
 ==================
 
