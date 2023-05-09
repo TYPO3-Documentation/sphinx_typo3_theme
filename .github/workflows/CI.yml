@@ -286,6 +286,13 @@ jobs:
           path: site
       - name: Publish
         uses: JamesIves/github-pages-deploy-action@releases/v3
+        #
+        #
+        # disabled while secrets.GITHUB_REPO_ACCESS doesn't work
+        #
+        if: 0
+        #
+        #
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_ACCESS }}
           BRANCH: gh-pages
