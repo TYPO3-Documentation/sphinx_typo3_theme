@@ -114,4 +114,13 @@ Example output::
 
 You may study as well the GitHub workflows of this repository.
 
+Restrictions
+------------
+
+This theme has not been used or tested with Sphinx versions that are
+newer than Sphinx-4.5.0.
+
+What else?
+----------
+
 Have fun!
