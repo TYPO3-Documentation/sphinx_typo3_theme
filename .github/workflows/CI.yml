@@ -287,7 +287,7 @@ jobs:
       - name: Publish
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_ACCESS }}
+          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_GITHUB }}
           BRANCH: gh-pages
           FOLDER: site
 
