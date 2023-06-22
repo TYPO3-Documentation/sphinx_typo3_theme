@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="docsearch:name" content="Sphinx TYPO3 theme" />
     <meta name="docsearch:package_type" content="" />
-    <meta name="docsearch:release" content="99.88.77" />
-    <meta name="docsearch:version" content="99.88.77" />
+    <meta name="docsearch:release" content="4.7.dev" />
+    <meta name="docsearch:version" content="4.7.dev" />
 
-    <title>sphinx_typo3_theme &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
+    <title>sphinx_typo3_theme &mdash; Sphinx TYPO3 theme 4.7.dev documentation</title>
 
-    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="Sphinx TYPO3 theme 99.88.77 documentation" href="#" />
+    <link rel="top" title="Sphinx TYPO3 theme 4.7.dev documentation" href="#" />
     <link rel="up" title="Module code" href="index.html" />
 <!-- /linktags -->
 <!-- extrahead --><!-- /extrahead -->
@@ -37,8 +37,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -50,7 +52,7 @@
 </div><!--/.row-->
 <!--/block pageheader-->
             </div><!--/.page-header-inner-->
-        </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
 
         
 
@@ -114,19 +116,31 @@
         <li class="breadcrumb-item active" aria-current="page">sphinx_typo3_theme</li>
     </ol>
     <div class="breadcrumb-additions">
-        <a class="btn btn-sm btn-light" id="btnHowToEdit"
-           href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html"
-           rel="nofollow noopener" target="_blank">
-            <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
-            <span class="btn-text">How to edit</span>
-        </a>
-        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/unused, deprecated/edit/unused, deprecated/Documentation/Localization.unused, deprecated/" target="_blank">
-            <span class="btn-icon"><span class="fab fa-github"></span></span>
-            <span class="btn-text">Edit on GitHub</span>
-        </a>
     </div>
 </div>
 <!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+<div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+<div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+<!-- /versionhints.html -->
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
 <!-- body -->
@@ -138,7 +152,7 @@
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">.static._version_GENERATED</span> <span class="kn">import</span> <span class="n">version</span> <span class="k">as</span> <span class="n">__version__</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;99.88.77&#39;</span>
+    <span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;4.7.dev&quot;</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">.static._version_info_GENERATED</span> <span class="kn">import</span> <span class="n">version_info</span>
@@ -147,25 +161,25 @@
 
 
 <div class="viewcode-block" id="get_html_theme_path"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.get_html_theme_path">[docs]</a><span class="k">def</span> <span class="nf">get_html_theme_path</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Return absolute path to parent folder of installed theme.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return absolute path to parent folder of installed theme.&quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))</span></div>
 
 
 <div class="viewcode-block" id="get_theme_mtime"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.get_theme_mtime">[docs]</a><span class="k">def</span> <span class="nf">get_theme_mtime</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Return the timestamp of the build as integer.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the timestamp of the build as integer.&quot;&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">version_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;build_mtime&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></div>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">version_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;build_mtime&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="get_theme_name"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.get_theme_name">[docs]</a><span class="k">def</span> <span class="nf">get_theme_name</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Return the name of the theme.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the name of the theme.&quot;&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="n">version_info</span><span class="p">[</span><span class="s1">&#39;module_name&#39;</span><span class="p">]</span></div>
+    <span class="k">return</span> <span class="n">version_info</span><span class="p">[</span><span class="s2">&quot;module_name&quot;</span><span class="p">]</span></div>
 
 
 <div class="viewcode-block" id="update_context"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.update_context">[docs]</a><span class="k">def</span> <span class="nf">update_context</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">pagename</span><span class="p">,</span> <span class="n">templatename</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">doctree</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Update the rendering context for a page.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Update the rendering context for a page.</span>
 
 <span class="sd">    This function makes the theme version available in the Jinja2 html</span>
 <span class="sd">    templates as `{{ theme_version }}`.</span>
@@ -183,14 +197,15 @@
 <span class="sd">    `page.html`.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">context</span><span class="p">[</span><span class="s1">&#39;theme_version&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">__version__</span>
-    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pagename</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;template&#39;</span><span class="p">)</span></div>
+    <span class="n">context</span><span class="p">[</span><span class="s2">&quot;theme_version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">__version__</span>
+    <span class="n">context</span><span class="p">[</span><span class="s2">&quot;theme_drc_version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OUR_IMAGE_VERSION&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pagename</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;template&quot;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="setup"><a class="viewcode-back" href="../sphinx_typo3_theme.html#sphinx_typo3_theme.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Setup functionality called by Sphinx&quot;&quot;&quot;</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;html-page-context&#39;</span><span class="p">,</span> <span class="n">update_context</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s1">&#39;add_html_theme&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Setup functionality called by Sphinx&quot;&quot;&quot;</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;html-page-context&quot;</span><span class="p">,</span> <span class="n">update_context</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s2">&quot;add_html_theme&quot;</span><span class="p">):</span>
         <span class="n">theme_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
         <span class="n">app</span><span class="o">.</span><span class="n">add_html_theme</span><span class="p">(</span><span class="s2">&quot;sphinx_typo3_theme&quot;</span><span class="p">,</span> <span class="n">theme_path</span><span class="p">)</span>
     <span class="c1"># unconfirmed: just assuming that parallel_write_safe is ok</span>
@@ -220,11 +235,10 @@
         <div class="frame-container">
             <div class="frame-inner">
                 <div class="footer-additional">
-                    <p class="text-center">
-                        <a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow" target="_blank">
-                            TYPO3 Theme 99.88.77
-                        </a>
-                    </p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.7.dev</span></a></li>
+                    </ul>
                 </div>
                 <div class="footer-meta">
                     <div class="footer-meta-copyright">
@@ -242,7 +256,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT: '../',
-            VERSION: '99.88.77',
+            VERSION: '4.7.dev',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE: true

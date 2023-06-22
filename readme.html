@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="docsearch:name" content="Sphinx TYPO3 theme" />
     <meta name="docsearch:package_type" content="" />
-    <meta name="docsearch:release" content="99.88.77" />
-    <meta name="docsearch:version" content="99.88.77" />
+    <meta name="docsearch:release" content="4.7.dev" />
+    <meta name="docsearch:version" content="4.7.dev" />
 
-    <title>Overview &mdash; Sphinx TYPO3 theme 99.88.77 documentation</title>
+    <title>Overview &mdash; Sphinx TYPO3 theme 4.7.dev documentation</title>
 
-    <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/webfonts.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/fontawesome.css" />
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/webfonts.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/codeblock.css" />
 <!-- linktags -->
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="Sphinx TYPO3 theme 99.88.77 documentation" href="#" />
+    <link rel="top" title="Sphinx TYPO3 theme 4.7.dev documentation" href="#" />
     <link rel="next" title="Installation" href="installation.html" />
     <link rel="prev" title="Welcome to “Sphinx TYPO3 theme” documentation!" href="index.html" />
 <!-- /linktags -->
@@ -40,8 +40,10 @@
     <div class="col-sm-6 col-lg-7">
 
         <div class="logo">
+        <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
 
-            <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" title="TYPO3 Documentation" class="logo-image" />
+            <img src="_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+        </a>
         </div>
     </div><!--/.col-x-->
     <div class="col-sm-6 col-lg-5">
@@ -53,7 +55,7 @@
 </div><!--/.row-->
 <!--/block pageheader-->
             </div><!--/.page-header-inner-->
-        </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
 
         
 
@@ -106,7 +108,10 @@
 <li><a class="reference internal" href="#sphinx-typo3-theme-for-docs-typo3-org">Sphinx TYPO3 theme for docs.typo3.org</a><ul>
 <li><a class="reference internal" href="#credits">Credits</a></li>
 <li><a class="reference internal" href="#releasing">Releasing</a></li>
-<li><a class="reference internal" href="#see-also">See also</a></li>
+<li><a class="reference internal" href="#feature-demonstration">Feature demonstration</a></li>
+<li><a class="reference internal" href="#development">Development</a></li>
+<li><a class="reference internal" href="#restrictions">Restrictions</a></li>
+<li><a class="reference internal" href="#what-else">What else?</a></li>
 </ul>
 </li>
 </ul>
@@ -131,23 +136,35 @@
         <li class="breadcrumb-item active" aria-current="page">Overview</li>
     </ol>
     <div class="breadcrumb-additions">
-        <a class="btn btn-sm btn-light" href="_sources/readme.rst.txt" rel="nofollow">
+        <a class="btn btn-sm btn-light" href="_sources/readme.rst.txt" rel="nofollow noopener" target="_blank">
             <span class="btn-icon"><span class="fas fa-code"></span></span>
             <span class="btn-text">View source</span>
-        </a>
-        <a class="btn btn-sm btn-light" id="btnHowToEdit"
-           href="https://docs.typo3.org/m/typo3/docs-how-to-document/master/en-us/WritingDocsOfficial/GithubMethod.html"
-           rel="nofollow noopener" target="_blank">
-            <span class="btn-icon"><span class="fas fa-info-circle"></span></span>
-            <span class="btn-text">How to edit</span>
-        </a>
-        <a class="btn btn-sm btn-primary" id="btnEditOnGitHub" href="https://github.com/unused, deprecated/edit/unused, deprecated/Documentation/Localization.unused, deprecated/readme.rst" target="_blank">
-            <span class="btn-icon"><span class="fab fa-github"></span></span>
-            <span class="btn-text">Edit on GitHub</span>
         </a>
     </div>
 </div>
 <!-- /breadcrumbs.html -->
+<!-- displaysettingsui.html -->
+<div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+<!-- /displaysettingsui.html -->
+<!-- versionhints.html -->
+<div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+<!-- /versionhints.html -->
                         <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                             <div itemprop="articleBody">
 <!-- body -->
@@ -178,11 +195,74 @@ by <a class="reference external" href="mailto:martin&#46;bless&#37;&#52;&#48;mbl
 <h3>Releasing<a class="headerlink" href="#releasing" title="Permalink to this headline">¶</a></h3>
 <p>Make sure to specify all three numbers as in ‘v99.88.77’.</p>
 </section>
-<section id="see-also">
-<h3>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h3>
-<p>There also is a <a class="reference external" href="https://docs.typo3.org/m/typo3/demo-t3SphinxThemeRtd/master/en-us/">demo manual</a>
+<section id="feature-demonstration">
+<h3>Feature demonstration<a class="headerlink" href="#feature-demonstration" title="Permalink to this headline">¶</a></h3>
+<p>There also is a <a class="reference external" href="https://typo3-documentation.github.io/sphinx_typo3_theme_rendering_test/">demo manual</a>
 which serves as a “stress test” for the theme and shows what markup is possible and
 how it gets rendered.</p>
+</section>
+<section id="development">
+<h3>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h3>
+<p>We are using Ubuntu (22.04) for development with <a class="reference external" href="https://www.python.org/">Python3</a> installed. Further we are using GNU <a class="reference external" href="https://www.mankier.com/1/make">make</a>
+for convenience.
+Next we are using the <a class="reference external" href="https://github.com/nvm-sh/nvm">Node Version Manager (NVM)</a> to install and activate Node version v12:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>❯ nvm install 12
+❯ nvm ls          # list installed version
+❯ nvm use v12     # activate
+</pre></div>
+</div>
+<p>We also need <a class="reference external" href="https://yarnpkg.com/">Yarn</a> and <a class="reference external" href="https://gruntjs.com/">Grunt</a>. Let’s install these globally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>❯ npm install -g yarn
+❯ npm install -g grunt
+</pre></div>
+</div>
+<p>Clone the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>❯ git clone https://github.com/TYPO3-Documentation/sphinx_typo3_theme/
+</pre></div>
+</div>
+<p>Further steps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>❯ cd sphinx_typo3_theme  # go there
+❯ make                   # see what options you have
+❯ cat Makefile           # read for understanding
+❯ cat Gruntfile.js       # read for understanding
+</pre></div>
+</div>
+<p>Use Node version v12, show Python version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>❯ nvm use v12
+Now using node v12.22.12 (npm v6.14.16)
+
+❯ python --version
+Python 3.10.6
+</pre></div>
+</div>
+<p>Install the Python modules, install the Node modules and build
+everything:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">setup</span> <span class="n">buildall</span>
+</pre></div>
+</div>
+<p>Repeat as you like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">buildall</span>
+</pre></div>
+</div>
+<p>Look at folder <cite>./dist</cite> to find the build results:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>❯ ls ./dist
+</pre></div>
+</div>
+<p>Example output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">dist</span><span class="o">/</span><span class="n">sphinx_typo3_theme</span><span class="o">-</span><span class="mf">4.7.10</span><span class="o">.</span><span class="n">dev1</span><span class="o">+</span><span class="n">gc7ebb3d</span><span class="o">.</span><span class="n">d20230426</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="nb">any</span><span class="o">.</span><span class="n">whl</span>
+<span class="o">./</span><span class="n">dist</span><span class="o">/</span><span class="n">sphinx_typo3_theme</span><span class="o">-</span><span class="mf">4.7.10</span><span class="o">.</span><span class="n">dev1</span><span class="o">+</span><span class="n">gc7ebb3d</span><span class="o">.</span><span class="n">d20230426</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>You may study as well the GitHub workflows of this repository.</p>
+</section>
+<section id="restrictions">
+<h3>Restrictions<a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h3>
+<p>This theme has not been used or tested with Sphinx versions that are
+newer than Sphinx-4.5.0.</p>
+</section>
+<section id="what-else">
+<h3>What else?<a class="headerlink" href="#what-else" title="Permalink to this headline">¶</a></h3>
+<p>Have fun!</p>
 </section>
 </section>
 </section>
@@ -221,11 +301,10 @@ how it gets rendered.</p>
         <div class="frame-container">
             <div class="frame-inner">
                 <div class="footer-additional">
-                    <p class="text-center">
-                        <a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow" target="_blank">
-                            TYPO3 Theme 99.88.77
-                        </a>
-                    </p>
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.7.dev</span></a></li>
+                    </ul>
                 </div>
                 <div class="footer-meta">
                     <div class="footer-meta-copyright">
@@ -243,7 +322,7 @@ how it gets rendered.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT: './',
-            VERSION: '99.88.77',
+            VERSION: '4.7.dev',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE: true
