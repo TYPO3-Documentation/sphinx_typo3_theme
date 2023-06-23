@@ -130,6 +130,18 @@
     }
 
     /**
+     * Version Added, Changed, Deprecated
+     */
+    div {
+        .deprecated,
+        .versionadded,
+        .versionchanged {
+            border-left: 2px solid hsl(26.5, 84.3%, 85%);
+            padding-left: 1em;
+        }
+    }
+
+    /**
      * Version Modified
      */
     .versionmodified {
