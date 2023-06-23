@@ -2,6 +2,23 @@
 History
 =======
 
+4.8.0 (2023-006-23)
+===================
+
+*  7b90e09 2023-06-23 Update-compact-list:
+   If display width is > 992px long list of .toctree or .contents can be shown with no extra spacing between lines
+   if `:class: compact-list` is set. This now also works for `.compact-list li > p`.
+
+*  9f72698 2023-06-23 Style div.versionadded:
+   The div block is indented now and has a vertical left bar.
+
+*  fb34a94 2023-06-22 Update footer: If link to theme is shown, show link to DRC as well, if given.
+
+*  efab638 2023-06-22 Reduce visual clutter for inline code
+
+*  35f0e2d 2023-06-22 Make all three buttons open in a new window
+
+
 4.7.10 (2023-05-08)
 ===================
 
