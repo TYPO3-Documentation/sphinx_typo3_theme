@@ -110,6 +110,9 @@
         ol.simple.compact-list {
             li {
                 margin-top: 0;
+                > p {
+                    margin: 0;
+                }
             }
         }
     }
