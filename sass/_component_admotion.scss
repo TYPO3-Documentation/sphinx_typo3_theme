@@ -24,7 +24,7 @@
     margin: -$spacer;
     margin-bottom: $spacer;
     color: color-yiq(theme-color('dark'));
-    background-color: theme-color('dark');
+    background-color: theme-color-level('dark', -3);
     &:before {
         @include fa-icon;
         content: fa-content($fa-var-info-circle);
@@ -34,17 +34,17 @@
     }
 }
 .admonition {
-    &.hint,
-    &.note {
-        background-color: theme-color-level('info', -11);
+    &.attention {
+        background-color: theme-color-level('warning', -11);
         .admonition-title {
-            color: color-yiq(theme-color('info'));
-            background-color: theme-color('info');
+            color: color-yiq(theme-color('warning'));
+            background-color: theme-color('warning');
+            &:before {
+                content: fa-content($fa-var-exclamation-circle);
+            }
         }
     }
-    &.caution,
-    &.warning,
-    &.attention {
+    &.caution {
         background-color: theme-color-level('warning', -11);
         .admonition-title {
             color: color-yiq(theme-color('warning'));
@@ -54,8 +54,7 @@
             }
         }
     }
-    &.danger,
-    &.error {
+    &.danger {
         background-color: theme-color-level('danger', -11);
         .admonition-title {
             color: color-yiq(theme-color('danger'));
@@ -65,13 +64,74 @@
             }
         }
     }
-    &.important,
-    &.seealso,
+    &.error {
+        background-color: theme-color-level('danger', -11);
+        .admonition-title {
+            color: color-yiq(theme-color('danger'));
+            background-color: theme-color('danger');
+            &:before {
+                content: fa-content($fa-var-times-circle);
+            }
+        }
+    }
+    &.important {
+        background-color: theme-color-level('warning', -11);
+        .admonition-title {
+            color: color-yiq(theme-color('warning'));
+            background-color: theme-color('warning');
+            &:before {
+                content: fa-content($fa-var-exclamation-circle);
+            }
+        }
+    }
+    &.hint {
+        background-color: theme-color-level('success', -11);
+        .admonition-title {
+            color: color-yiq(theme-color('success'));
+            background-color: theme-color('success');
+            &:before {
+                content: fa-content($fa-var-lightbulb);
+            }
+        }
+    }
+    &.note {
+        background-color: theme-color-level('info', -11);
+        .admonition-title {
+            color: color-yiq(theme-color('info'));
+            background-color: theme-color('info');
+            &:before {
+                content: fa-content($fa-var-bell);
+            }
+        }
+    }
+    &.seealso {
+        background-color: theme-color-level('success', -11);
+        .admonition-title {
+            color: color-yiq(theme-color('success'));
+            background-color: theme-color('success');
+            &:before {
+                content: fa-content($fa-var-share);
+            }
+        }
+    }
     &.tip {
         background-color: theme-color-level('success', -11);
         .admonition-title {
             color: color-yiq(theme-color('success'));
             background-color: theme-color('success');
+            &:before {
+                content: fa-content($fa-var-lightbulb);
+            }
+        }
+    }
+    &.warning {
+        background-color: theme-color-level('danger', -11);
+        .admonition-title {
+            color: color-yiq(theme-color('danger'));
+            background-color: theme-color('danger');
+            &:before {
+                content: fa-content($fa-var-exclamation-triangle);
+            }
         }
     }
 }
