@@ -98,7 +98,7 @@ module.exports = function (grunt) {
       sass: ['sass/**/*.scss']
     },
 
-    // sass
+    // sass :: compact, compressed, expanded, nested
     sass: {
       options: {
         implementation: sass,
