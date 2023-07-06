@@ -2,8 +2,15 @@
 History / Changelog
 ===================
 
-4.8.0 (2023-006-23)
-===================
+4.9.0 (2023-07-06)
+==================
+
+*  fbad57b Write 'Page last updated' instead of 'Last updated' in footer
+*  3ffce30 Make admonitions less heavy issue #201
+
+
+4.8.0 (2023-06-23)
+==================
 
 *  7b90e09 2023-06-23 Update-compact-list:
    If display width is > 992px long list of .toctree or .contents can be shown with no extra spacing between lines
