@@ -1,17 +1,7 @@
-//
-// Colors are matching Read the Docs
-// DO NOT ADJUST
-//
-// Similar:
-// - Admotion
-// - Bignums
-// - Horizontal Buttons
-//
 .admonition {
-    background-color: theme-color-level('dark', -11);
+    border: 4px solid theme-color-level('dark', -3);
     margin: $spacer 0;
     padding: $spacer;
-    box-shadow: $box-shadow-sm;
     border-radius: $border-radius;
     overflow: hidden;
     *:last-child {
@@ -22,9 +12,10 @@
     display: block;
     padding: ($spacer / 2) $spacer;
     margin: -$spacer;
-    margin-bottom: $spacer;
-    color: color-yiq(theme-color('dark'));
-    background-color: theme-color-level('dark', -3);
+    margin-bottom: $spacer / 4;
+    color: $body-color;
+    font-weight: bold;
+    font-size: 1.25em;
     &:before {
         @include fa-icon;
         content: fa-content($fa-var-info-circle);
@@ -35,100 +26,90 @@
 }
 .admonition {
     &.attention {
-        background-color: theme-color-level('warning', -11);
+        border-color: $warning;
         .admonition-title {
-            color: color-yiq(theme-color('warning'));
-            background-color: theme-color('warning');
+            color: $warning;
             &:before {
-                content: fa-content($fa-var-exclamation-circle);
+                content: fa-content($fa-var-bell);
             }
         }
     }
     &.caution {
-        background-color: theme-color-level('warning', -11);
+        border-color: $warning;
         .admonition-title {
-            color: color-yiq(theme-color('warning'));
-            background-color: theme-color('warning');
+            color: $warning;
             &:before {
                 content: fa-content($fa-var-exclamation-triangle);
             }
         }
     }
     &.danger {
-        background-color: theme-color-level('danger', -11);
+        border-color: $danger;
         .admonition-title {
-            color: color-yiq(theme-color('danger'));
-            background-color: theme-color('danger');
+            color: $danger;
             &:before {
                 content: fa-content($fa-var-exclamation-triangle);
             }
         }
     }
     &.error {
-        background-color: theme-color-level('danger', -11);
+        border-color: $danger;
         .admonition-title {
-            color: color-yiq(theme-color('danger'));
-            background-color: theme-color('danger');
+            color: $danger;
             &:before {
                 content: fa-content($fa-var-times-circle);
             }
         }
     }
     &.important {
-        background-color: theme-color-level('warning', -11);
+        border-color: $info;
         .admonition-title {
-            color: color-yiq(theme-color('warning'));
-            background-color: theme-color('warning');
+            color: $info;
             &:before {
-                content: fa-content($fa-var-exclamation-circle);
+                content: fa-content($fa-var-bell);
             }
         }
     }
     &.hint {
-        background-color: theme-color-level('success', -11);
+        border-color: $success;
         .admonition-title {
-            color: color-yiq(theme-color('success'));
-            background-color: theme-color('success');
+            color: $success;
             &:before {
                 content: fa-content($fa-var-lightbulb);
             }
         }
     }
     &.note {
-        background-color: theme-color-level('info', -11);
+        border-color: $info;
         .admonition-title {
-            color: color-yiq(theme-color('info'));
-            background-color: theme-color('info');
+            color: $info;
             &:before {
-                content: fa-content($fa-var-bell);
+                content: fa-content($fa-var-info-circle);
             }
         }
     }
     &.seealso {
-        background-color: theme-color-level('success', -11);
+        border-color: $success;
         .admonition-title {
-            color: color-yiq(theme-color('success'));
-            background-color: theme-color('success');
+            color: $success;
             &:before {
                 content: fa-content($fa-var-share);
             }
         }
     }
     &.tip {
-        background-color: theme-color-level('success', -11);
+        border-color: $success;
         .admonition-title {
-            color: color-yiq(theme-color('success'));
-            background-color: theme-color('success');
+            color: $success;
             &:before {
                 content: fa-content($fa-var-lightbulb);
             }
         }
     }
     &.warning {
-        background-color: theme-color-level('danger', -11);
+        border-color: $danger;
         .admonition-title {
-            color: color-yiq(theme-color('danger'));
-            background-color: theme-color('danger');
+            color: $danger;
             &:before {
                 content: fa-content($fa-var-exclamation-triangle);
             }
