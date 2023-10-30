@@ -38,7 +38,7 @@ $bignum-xxl:    1.5rem !default;
         border-radius: $border-radius;
         min-height: (($bignum-normal * 2) + $spacer * 2);
         > .first,
-        p:first-child {
+        > p:first-child {
             font-weight: $font-weight-bold;
             font-size: $bignum-normal;
         }
@@ -133,7 +133,7 @@ $bignum-xxl:    1.5rem !default;
         border-style: none;
         min-height: ($bignum-xxl * 2);
         > .first,
-        p:first-child {
+        > p:first-child {
             font-size: $bignum-xxl;
         }
         &:before {

@@ -438,7 +438,7 @@ jobs:
             -v $(pwd):/PROJECT:ro \
             -v $(pwd)/Documentation-GENERATED-temp:/RESULT \
             -v ${{ github.workspace }}/WHEELS:/WHEELS \
-            ghcr.io/t3docs/render-documentation:develop makehtml \
+            ghcr.io/t3docs/render-documentation:latest makehtml \
               -c make_singlehtml 1 \
               -c jobfile /RESULT/jobfile.json
 
