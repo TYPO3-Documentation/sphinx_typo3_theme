@@ -23,7 +23,7 @@
 		"modernizr": "^3.11.0",
 		"node-sass": "^4.14.0",
 		"popper.js": "^1.16.1",
-		"stylelint": "^13.3.3",
+		"stylelint": "^15.10.1",
 		"underscore": "^1.12.1"
 	},
 	"scripts": {
