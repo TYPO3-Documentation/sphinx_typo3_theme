@@ -1,11 +1,19 @@
 .rst-content {
 
-    /**
+    /**git
      * Headlines
      */
     h3 {
         padding-bottom: .5rem;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
+    }
+    p {
+        // issue 208
+        &.topic-title {
+            font-size: $h3-font-size;
+            font-weight: $headings-font-weight;
+            margin-bottom: $headings-margin-bottom;
+        }
     }
 
     /**
